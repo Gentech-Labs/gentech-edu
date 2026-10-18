@@ -560,6 +560,40 @@ def render(lesson: dict) -> str:
     return "\n".join(lines)
 
 
+# ── WHERE A LESSON IS FILED IS PACK DATA, NOT A PATH IN THE CODE ───────────────────────────────────
+# Jordan, 2026-10-18: *"a folder for Jordan and then a folder for Josephine… inside of our folders,
+# you'll have topics based on what we want to learn."* So the brain is LEARNER-first, topic second.
+# The convention therefore lives in `data/brain-layout.json` — changing where humans file lessons is a
+# FILE edit. When that file is missing the engine uses the legacy path AND SAYS SO, because silently
+# filing a lesson where nobody looks is how a record disappears.
+LAYOUT_FILE = DATA / "brain-layout.json"
+
+
+def brain_target(learner: str, dialect: str,
+                 layout_file: pathlib.Path | None = None) -> tuple[pathlib.Path, str]:
+    """Return (full file path in the brain, a human note about where it went).
+
+    `layout_file` is overridable so the selftest can prove the fallback WITHOUT touching the real
+    config — a test that has to delete production config to run is a test that loses it once.
+    """
+    lf = layout_file or LAYOUT_FILE
+    stamp = date.today().isoformat()
+    legacy_dir = VAULT / "EDU" / "lessons" / learner
+    try:
+        cfg = json.loads(lf.read_text())
+    except (FileNotFoundError, json.JSONDecodeError, OSError) as e:
+        return (legacy_dir / f"{stamp}-{dialect}.md",
+                f"⚠️  brain layout config unreadable ({type(e).__name__}) — fell back to the LEGACY "
+                f"path {legacy_dir}")
+    topic = ((cfg.get("topic_by_dialect") or {}).get(dialect)
+             or cfg.get("topic_default") or "_unsorted")
+    root = cfg.get("root") or "EDU"
+    folder = VAULT / root / (cfg.get("path_template") or "{learner}/{topic}").format(
+        learner=learner, topic=topic)
+    fname = (cfg.get("filename_template") or "{date}-{dialect}.md").format(date=stamp, dialect=dialect)
+    return folder / fname, f"brain → {folder.relative_to(VAULT)}/  (dialect {dialect} → topic '{topic}')"
+
+
 def selftest() -> int:
     """PLANT a failure and prove we go RED. House rule: every detector proves it can fail."""
     print("SELFTEST — planting failures, expecting loud RED\n")
@@ -726,7 +760,27 @@ def selftest() -> int:
         print(f"  ❌ FAIL 16: drill loop broken — her_weak={len(o2w)}, key_ok={keys_ok}, his_weak={len(j2w)}")
         ok = False
 
-    print("\n" + ("SELFTEST PASSED — all sixteen planted failures went RED"
+    # 17. WHERE THE LESSON IS FILED IS PACK DATA, NOT A PATH IN THIS SCRIPT (Jordan, 2026-10-18: the
+    #     brain is LEARNER-first, topic second). With the config the path must be learner/topic; when
+    #     the config is MISSING the engine must fall back to the legacy path AND ANNOUNCE it. A filing
+    #     convention that needs an engine edit is the boundary rule read backwards — so both directions
+    #     are planted here. The config file is NOT touched: the fallback runs against a path that
+    #     cannot exist, because a test that deletes production config to run eventually loses it.
+    p_cfg, note_cfg = brain_target("jordan", "th-TH")
+    p_abs, note_abs = brain_target("jordan", "th-TH",
+                                   pathlib.Path("/nonexistent-dir/brain-layout.json"))
+    good_cfg = (p_cfg.parent == VAULT / "EDU" / "jordan" / "thai"
+                and p_cfg.name.endswith("-th-TH.md"))
+    good_legacy = p_abs.parent == VAULT / "EDU" / "lessons" / "jordan"
+    loud = "LEGACY" in note_abs
+    if good_cfg and good_legacy and loud:
+        print("  ✅ RED 17: brain layout is CONFIG — learner-first when set, legacy AND announced when absent")
+        print(f"      with config: {p_cfg.parent.relative_to(VAULT)}/   without: {p_abs.parent.relative_to(VAULT)}/")
+    else:
+        print(f"  ❌ FAIL 17: layout not config-driven — cfg={good_cfg}, legacy={good_legacy}, announced={loud}")
+        ok = False
+
+    print("\n" + ("SELFTEST PASSED — all seventeen planted failures went RED"
                   if ok else "SELFTEST FAILED"))
     return 0 if ok else 1
 
@@ -757,11 +811,13 @@ def main() -> int:
     (OUT / f"{a.learner}.json").write_text(json.dumps(lesson, ensure_ascii=False, indent=2))
 
     # ── THE BRAIN IS THE RECORD (Jordan, 2026-10-17: *"Use the brain for Jordan lesson and Josephine
-    # lesson."*) One file per LEARNER per day, in the learner's own folder. The profile cache above is
-    # scratch; this is the record a human reads, and it must never be one shared file for two people.
-    brain = VAULT / "EDU" / "lessons" / lesson["learner"]
-    brain.mkdir(parents=True, exist_ok=True)
-    (brain / f"{date.today().isoformat()}-{lesson['dialect']}.md").write_text(
+    # lesson."*) One file per LEARNER per day, in the learner's OWN folder, under the TOPIC they are
+    # learning — and WHERE that is comes from `data/brain-layout.json`, not from this script. The
+    # profile cache above is scratch; this is the record a human reads, and it must never be one
+    # shared file for two people.
+    brain, where = brain_target(lesson["learner"], lesson["dialect"])
+    brain.parent.mkdir(parents=True, exist_ok=True)
+    brain.write_text(
         f"<!-- generated by life-lesson-engine.py — served, not written by hand -->\n\n"
         + render(lesson) + "\n")
 
@@ -769,6 +825,7 @@ def main() -> int:
         print(json.dumps(lesson, ensure_ascii=False, indent=2))
     elif not a.quiet:
         print(render(lesson))
+        print(f"\n  · {where}")
     return 0
 
 

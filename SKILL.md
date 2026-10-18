@@ -219,6 +219,16 @@ Rules:
 - ✅ An engine that reads the itinerary, knows which trip is next, and **serves what he needs next**,
   prioritising what he keeps getting wrong. **An agent.**
 
+## The operating shape — group, repo, session (added 2026-10-18)
+
+**A session is a workbench; the pack is the memory.** One **lane per session** (switch subject → `/new`),
+and the session must write its state to the vault/repo before it ends — that is the only way work is
+actually lost. The room separates subjects with **Topics** (a thread per pack, mirroring the engine/pack
+boundary and the same instinct as per-learner records); the repo separates them with **a folder per pack**,
+so *adding a subject never touches `scripts/`*. Learner records (`learners.json`, per-learner state) are
+**never published**. Full detail, including Arthur's measured admin rights in Gentech EDU:
+`EDU/STRUCTURE.md` in the vault.
+
 ## Where EDU lives
 
 **GenTech EDU is a SECTION OF THE AGENT KIT** — the thing we offer so people learn to use the skills and the

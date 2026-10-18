@@ -1,0 +1,15 @@
+{
+  "_what": "PACK DATA — WHERE A LESSON IS FILED IN THE BRAIN. Jordan, 2026-10-18: 'we should have like a GenTech EDU folder for this department… within that, there should be a folder for Jordan and then a folder for Josephine, whoever the collaborators are. Because inside of our folders, you'll have topics based on what we want to learn.' So the brain is LEARNER-first, TOPIC second.",
+  "_why_a_file_and_not_code": "The engine used to hardcode EDU/lessons/<learner>/. Changing how humans file lessons would then have meant editing the engine — which is the boundary rule backwards. A filing convention is PACK data. This file is the convention.",
+  "root": "EDU",
+  "path_template": "{learner}/{topic}",
+  "filename_template": "{date}-{dialect}.md",
+  "topic_by_dialect": {
+    "th-TH": "thai",
+    "es-DO": "spanish-do"
+  },
+  "topic_default": "_unsorted",
+  "_topic_default_rule": "A dialect with no topic mapping files under `_unsorted` rather than being dropped or guessed into the wrong subject — an unsorted lesson is findable; a misfiled one is not.",
+  "_fallback": "If this file is ABSENT the engine writes the LEGACY path (EDU/lessons/<learner>/) and ANNOUNCES it. A layout change must never silently file a lesson where nobody looks.",
+  "_verified": "2026-10-18 — selftest 17 proves both directions: with this file the path is learner-first, without it the engine falls back to legacy AND says so."
+}
