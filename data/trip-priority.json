@@ -1,0 +1,20 @@
+{
+ "_what": "TRIP PRIORITY — PACK DATA, not engine logic. Which destination leads a lesson is a property of the PLAN, so it lives in a file. This is the same boundary rule as the phrase banks: adding or changing a subject is a FILE edit, never an engine edit.",
+ "_rule": "A place Jordan has NAMED outranks a fare WATCHER. An abandoned trip's tracker drops below both. A watcher outlives the decision that created it, so it must never win by default.",
+ "_churn": "Jordan, 2026-10-17: *\"Lol sorry trip plans change a lot\"* — recorded because it IS the design input. When the plan moves, edit THIS file. Nobody edits the engine for a calendar.",
+ "_updated": "2026-10-17",
+ "default_rank": 99,
+ "_default_rank_why": "A place with no entry does not win by accident — it sits behind everything that was actually decided. An empty table makes the engine REFUSE rather than guess.",
+ "places": {
+  "thailand": {"rank": 1, "status": "named", "why": "Jordan, in Gentech EDU, 2026-10-17: *\"We both are planning a trip to Thailand and want to learn Thai.\"* His most recent word, and it names the destination outright."},
+  "bangkok": {"rank": 1, "status": "named", "why": "Same trip — the Bangkok leg (1-2 days, then Pattaya)."},
+  "pattaya": {"rank": 1, "status": "named", "why": "Same trip — the Pattaya leg, and where the La Miniera villa is."},
+  "chiang mai": {"rank": 1, "status": "watched", "why": "On the Thailand route list; the destination is named even though this leg is not yet chosen."},
+  "puerto plata": {"rank": 3, "status": "stale watcher", "why": "ABANDONED. The Amazon PTO blackout (Nov 28 - Dec 24) killed the November window (00-HQ/01-Travel/jordan-leave-plan-2026-10-15.md). The fare tracker is still on disk, which is the ONLY reason it kept winning rank 1 and the engine kept speeding to a trip nobody is taking."},
+  "sosúa": {"rank": 3, "status": "stale watcher", "why": "Same abandoned DR trip."},
+  "sosua": {"rank": 3, "status": "stale watcher", "why": "Same abandoned DR trip, unaccented spelling — both spellings must rank alike or the answer depends on how a filename is typed."},
+  "dominican republic": {"rank": 3, "status": "stale watcher", "why": "Same abandoned DR trip."}
+ },
+ "_note_on_manila": "The trip RECORD currently reads 'Manila & Pampanga — Dry Season 2027' (2027-02-12). It is deliberately ABSENT from this table: there is no Filipino pack, so a dialect cannot resolve for it, and the engine's resolver now skips a dialect it has no bank for rather than crashing or falling through to the next country. When a Filipino pack exists, this place gets an entry and a rank — one file, no engine edit.",
+ "_how_to_change_a_trip": "1. Edit the rank here (lower wins). 2. Say WHY in the same entry, with the source. 3. Nothing else. The engine re-reads this file on every run."
+}

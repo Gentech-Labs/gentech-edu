@@ -1,0 +1,149 @@
+{
+ "_what": "EDU scenario SHAPES pack. A new subject is a FILE, not an engine edit — the boundary rule in edu/SKILL.md. Key = '<dialect>|<venue type>'. Built-in es-DO shapes stay in the script; anything here adds or overrides.",
+ "_for": "Jordan's Thailand trip (2026-10-15): Bangkok 1-2 days, then Pattaya.",
+ "_sources": "7-Eleven items: cktravels.com, travelinstinctoz.com (Jun 2026), thai-awesome.com (2026). Bus: operator Roong Reuang Coach via bangkokpattayabus.com (page checked 2026-08-02), cross-checked against our own route doc 2026-09-28.",
+ "shapes": {
+  "th-TH|convenience_store": {
+   "title": "7-Eleven — Thailand's kitchen, not a snack aisle",
+   "setup": "In Thailand the corner 7-Eleven is a food business. The thing to learn first is not a greeting: it is that your toastie is not ready to eat — staff microwave it for you, free.",
+   "lines": [
+    [
+     "อันนี้เท่าไหร่",
+     "How much is this one?",
+     "an-níi thâo-rài"
+    ],
+    [
+     "เวฟให้หน่อย",
+     "Microwave this, please.  <- the toastie sentence",
+     "wéep hâi nòi"
+    ],
+    [
+     "ไม่ใส่พริก",
+     "No chili, please.",
+     "mâi sài phrík"
+    ],
+    [
+     "ไม่หวาน",
+     "Not sweet, please.",
+     "mâi wǎan"
+    ],
+    [
+     "ถุงด้วย",
+     "A bag as well, please.",
+     "thǔng dûai"
+    ],
+    [
+     "จ่ายเงินที่ไหน",
+     "Where do I pay?",
+     "jàai ngən thîi nǎi"
+    ],
+    [
+     "รับบัตรไหม",
+     "Do you take card?",
+     "ráp bàt mǎi"
+    ]
+   ],
+   "watch_out": [
+    "Your toastie is NOT ready to eat — hand it to the counter and say เวฟให้หน่อย. Staff microwave it for you at no charge. This is the one sentence that changes the store from a puzzle into a canteen.",
+    "The refrigerated shelf sells out earlier in the day — the tamago sando (~29 THB) goes first.",
+    "Nori-flavoured chips can carry shrimp powder. Check if shellfish matters to you.",
+    "Prices are fixed here — no bargaining at 7-Eleven, unlike a market."
+   ]
+  },
+  "th-TH|transport": {
+   "title": "Bangkok to Pattaya — the bus, and the one moment a newcomer gets taken",
+   "setup": "Pattaya is a bus, not a flight. 148 THB from Ekkamai, 158 THB from Mo Chit 2; buy at the counter at the terminal. The risk is not the ride — it is the last 3 km from North Pattaya Bus Station.",
+   "lines": [
+    [
+     "ตั๋วไปพัทยา",
+     "A ticket to Pattaya.",
+     "tǔa pai phát-thá-yaa"
+    ],
+    [
+     "กี่บาท",
+     "How much?",
+     "kìi bàat"
+    ],
+    [
+     "รถออกกี่โมง",
+     "What time does it leave?",
+     "rót òk kìi moong"
+    ],
+    [
+     "สถานีขนส่ง",
+     "Bus terminal. (to the driver)",
+     "sà-thǎa-nii khǒn-sòng"
+    ],
+    [
+     "ไปเอกมัย",
+     "To Ekkamai. (to the driver)",
+     "pai èk-ka-mai"
+    ],
+    [
+     "ไปพัทยาเหนือ",
+     "To North Pattaya.",
+     "pai phát-thá-yaa nʉ̌a"
+    ],
+    [
+     "เท่าไหร่",
+     "How much? (ask BEFORE you get in)",
+     "thâo-rài"
+    ]
+   ],
+   "watch_out": [
+    "Pattaya is a BUS: 148 THB from Ekkamai (next to BTS Ekkamai) or 158 THB from Mo Chit 2. ~2-3 hours, ~150 km. Buy at the counter — the regular coach needs no advance purchase.",
+    "UTP / Pattaya airport is 229 USD round trip and 3h15 for a 140 km trip. It is the most expensive and the slowest option on the list — do not take it.",
+    "North Pattaya Bus Station is NOT your hotel. A songthaew on the fixed route is ~10 THB; a chartered one is negotiated. AGREE THE FARE BEFORE THE BAGS GO IN — that is the one moment a newcomer gets overcharged."
+   ]
+  },
+  "th-TH|villa": {
+   "title": "La Miniera Pool Villas Pattaya — the villa in the room, and the sentence shape that finds it",
+   "setup": "The property is a villa, not a hotel room: the indoor pool is INSIDE the room, and the lagoon pool bar is through the terrace. The teaching target is NOT the vocabulary of this one villa — it is จาก X แค่ [time] ก็มี Y, the shape Thai social copy uses to describe any destination by its distance and its draw. Jordan reads Thai reels; this is the shape that makes the next one legible, and it is the shape he can say back.",
+   "lines": [
+    [
+     "จากกรุงเทพ แค่ 2 ชม. ก็มีวิลล่าให้ว่ายน้ำในห้อง",
+     "Just 2 hours from Bangkok, and there's a villa where you swim in your room.  <- THE pattern, say it with any city and any draw",
+     "jàak krung-thêep khâe 2 chôo-moong kôr mii wan-lâa hâi wâai-náam nai hông"
+    ],
+    [
+     "ไม่ใช่บาหลี อยู่ที่พัทยานี่แหละ",
+     "It's not Bali — it's right here in Pattaya.",
+     "mâi châi baa-lîi yùu thîi phát-thá-yaa nîi-làe"
+    ],
+    [
+     "ห้องมีสระว่ายน้ำส่วนตัวไหม",
+     "Does the room have a private pool?",
+     "hông mii sà-wàai-náam sùan-tua mǎi"
+    ],
+    [
+     "ขอห้องชั้นล่างใกล้ลากูน",
+     "Could I have a ground-floor villa near the lagoon?",
+     "khǒr hông chán-lâang klâi laa-guun"
+    ],
+    [
+     "อาหารเช้าแบบลอยน้ำ",
+     "The floating breakfast.  <- the thing every reel films",
+     "aa-hǎan cháo bàep loi-náam"
+    ],
+    [
+     "ขอเช็คอินเร็วได้ไหม",
+     "Can we check in early?",
+     "khǒr chék-in reo dâi mǎi"
+    ],
+    [
+     "มีรถรับจากสนามบินไหม",
+     "Is there an airport pickup?",
+     "mii rót ráp jàak sà-nǎam-bin mǎi"
+    ]
+   ],
+   "watch_out": [
+    "REGISTER — ปัง (pang, 'awesome/fire') is safe anywhere, including with staff. โคตร (khôht, 'extremely') is a slang intensifier that blurs toward rude in polite settings: READ it, don't say it at the hotel desk. Both appear in the reel; only one of them is yours to deploy.",
+    "'ไม่ใช่บาหลี' is social-media copy, not conversation. Do not announce to the front desk that this is not Bali. It is in the lesson because it carries the PATTERN (ไม่ใช่ X อยู่ที่ Y — 'it's not X, it's Y'), which is genuinely reusable.",
+    "ห้อง here means the whole villa unit, not a room in a hotel — the in-room pool sentence (ว่ายน้ำในห้อง) only makes sense if you hear ห้อง that way.",
+    "นี่แหละ is the verbal finger-point ('right HERE'). It is emphasis, not location. Drop it and the sentence still works.",
+    "Friction worth knowing, not language: KAYAK's own data says ~11 weeks of lead time is ~17% cheaper than last-minute. For a late-January trip that is a MID-NOVEMBER booking, and it sits outside the Nov 28 - Dec 24 Amazon blackout.",
+    "Honest limit on the identification: Instagram blocks scraping, so HQ matched the reel's two distinctive claims (2 h from Bangkok + swim-in-the-room) and the layout against La Miniera's own tour video rather than reading the post's location tag. Jordan then confirmed the property himself, so the identification is closed — but it was matched, not read."
+   ]
+  }
+ }
+}

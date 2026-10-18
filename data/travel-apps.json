@@ -1,0 +1,265 @@
+{
+  "_comment": "Which apps actually work for Jordan's North Coast (POP/Sosúa/Cabarete) trips — food, rides, events. Jordan asked: 'I need to know what apps to use for like food and events and stuff like that. Komida's their delivery app.' Every entry carries its source and whether it is VERIFIED or CONFLICTING. A conflicting claim is recorded as conflicting — never smoothed into a confident recommendation.",
+  "destination": "Dominican Republic — North Coast (Puerto Plata / Sosúa / Cabarete)",
+  "verified": "2026-09-23",
+  "categories": {
+    "food_delivery": {
+      "verdict": "Komida is the one — it is the North Coast's own app, and it is the channel Sliced DR orders through.",
+      "apps": [
+        {
+          "name": "Komida",
+          "status": "RECOMMENDED — primary",
+          "why": "Created in Las Terrenas 2018, expanded to Sosúa and Cabarete in 2022. 200+ restaurants/supermarkets/stores, 100+ delivery riders of their own. Local to exactly the area he is visiting.",
+          "website": "https://www.komida.app",
+          "source": "Komida's own site, read 2026-09-23",
+          "verified": "yes — from the company itself",
+          "covers": [
+            "Las Terrenas",
+            "Sosúa",
+            "Cabarete"
+          ],
+          "note": "Also the ordering channel for Sliced DR, who publish no other online menu."
+        },
+        {
+          "name": "PedidosYa",
+          "status": "backup — national",
+          "why": "The largest delivery platform in the DR and in Latin America, but it is Santo Domingo-centric. Coverage on the North Coast is not confirmed.",
+          "source": "Reddit r/PuntaCana ('the Uber Eats of the DR'); Sensor Tower Q4-2023 Android DR ranking (#1 by users)",
+          "verified": "partially — national presence yes, North Coast coverage UNCONFIRMED"
+        },
+        {
+          "name": "Uber Eats",
+          "status": "weak in DR",
+          "why": "Present but far smaller than PedidosYa in DR (≈39K weekly active users vs ≈149K).",
+          "source": "Sensor Tower Q4-2023 Android DR",
+          "verified": "yes — but small"
+        }
+      ],
+      "do_not_bother": "Postmates, Grubhub and DoorDash do not operate in the Dominican Republic."
+    },
+    "rides": {
+      "verdict": "Uber DOES operate in the DR — the problem was never that it left. The problem is real and current: drivers accept the app price, then contact you to demand more cash, and cancel if you refuse. Locals' own answer is taxis and private drivers.",
+      "research_note": "Jordan, 2026-09-23: 'maybe it was available in the Dominican Republic and then maybe there were too many scammers… and they had to pull it for a while. So we should look for alternatives and we need to see what those locals are saying and if it's updated.' — the 'too many scammers' half is CONFIRMED. The 'they pulled it' half is NOT what happened; see uber_history.",
+      "uber_history": {
+        "headline": "It was challenged by regulators, not withdrawn.",
+        "what_actually_happened": [
+          "Dominican authorities (INTRANT) at one point formally asked Uber to SUSPEND operations in the vicinity of tourist zones — this is almost certainly the event remembered as 'they pulled it'.",
+          "Uber later confirmed it would REGISTER with INTRANT as an 'Empresa de Red de Transporte' (Transport Network Company) — i.e. it stayed and got regulated, rather than leaving.",
+          "INTRANT, MITUR, Uber and ASONAHORES (the hotel association) met to settle how the service operates — including around airports and resorts.",
+          "INTRANT-implemented measures have caused friction with drivers."
+        ],
+        "conclusion": "Uber is operational in the DR today. A suspension was ASKED FOR and then resolved into registration. Recorded here so the 'they pulled it' memory does not become a false fact in the plan.",
+        "source": "Dominican press (Listín Diario / Diario Libre), presidencia.gob.do notice on the INTRANT-MITUR-Uber-ASONAHORES meeting; Uber's own DR site lists the country — read 2026-09-23"
+      },
+      "apps": [
+        {
+          "name": "Uber",
+          "status": "WORKS, BUT EXPECT TO BE ASKED FOR MORE — the scam is the issue, not availability",
+          "why": "Uber operates in the DR and its app is live. What has gone wrong is the fare: drivers accept the booked price, then contact the rider to demand more, and cancel the trip if refused. Card payers get asked for cash on top — paying twice for one ride. One reported case: app showed RD$211, the driver demanded RD$350 before pickup. Another: four separate drivers on one trip each tried to double or triple the accepted price. Local Dominicans report getting the same treatment at least as often as foreigners, and there is a Facebook group dedicated to it.",
+          "what_the_locals_say": "Residents describe it as 'no longer reliable in this area' and report moving to taxis or a named private driver. A long-time expat Uber user in Puerto Plata: 'I think we are going to find a reliable taxi driver from here on out.' Another: 'Taxi's ended up being a much better experience.'",
+          "does_it_cover_sosua": "UNRESOLVED, and honestly so. Uber publishes Sosúa and POP airport marketing pages, but residents say there is no Uber in Sosúa, and Expat Focus (reviewed May 2026) lists Uber in only three cities: Santo Domingo, Santiago and Puerto Plata. A 2026 report from Puerto Plata shows 6-8 cars on the app — so the city works. Treat Sosúa/Cabarete as unproven.",
+          "how_to_not_get_burned": [
+            "If a driver messages you to change the price, CANCEL in the app before getting in. That is the whole defence.",
+            "Do not accept a cash top-up on top of the app fare — that is paying twice.",
+            "Confirm the price AND the payment method in the chat, and keep the chat.",
+            "If the price changes after acceptance, that is the scam pattern — take a taxi instead."
+          ],
+          "source": "Tripadvisor Puerto Plata forum ('Has anyone used an Uber?', Jan 2023 case + a current 'this month' case); Expat J / expatlatina.com 'The Problem Facing Uber in the Dominican Republic'; r/Dominican and r/solotravel threads — read 2026-09-23",
+          "verified": "yes — multiple independent, dated, and consistent; the scam is the norm, not an edge case",
+          "checked": "2026-09-23"
+        },
+        {
+          "name": "Named private driver / flat day rate",
+          "status": "WHAT THE LOCALS ACTUALLY RECOMMEND — primary alternative",
+          "why": "The most repeated local answer is not another app. It is a taxi company or a specific driver at a flat day rate — 'a little bit more than the Uber, but with no games at all.' Tripadvisor's Sosúa transportation listings are full of individual drivers recommended by name, and the Sosúa and Puerto Plata groups run regular threads asking for driver recommendations at a flat day rate.",
+          "why_it_fits_jordan": "A flat day rate is an ITINERARY, not a price — which is the shape he already buys in. It also removes the negotiation entirely, which is the single most useful thing when Spanish is still coming back.",
+          "source": "Tripadvisor Puerto Plata + Sosúa forums; 'Everything Sosua' FB group driver-recommendation threads — read 2026-09-23",
+          "verified": "yes — this is the consistent local recommendation",
+          "checked": "2026-09-23"
+        },
+        {
+          "name": "Local taxi (negotiated, no meter)",
+          "status": "works — the no-games fallback",
+          "why": "Taxis in the DR have no meters; the fare is agreed before you set off. That single fact is why taxis beat Uber here: the negotiation happens ONCE, up front, instead of after you have committed.",
+          "the_real_answer": "Base ≈200 DOP + ≈170 DOP/km. Airport taxis are officially pricier than street taxis. Do not let a hotel bellhop or front desk call it — you pay a premium for that.",
+          "source": "Expat Focus (reviewed May 2026); Tripadvisor forum reports",
+          "verified": "yes",
+          "checked": "2026-09-23"
+        },
+        {
+          "name": "inDrive",
+          "status": "works in DR — offer-your-fare model",
+          "why": "Live in the DR with its own country site. Its model is that the rider offers a fare and the driver accepts or counters — which fits the DR exactly, because DR fares are already negotiated rather than metered. Arguably a better structural fit than Uber here.",
+          "caveat": "It is still a negotiation, so the same discipline applies: settle it before you get in.",
+          "source": "indrive.com/en-do (official country site), read 2026-09-23; Expat Focus May 2026",
+          "verified": "yes — officially operating in the DR",
+          "checked": "2026-09-23"
+        },
+        {
+          "name": "Motoconcho (motorcycle taxi)",
+          "status": "available everywhere — not for luggage days",
+          "why": "Orange-vested motorcycle taxis are all over the North Coast and are the cheap local way to cover short hops (≈50 DOP daytime, double at night per person). They will approach you unprompted.",
+          "caveat": "Not for airport runs or with bags, and not the safest option. Recorded because he will see them constantly and should know what they are.",
+          "source": "Kite-travel guides and Cabarete forum discussion, read 2026-09-23",
+          "verified": "yes — widely reported",
+          "checked": "2026-09-23"
+        },
+        {
+          "name": "DiDi Rider / Cabify",
+          "status": "Santo Domingo mainly",
+          "why": "Both round out the main digital options but are concentrated in the capital.",
+          "source": "Expat Focus, reviewed May 2026",
+          "verified": "yes",
+          "checked": "2026-09-23"
+        }
+      ]
+    },
+    "events": {
+      "verdict": "POP Events is the North Coast's own daily calendar — start there.",
+      "apps": [
+        {
+          "name": "POP Events (pop-event.com)",
+          "status": "RECOMMENDED — primary",
+          "why": "A daily calendar built specifically for the North Coast — Puerto Plata, Sosúa and Cabarete. Concerts, meetups, recurring beach events and one-offs, updated daily. On the day of research it listed: Hard Rock Rising local final, Restaurant Week Puerto Plata 2026, Guananico and Imbert patronales fiestas, rooftop mojito nights, Latin Flow Dance Night at Aura Beach Club, several karaoke nights.",
+          "website": "https://pop-event.com/en/when/today",
+          "source": "The site itself, read 2026-09-23",
+          "verified": "yes"
+        },
+        {
+          "name": "puertoplatadr.com/events",
+          "status": "secondary",
+          "why": "North Coast travel guide with an events section — good for context, less current than POP Events.",
+          "website": "https://puertoplatadr.com/events",
+          "source": "Search result description ('the most complete travel guide for the North Coast... Puerto Plata, Sosua, Cabarete'), read 2026-09-23 — listed, not opened",
+          "verified": "listed only — not independently read"
+        },
+        {
+          "name": "Bandsintown / Eventbrite",
+          "status": "generic fallback",
+          "why": "Cover Sosúa for ticketed concerts and listed events, but miss the local fiestas that POP Events carries.",
+          "source": "Both publish a Sosúa events listing (bandsintown.com/c/sosua-dominican-republic, eventbrite.com/d/dominican-republic--sosua/events), read 2026-09-23",
+          "verified": "listed only — not independently read"
+        }
+      ]
+    }
+  },
+  "language_note": "These apps are also your Spanish practice. Komida and the taxi negotiation are the two places where Spanish buys you something real — a lower fare, and a menu nobody has translated.",
+  "equivalence": {
+    "_comment": "The need is the unit, not the app. A country with no known app says so explicitly rather than borrowing another country's name.",
+    "food delivery": {
+      "us": {
+        "app": "Grubhub / DoorDash / Uber Eats",
+        "status": "reference",
+        "note": "the need Jordan already knows from home"
+      },
+      "do": {
+        "app": "Komida",
+        "status": "RECOMMENDED",
+        "note": "The North Coast's own. Las Terrenas 2018 -> Puerto Plata, Sosua, Cabarete. 200+ venues, 100+ own riders. Sliced DR orders through it."
+      },
+      "do_alt": {
+        "app": "PedidosYa",
+        "status": "backup",
+        "note": "DR-wide and largest nationally, but Santo Domingo-centric."
+      },
+      "th": {
+        "app": "GrabFood / LINE MAN Wongnai",
+        "status": "RECOMMENDED",
+        "note": "Grab ~55% of SE Asia GMV; in Thailand a near-even race with LINE MAN, together ~90% after foodpanda's exit. Robinhood is the local third option — Thai, cashless, no commission to restaurants."
+      },
+      "th_alt": {
+        "app": "foodpanda",
+        "status": "DEAD IN THAILAND - withdrew May 2025",
+        "note": "Do not rely on it here. NOTE: the SAME brand is alive and #2 in the Philippines (39% share) — the brand travels, its survival does not. Check per country, never per brand."
+      },
+      "ph": {
+        "app": "GrabFood / foodpanda",
+        "status": "RECOMMENDED",
+        "note": "The Philippine market is effectively two players: Grab 61% and foodpanda 39% (2024 market share). GrabFood runs 24/7 in Metro Manila and Cebu. ShopeeFood launched in the Philippines in Sept 2026."
+      },
+      "ph_note": {
+        "app": "LINE MAN — NOT available",
+        "status": "absent",
+        "note": "Confirmed by Jordan and by the market: LINE MAN is Thailand-only because it is bolted onto LINE, which is Thailand's default messaging app. The Philippines runs on Messenger/Viber, so the delivery app that grew out of a chat app never appeared."
+      },
+      "th_bolt_food": {
+        "app": "Bolt Food (separate app)",
+        "status": "⚠️ CONFLICTED — do not resolve either way",
+        "note": "JORDAN, 2026-09-23: 'they eventually made a standalone app called Bolt Food because it used to be part of the app as well. I would check that out unless they got rid of it completely.' HE IS RIGHT ON THE HISTORY: Bolt Food launched Aug 2019 as a genuinely SEPARATE app (CNBC, at launch: the service 'would be available through a separate app called Bolt Food'). EVIDENCE IT IS LIVE IN THAILAND: a Thai-language Bolt Food site exists (bolt.eu/th-th/food), a Thai Play Store listing exists (com.bolt.deliveryclient, hl=th), and the app is listed in the Thai App Store storefront (apps.apple.com/th/...). EVIDENCE AGAINST: Bolt's OWN per-city service list — the operational statement, not marketing — shows ONLY 'Bolt Rides' under 'Available services in Bangkok' and 'in Chiang Mai'. The same template renders a Bolt Food entry for European cities. And a Thailand app guide (Sep 2026) titles the category 'Grab & Bolt: Ride-hailing & Food delivery (Only Grab)'. RESOLUTION PATH (his, not mine): open Bolt Food and enter the Sosua/Bangkok address, or select the city on bolt.eu/cities — coverage is resolved per address, per Bolt's own support page. BOTTOM LINE: this is a CONFLICT, not a settled fact. Either claim would be a guess."
+      }
+    },
+    "ride": {
+      "us": {
+        "app": "Uber / Lyft",
+        "status": "reference"
+      },
+      "do": {
+        "app": "inDrive / local taxi / named private driver",
+        "status": "RECOMMENDED",
+        "note": "Uber operates but drivers routinely renegotiate the agreed price upward - cancel before boarding. Taxis have no meter, so the fare is settled once, up front."
+      },
+      "th": {
+        "app": "Grab / Bolt",
+        "status": "RECOMMENDED",
+        "note": "CORRECTED 2026-09-23: I previously wrote 'Bolt is RIDES ONLY in Thailand' as settled — that was an OVERCLAIM built on a single community summary, and Jordan pushed back correctly. Bolt RIDES are the certain part (Bolt launched rides in Bangkok in 2020, Thailand was its SEA debut; Economy/Bolt/Comfort/XL/Taxi/Motor/Ladies). Whether Bolt FOOD operates in Thailand is ⚠️ CONFLICTED — see th_bolt_food. What IS certain: Bolt rides are usually cheaper than Grab for short trips, and Grab unquestionably does food. So the safe play is still Bolt for the ride, Grab for the meal — but that is a hedge, not a claim that Bolt Food is absent."
+      },
+      "ph": {
+        "app": "Grab (cars) + Angkas / JoyRide / MoveIt (motorbike)",
+        "status": "RECOMMENDED",
+        "note": "Philippine rides split by vehicle: Grab does private cars and taxis, while Angkas, JoyRide and MoveIt own the motorcycle-taxi segment. inDrive has launched officially in Metro Manila, Cebu, Baguio, Bacolod, Iloilo, Cagayan de Oro and Butuan. Green GSM (electric cars) is the rising budget option."
+      },
+      "ph_note": {
+        "app": "Uber — GONE",
+        "status": "absent",
+        "note": "Uber exited Southeast Asia in 2018, selling to Grab. Do not look for it."
+      }
+    },
+    "events": {
+      "do": {
+        "app": "POP Events (pop-event.com)",
+        "status": "RECOMMENDED",
+        "note": "Daily North Coast calendar - Puerto Plata, Sosua, Cabarete."
+      }
+    },
+    "the_choice": {
+      "need": "I don't want to go out for it",
+      "option_a": "Ride there - a ride app (Grab / inDrive / taxi)",
+      "option_b": "Have it delivered - a delivery app (Komida / GrabFood)",
+      "note": "Same need, two resolutions. Knowing the equivalence is what turns 'I need a moto' into 'I could just have it delivered'."
+    },
+    "why_apps_travel": {
+      "_comment": "The rule that predicts the next country, from Jordan's own observation that Thailand has LINE MAN and the Philippines does not.",
+      "dedicated_superapps_travel": "Grab works across the region because it is a standalone superapp — rides, food, parcels, payments. Nothing local holds it back.",
+      "chat_bolted_apps_do_not": "LINE MAN exists only where LINE is the default messenger (Thailand). It grew out of a chat app, so it cannot follow the diaspora of users — it follows the messaging habit. The Philippines runs on Messenger/Viber, so LINE MAN never appeared.",
+      "brands_survive_market_by_market": "foodpanda is DEAD in Thailand (2025) and #2 in the Philippines (39%). A brand being present somewhere says nothing about it being present here.",
+      "therefore": "NEVER carry an app recommendation across a border. Resolve the need against the destination, every time."
+    }
+  },
+  "sosua_focus_2026_09_23": {
+    "_comment": "Jordan, 2026-09-23: 'So more than likely for the four days that I'm away, I may just stay in Sosua so that way I don't have to go from one town to the next... I think I'll just do that instead of going to Puerto Plata. Puerto Plata is like an hour away from Sosua.' — The plan change is sound. The DISTANCE he used to justify it is wrong, and the correction matters because it removes a reason to skip the airport-city entirely.",
+    "the_plan": "Base in Sosúa for all four days. One area, no repacking, no moving between towns.",
+    "the_correction": {
+      "his_estimate": "Puerto Plata is about an hour away from Sosúa.",
+      "measured": "Sosúa <-> Puerto Plata is ~15-27 minutes, 15-24 km along Highway 5.",
+      "sources": [
+        "Rome2rio: 24 km, ~27 min",
+        "Wanderlog: 15 km, ~22 min",
+        "Bookaway: ~18 km, ~15 min",
+        "Travelmath: ~27 min"
+      ],
+      "why_it_matters": "The 'it's an hour away' reason is wrong by roughly half. But the DECISION still holds on better grounds — a four-day trip with a base in one town is right regardless of how close the other town is. Correcting the reason does not change the plan; it just removes a false constraint.",
+      "his_estimate_revisited": "Jordan clarified: 'I was probably thinking about with traffic.' THAT IS DEFENSIBLE — DR peak traffic runs 7-9 a.m. and 5-7 p.m., DIGESETT police manage intersections at rush hour, and the North Coast highway (Highway 5, Puerto Plata-Sosua-Cabarete) has curves, hills and mixed traffic with well-documented congestion in the Sosua-Cabarete stretch. So 15-27 min is the OFF-PEAK figure, and a peak-hour run can plausibly approach an hour. Both numbers are true; they describe different times of day. The useful statement is: ~20-25 min off-peak, up to ~45-60 min in the 7-9am / 5-7pm peak."
+    },
+    "what_it_actually_changes": {
+      "POP_airport_is_much_closer_than_he_may_realize": "POP (Gregorio Luperón) is only about 7-10 km / 9-20 min from Sosúa — several sources put it at 10 minutes. That is the real anchor: he lands ~10 minutes from his base.",
+      "puerto_plata_is_still_day_trip_viable_if_he_wants_it": "At ~25 min each way it is not a day trip OR an overnight commitment — it is an afternoon. The cable car (Mount Isabel de Torres) is the main draw in the city.",
+      "sosua_gives_him_the_specific_venues_he_named": [
+        "Flip Flop Sports Bar — Duarte, El Batey, Sosúa",
+        "Sliced DR — corner of Pedro Clisante & Dr. Rosen, Sosúa"
+      ],
+      "cabarete_is_the_neighbour": "~20 km / 25 min from POP, and close to Sosúa. The kite-surf town, if he wants a second beach and a different night out."
+    },
+    "verified": "2026-09-23",
+    "the_plan_is_confirmed": "Jordan, 2026-09-23: 'for four days I just don't think it's a good idea to try to hit two towns.' CONFIRMED AND SOUND. Not because Puerto Plata is far — because four days does not hold two bases. One base, Sosua, with Puerto Plata as an optional afternoon if he wants the cable car."
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "_why": "SUBJECT-SPECIFIC level targets. This is the PACK side of the EDU engine/pack boundary: a new subject adds this file, it never edits the engine. The engine owns the CEFR ladder and the honesty rules; this file owns 'how good do I need to be, for THIS trip'.",
+  "_ladder_source": "CEFR cumulative guided-learning-hour estimates, cross-read 2026-09-24 across CEFR/Spanish-school/FSI-derived tables (espanol.com, internationalenglishtest, lingualive, pcpcespanishschool). Ranges are quoted, never averaged into one fake number.",
+  "targets": [
+    {
+      "match": ["sosúa", "sosua", "puerto plata", "cabarete", "pop", "playa dorada", "punta cana", "puj", "bávaro", "bavaro"],
+      "zone": "tourist",
+      "target": "A1",
+      "label": "Tourist zone — survival, not conversation",
+      "why": "Resort and expat zones (Sosúa, Cabarete, Punta Cana/Bávaro) run on English — hotels, bars and the venues already on file. A1 gets the taxi, the passport desk and the menu done. Not being fluent here costs nothing.",
+      "phrases_that_matter": ["greeting", "airport", "taxi", "hotel", "food"]
+    },
+    {
+      "match": ["santo domingo", "sdq", "santiago", "santiago de los caballeros", "sti", "la vega", "moca", "bonao"],
+      "zone": "city",
+      "target": "B1",
+      "label": "Real city — conversational floor",
+      "why": "Santo Domingo and Santiago are not tourist zones. Outside the hotel desk and the airport, English thins out fast. A2 gets him understood but not conversing — B1 is the first level where a spontaneous exchange with a local is survivable. Cibao-region speech (Santiago, Moca, La Vega) drops the s hardest, so listening is the wall, not speaking.",
+      "phrases_that_matter": ["greeting", "directions", "market", "smalltalk", "food", "taxi", "hotel"]
+    },
+    {
+      "match": ["thailand", "bangkok", "pattaya", "chiang mai"],
+      "zone": "tourist",
+      "target": "A1",
+      "label": "Two-week Thailand — get around politely",
+      "why": "Thai is FSI Category IV (~1,100 class hours). A fluent goal does not fit in the months before the trip, so the honest target is polite survival, not fluency.",
+      "phrases_that_matter": ["greeting", "airport", "taxi", "hotel", "food"]
+    }
+  ],
+  "default": {
+    "zone": "unknown",
+    "target": null,
+    "label": "No target resolved",
+    "why": "No place in the trip data maps to a known zone. Refusing to invent a target rather than guessing one."
+  }
+}

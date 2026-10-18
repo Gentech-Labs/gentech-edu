@@ -1,0 +1,41 @@
+{
+ "_what": "VOICE MAPPING — PACK DATA. Which voice speaks which dialect, per learner FORM. §4 of the edu skill names voice mapping as pack, not engine — this is that file.",
+ "_rule": "A LANGUAGE NAME IS NOT A VOICE. A multilingual voice that can pronounce Thai is still an English speaker pronouncing Thai: the learner copies the accent, and unlearns it at cost. Every dialect here names a NATIVE voice, and an entry with no native voice says so out loud instead of borrowing one.",
+ "_verified": "2026-10-17 — /v1/voices on the fleet account held 34 voices and not one was Thai (every label 'en', one 'es', one 'ru'). th-TH was wired to CwhRBWXzGAHq8TQ4Fs17 'Roger' (accent=american). Two Thai voices were then ADDED from the shared library (free — adds do not consume characters) and are verified present.",
+ "_add_a_voice": "Shared voices are NOT synthesis-capable by id alone — POST /v1/voices/add/{public_owner_id}/{voice_id} first, or /text-to-speech returns 404 voice_not_found. That missing step is what 'the voice 404s' means.",
+ "dialects": {
+  "es-DO": { "by_form": { "default": "tpbS1suUR3ke5cIZG2E3" }, "note": "Anderson — lang=es accent=dominican" },
+  "th-TH": {
+   "by_form": {
+    "male form": "FaUQoAqt8WX5mfvrvb3A",
+    "female form": "B4NdgwdU97lHqA8Udh2D"
+   },
+   "note": "Preecha (th, male — 'Patient, Friendly, Clear') for Jordan; Kanya (th, female — 'Warm, Calm Narrator') for Josephine. A learner copies the voice they hear, so the voice must match the learner's own particle."
+  }
+ },
+ "bridge": {
+  "_what": "THE BRIDGE — the Latin reading (`rom`) said ALOUD, so the learner hears the approximation beside the real Thai. A bridge is only a bridge if it is spoken in the learner's OWN first language. Jordan, 2026-10-17: 'I am American, so I speak English… Josephine, she's Filipino, so she speaks Tagalog… speak to her and her language whenever she is asking for pronunciation.' An English-eye reading does not serve a Tagalog speaker. THE DELTA BETWEEN THE TWO CLIPS IS THE LESSON — and it matters most because RTGS drops tones, so the audio is the only carrier of them.",
+  "by_lang": {
+   "en-US": {
+    "voice_id": "SAz9YHcvj6GT2YYXdXww",
+    "voice_name": "River - Relaxed, Neutral, Informative",
+    "accent": "american",
+    "learner": "jordan",
+    "why": "AMERICAN on purpose: he reads that string with an American ear, so the bridge must approximate THAT reading. 'Neutral / Informative' rather than a performer — the bridge is a reference, not a character."
+   },
+   "fil-PH": {
+    "voice_id": "t7sNfI9XT9DjDN4H58e6",
+    "voice_name": "Onessa - Young Reporter (Filipino)",
+    "accent": "filipino",
+    "learner": "josephine-b",
+    "_status": "PROVISIONAL — her first language was given by Jordan, not by her. She is the authority on her own language and has not confirmed it yet.",
+    "why": "A clear reporter's articulation rather than a performer, because the bridge is a REFERENCE. Added from the shared library 2026-10-17 (free) and proven synthesis-capable with a 16,761-byte probe.",
+    "_open_second_layer": "HALF DONE, and this file should say so: the READING TEXT is still spelled for an English eye (RTGS — 'phom ma thiao khrap'). Tagalog is phonetically regular and has no 'ph' or 'kh', so her approximation should be re-spelled in Tagalog orthography. Until that layer exists this clip is an English spelling in a Filipino voice — useful, but not yet truly her bridge."
+   }
+  },
+  "_no_bridge_for_a_language": "If a learner's first language has no entry here, the render must SAY SO and serve the Thai alone. Never hand a learner another language's approximation and call it a bridge — same wrong-answer class as borrowing an English voice to speak Thai.",
+  "_verified": "2026-10-17 — both by_lang entries listed live from /v1/voices and synthesised successfully on the `suay` test clip.",
+  "_bridge_is_not_a_borrowed_voice": "A bridge voice reads an APPROXIMATION in the learner's own language — it is NEVER used to speak Thai script. `no_borrowed_voice` still holds: the Thai side stays native-only, and a missing native voice still means refuse."
+ },
+ "no_borrowed_voice": ["th-TH"]
+}

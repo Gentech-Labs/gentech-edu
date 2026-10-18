@@ -1,0 +1,540 @@
+{
+ "_comment": "Real places Jordan is actually going to. Each venue carries the facts that make the SCENARIO specific — the real menu items, real prices, real address. Phrases are generated against these, not against a generic corpus. Verified 2026-09-23.",
+ "venues": [
+  {
+   "id": "pop-airport",
+   "name": "Puerto Plata Airport (POP) — Gregorio Luperón",
+   "type": "airport",
+   "dialect": "es-DO",
+   "city": "Puerto Plata",
+   "context": "He lands here for the DR trip. First Spanish he needs is the taxi rank outside arrivals.",
+   "verified": "2026-09-23",
+   "notes": "POP serves Puerto Plata, Sosúa and Cabarete."
+  },
+  {
+   "id": "flip-flops",
+   "name": "Flip Flop Sports Bar",
+   "type": "restaurant",
+   "dialect": "es-DO",
+   "city": "Sosúa",
+   "address": "Duarte, 57000 Sosúa, Dominican Republic (Beachway Plaza / #2 Duarte Street, El Batey)",
+   "phone": "+1 829-817-8147",
+   "hours": "Restaurant 7am-10pm; Bar 11am-12am; open 7 days",
+   "website": "https://flipflop360.com",
+   "menu_url": "https://flipflop360.com/menu",
+   "source": "Own site (flipflop360.com) + its two menu boards, read 2026-09-23",
+   "verified": "2026-09-23",
+   "currency": "DOP",
+   "staff_languages": "English AND Spanish speaking (per Tripadvisor reviews)",
+   "note_for_jordan": "Staff speak English here — so this is a LOW-STAKES place to practise. Good first stop, not a hard test.",
+   "menu": {
+    "breakfast": [
+     {
+      "item": "Dominican Breakfast",
+      "dop": 350,
+      "note": "eggs, salami, mangú, fried cheese — the authentic one"
+     },
+     {
+      "item": "Basic Breakfast",
+      "dop": 325,
+      "note": "two eggs any style, toast, bacon, coffee"
+     },
+     {
+      "item": "Big Boy Platter",
+      "dop": 610
+     },
+     {
+      "item": "Stuffed French Toast",
+      "dop": 500,
+      "note": "signature — peanut butter, jelly or cream cheese"
+     },
+     {
+      "item": "Flip Flop Omelette",
+      "dop": 475
+     },
+     {
+      "item": "Steak & Eggs",
+      "dop": 1215
+     },
+     {
+      "item": "Grande Breakfast Burrito",
+      "dop": 435
+     },
+     {
+      "item": "Mexicana",
+      "dop": 375
+     }
+    ],
+    "wings": [
+     {
+      "item": "Our Famous Wings (12)",
+      "dop": 795
+     },
+     {
+      "item": "Our Famous Wings (12) with fries",
+      "dop": 925
+     }
+    ],
+    "wing_sauces": [
+     "BBQ",
+     "Honey BBQ",
+     "Spicy Buffalo",
+     "Buffalo",
+     "Fiesta",
+     "Lemon Pepper",
+     "Garlic Parmesan",
+     "Mambo",
+     "HEAT",
+     "Teriyaki",
+     "General Tso"
+    ],
+    "burgers": [
+     {
+      "item": "Flip Flop Burger",
+      "dop": 625,
+      "note": "quarter pounder topped with fried egg"
+     },
+     {
+      "item": "Taco Burger",
+      "dop": 625,
+      "note": "two patties, cheese, special sauce, wrapped in a tortilla"
+     },
+     {
+      "item": "Angus Burger",
+      "dop": 795
+     },
+     {
+      "item": "Chicken Burger",
+      "dop": 665
+     }
+    ],
+    "tacos": [
+     {
+      "item": "Taco — Chicken",
+      "dop": 150,
+      "unit": "1 taco"
+     },
+     {
+      "item": "Taco — Beef",
+      "dop": 120,
+      "unit": "1 taco"
+     },
+     {
+      "item": "Taco — Fish",
+      "dop": 205,
+      "unit": "1 taco"
+     },
+     {
+      "item": "3 Tacos — Chicken",
+      "dop": 450
+     }
+    ],
+    "specials": [
+     {
+      "item": "Flip Flop Platter",
+      "dop": 1000,
+      "note": "2 beers, 6 wings, 2 tacos"
+     },
+     {
+      "item": "York Combo",
+      "dop": 1000,
+      "note": "1 beer, 6 wings, fried rice"
+     },
+     {
+      "item": "Fish Platter",
+      "dop": null,
+      "note": "snapper/grouper/salmon, price varies"
+     }
+    ],
+    "sides": [
+     {
+      "item": "Rice & Beans",
+      "dop": 165
+     },
+     {
+      "item": "Fresh Cut Fries",
+      "dop": 225
+     },
+     {
+      "item": "Guacamole",
+      "dop": 115
+     },
+     {
+      "item": "Pico De Gallo",
+      "dop": 80
+     }
+    ],
+    "drinks_note": "Beers served; Flip Flop Punch is the signature tropical mix"
+   },
+   "daily_specials": {
+    "Monday": "ALL DAY Happy Hour 8am-9:30pm",
+    "Tuesday": "Taco Tuesday",
+    "Wednesday": "Wing Wednesday — 12 wings",
+    "Thursday": "Burrito Thursday",
+    "Friday": "Fried Rice Friday"
+   },
+   "footer_note_from_menu": "Taxes included / Tip NOT included"
+  },
+  {
+   "id": "sliced-dr",
+   "name": "Sliced DR — Rooftop Pizzeria Lounge",
+   "type": "pizzeria",
+   "dialect": "es-DO",
+   "city": "Sosúa",
+   "address": "Corner of Pedro Clisante & Dr. Rosen, Sosúa 57000, Dominican Republic",
+   "phone": "+1 849-517-1853",
+   "website": "https://www.instagram.com/sliced_dr",
+   "menu_url": "Komida app (their published ordering channel — no public web menu)",
+   "source": "Wanderlog/Google listing (4.8★, 79 reviews), Sliced DR's own FB/IG posts, TikTok @sosuaenvivo — read 2026-09-23",
+   "verified": "2026-09-23",
+   "currency": "DOP",
+   "menu_source_attempts": "Jordan asked directly: 'Are you able to get the prices for Sliced DR?' — partially YES, and here is exactly what was verifiable vs not. Their full FOOD menu is APP-GATED: ordering runs through the Komida app, and Komida publishes no web ordering (no subdomain, no /api/, no menu endpoint — all checked and 404). No aggregator lists their food prices either. But their own boards carry real RD$ figures — recorded below, marked per line.",
+   "staff_languages": "Spanish-speaking; reviews name staff Yasmin and Esmeralda for service",
+   "note_for_jordan": "Jordan's own request: 'a pizza restaurant out there called Sliced DR that I want to check out too. They got an oxtail pizza. I need that.' Rooftop, elevated corner seat overlooking Pedro Clisante.",
+   "hours_conflict": [
+    "Wanderlog/Google: Su 12AM-12PM & 4PM-12AM; Mo 12AM-12PM & 4PM-11AM; Tu CLOSED; We 4PM-11AM; Th 12-11AM & 4PM-11AM; Fr 12-11AM & 4PM-12AM; Sa 12AM-12PM & 4PM-12AM",
+    "Tripadvisor reviewer: 'It opens at 4 PM'",
+    "Their own FB post: 'serving hours 12:30 pm-3:00 pm'",
+    "NOTE: the Google rows are internally garbled (a closing time cannot be 11AM after a 4PM open). The one thing all sources agree on is a 4PM evening service and that TUESDAY is closed. Treat the rest as UNVERIFIED and call ahead."
+   ],
+   "menu": {
+    "signature": [
+     {
+      "item": "Oxtail Pizza",
+      "price": null,
+      "note": "THE reason Jordan is going. Confirmed by multiple independent sources as their signature."
+     },
+     {
+      "item": "8 Mile Detroit Style",
+      "price": null,
+      "note": "Detroit-style, highly praised in reviews"
+     }
+    ],
+    "by_the_slice": [
+     {
+      "item": "Pizza by the slice",
+      "price": "$2.50",
+      "note": "their own post: '$2.50, all day, everyday' — currency as posted, unconfirmed USD/DOP",
+      "verified": "own post only"
+     }
+    ],
+    "happy_hour_drinks": [
+     {
+      "item": "Margarita",
+      "dop": 200,
+      "note": "HAPPY HOUR board — 1x 200 RD$"
+     },
+     {
+      "item": "Cuba Libre",
+      "dop": 150,
+      "note": "HAPPY HOUR board — 1x 150 RD$"
+     },
+     {
+      "item": "Rum Punch",
+      "dop": 175,
+      "note": "HAPPY HOUR board — 1x 175 RD$"
+     },
+     {
+      "item": "Mojito",
+      "dop": 200,
+      "note": "HAPPY HOUR board — 1x 200 RD$"
+     },
+     {
+      "item": "Mama Juana",
+      "dop": null,
+      "note": "on the board; the 100 figure aligns with it but the mapping is not certain — NOT asserted"
+     },
+     {
+      "item": "Vodka Tonic",
+      "dop": null,
+      "note": "on the board; the 250 figure aligns with it but the mapping is not certain — NOT asserted"
+     },
+     {
+      "item": "Tequila Sunrise",
+      "dop": null,
+      "note": "listed last on the board; no price could be matched to it"
+     }
+    ],
+    "happy_hour_note": "From their own 'HAPPY HOUR DRINK SPECIALS' board: MARGARITA / CUBA LIBRE / RUM PUNCH / MAMA JUANA / MOJITO / VODKA TONIC / TEQUILA SUNRISE, priced 200 / 150 / 175 / 100 / 200 / 250. SEVEN drinks against SIX prices — so two prices could not be matched with certainty. Only the four above are asserted; the full drink list is published here so nothing is hidden. Pizza happy hour is 5PM-8PM.",
+    "other_flavours_named": [
+     "Oxtail",
+     "8 Mile Detroit Style",
+     "BBQ Chicken",
+     "Bourbon Bacon",
+     "Pepperoni",
+     "Dominican",
+     "Meat Lover",
+     "Cheese Smash",
+     "Swanky Chicken Deluxe (pizza sauce, cheese, peppers, bacon, mushroom, chicken)"
+    ],
+    "other_food": [
+     "Smash burgers",
+     "Oven-baked wings",
+     "Pizza sandwiches"
+    ],
+    "drinks": [
+     {
+      "item": "Orange Cream Pop / Peach Gummy Slushies",
+      "price": "$5.99",
+      "note": "own post, dine-in or takeout"
+     }
+    ],
+    "pizza_of_the_month_note": "They run a rotating monthly special — a Caesar-dressing base with mozzarella, grilled chicken and crispy bacon; a later one was a 'Canadian' pizza."
+   },
+   "how_to_get_the_food_prices_that_are_missing": "Download the Komida app (iOS id1356304936 / Android pro.komida). Komida's own listings confirm it delivers in Puerto Plata, Sosúa, Cabarete and Las Terrenas — and its prices display in RD$. Or DM/WhatsApp Sliced directly; their own post says 'DM/WhatsApp us directly' for orders and reservations.",
+   "price_honesty": "Sliced's FOOD prices (including the oxtail pizza) are app-gated and NOT published anywhere on the open web — verified by checking their site, Komida's web presence, and menu aggregators. They are UNKNOWN here and must NOT be guessed. What IS recorded: the four verified happy-hour drink prices and the $2.50 slice figure from their own posts."
+  },
+  {
+   "id": "bkk-7eleven",
+   "name": "7-Eleven Thailand (any store)",
+   "type": "convenience_store",
+   "dialect": "th-TH",
+   "city": "Bangkok / Pattaya",
+   "context": "Jordan, 2026-10-15: *\"I know 7-Eleven is almost everywhere, so we can make lessons on ordering certain items from 7-11. I know their 7-Eleven is different from ours.\"* He is right — the Thai store is a food business, not a snack aisle.",
+   "source": "cktravels.com '64 things you can buy in Thailand's 7-Eleven' + travelinstinctoz.com 'The 7-Eleven Phenomenon' (Jun 2026) + thai-awesome.com '10 new must-try 7-Eleven foods 2026'",
+   "verified": "2026-10-15",
+   "currency": "THB",
+   "the_difference": "THE store fact to know: your toastie is not ready to eat — **staff microwave it for you, for free**. That single request (เวฟให้หน่อย) is the most useful Thai sentence in the country.",
+   "items": [
+    {
+     "item": "Toastie / toasted sandwich (แซนด์วิช)",
+     "price": "~25-45 THB",
+     "note": "50+ flavours and counting: cheese, carbonara danish, pandan custard, Milo Roti, plant-based pork. THE reason to go."
+    },
+    {
+     "item": "Tamago sando (Japanese egg salad)",
+     "price": "~29 THB",
+     "note": "Refrigerated section, Kewpie mayo on milk bread. Sells out fast — go earlier in the day."
+    },
+    {
+     "item": "Gyoza / dim sum",
+     "price": "~35-45 THB",
+     "note": "Chiller. Staff microwave it; packet has a sauce sachet and a small fork."
+    },
+    {
+     "item": "Crab fried rice (khao phat buu)",
+     "price": "~40-50 THB",
+     "note": "Microwavable meal, almost universal. Rated as good as street food."
+    },
+    {
+     "item": "Onigiri + sushi",
+     "price": "~25-40 THB",
+     "note": "Japanese-style, a reliable breakfast."
+    },
+    {
+     "item": "Nata de coco / coconut jelly cup",
+     "price": "~20 THB",
+     "note": "Light and cold — the right call in the heat."
+    },
+    {
+     "item": "Bottled Thai milk tea / banana+chocolate milk",
+     "price": "~20-25 THB",
+     "note": "Mix the banana-caramel and chocolate milks for the local dessert-in-a-cup."
+    },
+    {
+     "item": "Lays nori seaweed chips",
+     "price": "~20 THB",
+     "note": "Thailand-only flavours. Don't buy blind if shellfish matters to you — nori versions can carry shrimp powder."
+    },
+    {
+     "item": "C-Vitt vitamin drink",
+     "price": "~12 THB",
+     "note": "The ubiquitous 7-11 drink; everywhere on every trip report."
+    }
+   ],
+   "phrases": [
+    {
+     "th": "อันนี้เท่าไหร่",
+     "rom": "an-níi thâo-rài",
+     "en": "How much is this one?"
+    },
+    {
+     "th": "เวฟให้หน่อย",
+     "rom": "wéep hâi nòi",
+     "en": "Microwave this, please.  <- the toastie sentence",
+     "friction": "Say it at the counter when you hand over the toastie. This is the single highest-value phrase in the store."
+    },
+    {
+     "th": "ไม่ใส่พริก",
+     "rom": "mâi sài phrík",
+     "en": "No chili, please."
+    },
+    {
+     "th": "ไม่หวาน",
+     "rom": "mâi wǎan",
+     "en": "Not sweet, please."
+    },
+    {
+     "th": "ถุงด้วย",
+     "rom": "thǔng dûai",
+     "en": "A bag as well, please."
+    }
+   ]
+  },
+  {
+   "id": "ekkamai-bus",
+   "name": "Ekkamai Bus Terminal (Bangkok) -> Pattaya",
+   "type": "transport",
+   "dialect": "th-TH",
+   "city": "Bangkok",
+   "address": "Ekkamai / Eastern Bus Terminal, next to BTS Ekkamai (เอกมัย)",
+   "context": "Jordan's plan: 1-2 days in Bangkok, then the rest in Pattaya. Pattaya is a BUS, not a flight.",
+   "source": "bangkokpattayabus.com (operator Roong Reuang Coach; page last checked 2026-08-02) + our own measured route doc 2026-09-28",
+   "verified": "2026-10-15",
+   "currency": "THB",
+   "facts": {
+    "fare": "148 THB from Ekkamai (158 THB from Mo Chit 2)",
+    "duration": "~2-3 hours, ~150 km, traffic-dependent",
+    "buy_at": "the counter at the terminal — no advance purchase needed for the regular coach",
+    "arrives": "North Pattaya Bus Station, then a songthaew or taxi to the hotel",
+    "why_not_a_flight": "UTP/Pattaya airport is 229 USD round trip and 3h15 for a 140 km trip — the most expensive and slowest option on the list."
+   },
+   "phrases": [
+    {
+     "th": "ตั๋วไปพัทยา",
+     "rom": "tǔa pai phát-thá-yaa",
+     "en": "A ticket to Pattaya."
+    },
+    {
+     "th": "กี่บาท",
+     "rom": "kìi bàat",
+     "en": "How much?"
+    },
+    {
+     "th": "รถออกกี่โมง",
+     "rom": "rót òk kìi moong",
+     "en": "What time does it leave?"
+    },
+    {
+     "th": "สถานีขนส่ง",
+     "rom": "sà-thǎa-nii khǒn-sòng",
+     "en": "Bus terminal (say it to the taxi driver)."
+    },
+    {
+     "th": "ไปเอกมัย",
+     "rom": "pai èk-ka-mai",
+     "en": "To Ekkamai (to the taxi driver)."
+    }
+   ]
+  },
+  {
+   "id": "mochit-bus",
+   "name": "Mo Chit 2 Bus Terminal (Bangkok) -> Pattaya",
+   "type": "transport",
+   "dialect": "th-TH",
+   "city": "Bangkok",
+   "address": "Mo Chit 2 / Northern Bus Terminal (หมอชิต 2)",
+   "context": "The other Pattaya terminal — 10 THB more than Ekkamai. Relevant if he is coming from Chatuchak or the north of the city.",
+   "source": "bangkokpattayabus.com (operator-published fares; checked 2026-08-02)",
+   "verified": "2026-10-15",
+   "currency": "THB",
+   "facts": {
+    "fare": "158 THB",
+    "duration": "~2-3 hours",
+    "note": "Ekkamai is the cheaper and more usual choice from central Bangkok."
+   },
+   "phrases": [
+    {
+     "th": "หมอชิต",
+     "rom": "mǒr-chít",
+     "en": "Mo Chit (to the taxi driver)."
+    }
+   ]
+  },
+  {
+   "id": "north-pattaya-station",
+   "name": "North Pattaya Bus Station",
+   "type": "transport",
+   "dialect": "th-TH",
+   "city": "Pattaya",
+   "context": "Where the bus actually drops him. The last leg to the hotel is the part first-timers get wrong.",
+   "source": "bangkokpattayabus.com (arrival point)",
+   "verified": "2026-10-15",
+   "facts": {
+    "onward": "songthaew (the baht bus, ~10 THB along the route) or a taxi to the hotel",
+    "friction": "AGREE THE FARE BEFORE THE BAGS GO IN. A songthaew on the fixed route is ~10 THB; a chartered one is negotiated."
+   },
+   "phrases": [
+    {
+     "th": "ไปพัทยาเหนือ",
+     "rom": "pai phát-thá-yaa nʉ̌a",
+     "en": "To North Pattaya."
+    },
+    {
+     "th": "เท่าไหร่",
+     "rom": "thâo-rài",
+     "en": "How much?  <- ask BEFORE you get in",
+     "friction": "Agree the price before boarding. This is the one place a tourist gets overcharged."
+    }
+   ]
+  },
+  {
+   "id": "la-miniera",
+   "name": "La Miniera Pool Villas Pattaya",
+   "type": "villa",
+   "dialect": "th-TH",
+   "city": "Pattaya (Nong Prue, Bang Lamung, Chonburi)",
+   "address": "666 Moo 1, Chaiyapornvitee 14 Road, Nong Prue, Bang Lamung, Chonburi 20150 — ~2 h by road from Bangkok",
+   "context": "The villa from the Instagram reel Jordan found (nora_travellife, 2026-10-16). HQ identified it as La Miniera Pool Villas Pattaya and Jordan confirmed it: *\"Thank you so much i found it.\"* It is the anchor of the Pattaya leg — and the reason the sentence pattern จาก X แค่ [time] ก็มี Y is worth owning.",
+   "source": "00-HQ/pattaya-villa-identified-2026-10-16.md (TripAdvisor range, Agoda average, KAYAK 'from' + booking-lead finding); the property's own published tour video for the in-room pool + 2-hour-from-Bangkok claim",
+   "verified": "2026-10-16",
+   "currency": "USD",
+   "the_difference": "THE sentence to own is the one the reel itself used: จาก X แค่ [time] ก็มี Y — 'just [time] from X, and there's Y.' It describes ANY destination by distance + draw, so it survives every hotel, every town and every trip after this one. Learn the shape, not the sentence.",
+   "rates": [
+    {
+     "item": "Pool Villa — low/shoulder night",
+     "price": "$154 (TripAdvisor low end)",
+     "note": "Shoulder nights read as a steal at this price; Monday is the cheapest night (~$179 average)."
+    },
+    {
+     "item": "Pool Villa — typical night",
+     "price": "~$201-250 (Agoda average)",
+     "note": "The realistic band for a mid-week booking."
+    },
+    {
+     "item": "Peak night (Sunday)",
+     "price": "~$308 average",
+     "note": "Sunday is the most expensive night of the week here — shift the stay if the dates are flexible."
+    },
+    {
+     "item": "Top-end night",
+     "price": "up to $596 (TripAdvisor high)",
+     "note": "Honest counterweight: at ~$250+ reviews are NOT uniformly glowing — one Agoda reviewer complained of a dirty in-room pool at >10,000 THB/night. The value case is the $150-180 shoulder, not the top end."
+    },
+    {
+     "item": "Booking lead time",
+     "price": "book ~11 weeks out",
+     "note": "KAYAK's own data: ~17% cheaper than last-minute. For a late-January trip that means booking mid-November — which also falls OUTSIDE Jordan's Nov 28 - Dec 24 Amazon blackout."
+    }
+   ],
+   "phrases": [
+    {
+     "th": "จากกรุงเทพ แค่ 2 ชม. ก็มีวิลล่าให้ว่ายน้ำในห้อง",
+     "rom": "jàak krung-thêep khâe 2 chôo-moong kôr mii wan-lâa hâi wâai-náam nai hông",
+     "en": "Just 2 hours from Bangkok, and there's a villa where you swim in your room.  <- the pattern sentence"
+    },
+    {
+     "th": "ไม่ใช่บาหลี อยู่ที่พัทยานี่แหละ",
+     "rom": "mâi châi baa-lîi yùu thîi phát-thá-yaa nîi-làe",
+     "en": "It's not Bali — it's right here in Pattaya.  <- the reel's caption"
+    },
+    {
+     "th": "ห้องมีสระว่ายน้ำส่วนตัวไหม",
+     "rom": "hông mii sà-wàai-náam sùan-tua mǎi",
+     "en": "Does the room have a private pool?"
+    },
+    {
+     "th": "ขอเช็คอินเร็วได้ไหม",
+     "rom": "khǒr chék-in reo dâi mǎi",
+     "en": "Can we check in early?"
+    },
+    {
+     "th": "มีรถรับจากสนามบินไหม",
+     "rom": "mii rót ráp jàak sà-nǎam-bin mǎi",
+     "en": "Is there an airport pickup?"
+    }
+   ],
+   "note_for_jordan": "This is a LANGUAGE entry first: the deliverable is the จาก X แค่ [time] ก็มี Y pattern, and the page can punch him in the face with real money beside it. Nothing here is booked, held or reserved."
+  }
+ ]
+}

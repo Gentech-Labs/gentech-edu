@@ -1,0 +1,39 @@
+{
+ "_what": "PRONUNCIATION BRIDGE — PACK DATA. A learner who cannot read Thai script cannot pronounce what we serve. This file gives each bank phrase a Latin reading, keyed by the EXACT phrase the engine will render (male and female forms both present, so the lookup survives the form substitution).",
+ "_tool": "PyThaiNLP 5.4.0 — word_tokenize(engine='newmm') then transliterate.romanize(engine='royin', the Royal Thai General System). GENERATED, never hand-typed.",
+ "_why_tokenize": "Romanizing the whole phrase without tokenizing mashes it: ผมมาเที่ยวครับ -> 'phommathiaokhrap'. Tokenized, the same phrase reads 'phom ma thiao khrap'.",
+ "_LIMIT_NO_TONES": "NO TONE MARKS — measured, not assumed. RTGS drops tones, and thai2rom_onnx returns the same string as royin on this version. Thai tones are lexical (they change the word), so this bridge gets you UNDERSTOOD; it does not make you RIGHT. Tone-marked readings need a curated dataset, not this library.",
+ "_count": 18,
+ "dialect": "th-TH",
+ "phrases": {
+  "ขอบคุณครับ": "khopkhun khrap",
+  "ขอบคุณค่ะ": "khopkhun kha",
+  "ฉันมาเที่ยวค่ะ": "chan ma thiao kha",
+  "ฉันมีจองไว้ค่ะ": "chan mi chong wai kha",
+  "ผมมาเที่ยวครับ": "phom ma thiao khrap",
+  "ผมมีจองไว้ครับ": "phom mi chong wai khrap",
+  "สวัสดีครับ": "swatdi khrap",
+  "สวัสดีค่ะ": "swatdi kha",
+  "เก็บเงินด้วยครับ": "kep ngoen duai khrap",
+  "เก็บเงินด้วยค่ะ": "kep ngoen duai kha",
+  "เท่าไหร่ครับ": "thaorai khrap",
+  "เท่าไหร่ค่ะ": "thaorai kha",
+  "ไปที่โรงแรมนี้ครับ": "pai thi rongraem ni khrap",
+  "ไปที่โรงแรมนี้ค่ะ": "pai thi rongraem ni kha",
+  "ไม่เป็นไรครับ": "maipenrai khrap",
+  "ไม่เป็นไรค่ะ": "maipenrai kha",
+  "ไม่เผ็ดครับ": "mai phet khrap",
+  "ไม่เผ็ดค่ะ": "mai phet kha"
+ },
+ "female_derived_from": {
+  "สวัสดีค่ะ": "สวัสดีครับ",
+  "ขอบคุณค่ะ": "ขอบคุณครับ",
+  "ไม่เป็นไรค่ะ": "ไม่เป็นไรครับ",
+  "ฉันมาเที่ยวค่ะ": "ผมมาเที่ยวครับ",
+  "ไปที่โรงแรมนี้ค่ะ": "ไปที่โรงแรมนี้ครับ",
+  "เท่าไหร่ค่ะ": "เท่าไหร่ครับ",
+  "ฉันมีจองไว้ค่ะ": "ผมมีจองไว้ครับ",
+  "ไม่เผ็ดค่ะ": "ไม่เผ็ดครับ",
+  "เก็บเงินด้วยค่ะ": "เก็บเงินด้วยครับ"
+ }
+}
