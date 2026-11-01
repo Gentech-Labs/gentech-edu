@@ -1,0 +1,843 @@
+{
+ "_what": "EVAL-7 golden set — phrase pairs from the UBC open-access Nepali textbook.",
+ "_source": "Introduction to the Nepali Language (UBC, 2026), CC BY-NC-SA 4.0, doi 10.14288/0yy1-0x56",
+ "_why": "An eval needs a truth that is not the model. These pairs are printed in the source tables.",
+ "_extraction_rule": "Only rows inside a header-confirmed 4-column table; phrase targets only; sentence-like glosses only; one chunk per chapter.",
+ "_v1_pitfall": "v1 matched row SHAPE without a header and produced 161 fabricated pairs ('The final उ (u) is not dropped.' -> 'Core Takeaway'). A garbage golden set is worse than none: it launders falsehood into the word 'truth'.",
+ "_reviewed": null,
+ "n_cases": 10,
+ "cases": [
+  {
+   "id": "case-01",
+   "doc": "chapter-050-chapter-6-unit-4-grammar-focus.xhtml",
+   "chunk": "I am at home.\n तपाईं घरमा हुनुहुन्छ।\n tapāī̃ gharmā hunuhuncha. \n You are at home.\n उनी कक्षामा छिन्।\n unī kakṣāmā chin. \n She is in the classroom.\n उहाँ कक्षामा हुनुहुन्छ।\n uhā̃ kakṣāmā hunuhuncha. \n He/She is in the classroom.\n Asking “Where?” with कहाँ\n To ask where someone or something is, use कहाँ ( kahā̃ ), meaning “where.”\n For example:\n किताब कहाँ छ?\n kitāb kahā̃ cha? \n Where is the book?\n किताब टेबलमा छ।\n kitāb ṭebalmā cha. \n The book is on the table.\n उहाँ कहाँ हुनुहुन्छ?\n uhā̃ kahā̃ hunuhuncha? \n Where is he/she?\n उहाँ घरमा हुनुहुन्छ।\n uhā̃ gharmā hunuhuncha. \n He/She is at home.\n The verb form changes depending on number and respect level.\n Use छ ( cha ) for one object.\n Use छन् ( chan ) for more than one object or non-honorific plural subjects.\n Use हुनुहुन्छ ( hunuhuncha ) for respectful people.\n Table 6.4.4 – Location Questions\n Nepali\n Transliteration\n English\n मेरो कलम कहाँ छ?\n mero kalam kahā̃ cha? \n Where is my pen?\n चाबीहरू कहाँ छन्?\n cābīharū kahā̃ chan? \n Where are the keys?\n मोबाइल यहाँ छ?\n mobāil yahā̃ cha? \n Is the mobile here?\n तपाईं कहाँ हुनुहुन्छ?\n tapāī̃ kahā̃ hunuhuncha? \n Where are you? (polite)\n उहाँ कहाँ हुनुहुन्छ?\n uhā̃ kahā̃ hunuhuncha? \n Where is he/she? (honorific)\n Table 6.4.5 – Present location statements (affirmative)\n Nepali\n Transliteration\n English\n मेरो कार्ड झोलामा छ।\n mero kārḍ jholāmā cha. \n My card is in the bag.\n चाबीहरू टेबलमा छन्।\n cābīharū ṭebalmā chan. \n The keys are on the table.\n म कक्षामा छु।\n ma kakṣāmā chu. \n I am in class.\n तपाईं अफिसमा हुनुहुन्छ।\n tapāī̃ aphismā hunuhuncha. \n You are in the office. (polite)\n Table 6.4.6 – Present location statements (negative)\n Nepali\n Transliteration\n English\n मेरो मोबाइल यहाँ छैन।\n mero mobāil yahā̃ chaina. \n My phone is not here.\n चाबीहरू टेबलमा छैनन्।\n cābīharū ṭebalmā chainan. \n The keys are not on the table.\n तपाईं कक्षामा हुनुहुन्न।\n tapāī̃ kakṣāmā hunuhunna. \n You are not in class. (polite)\n उहाँ त्यहाँ हुनुहुन्न।\n uhā̃ tyahā̃ hunuhunna. \n He/She is not there. (hon.)\n Try It Now\n Ask and answer.\n A: किताब कहाँ छ?\n kitāb kahā̃ cha? \n Where is the book?\n B: किताब टेबलमा छ।\n kitāb ṭebalmā cha. \n The book is on the table.\n A: कलम कहाँ छ?\n kalam kahā̃ cha? \n Where is the pen?\n B: कलम झोलामा छ।\n kalam jholāmā cha. \n The pen is in the bag.\n A: उहाँ कहाँ हुनुहुन्छ?\n uhā̃ kahā̃ hunuhuncha? \n Where is he/she?\n B: उहाँ कक्षामा हुनुहुन्छ।\n uhā̃ kakṣāmā hunuhuncha. \n He/She is in the classroom.\n Postpositions in Nepali\n English uses prepositions such as “in,” “on,” and “at” before a noun.\n For example:\n in the classroom\n on the table\n at home\n Nepali usually uses pos",
+   "golden": [
+    {
+     "target": "मेरो कलम कहाँ छ?",
+     "roman": "mero kalam kahā̃ cha?",
+     "literal": "",
+     "gloss": "Where is my pen?"
+    },
+    {
+     "target": "चाबीहरू कहाँ छन्?",
+     "roman": "cābīharū kahā̃ chan?",
+     "literal": "",
+     "gloss": "Where are the keys?"
+    },
+    {
+     "target": "मोबाइल यहाँ छ?",
+     "roman": "mobāil yahā̃ cha?",
+     "literal": "",
+     "gloss": "Is the mobile here?"
+    },
+    {
+     "target": "तपाईं कहाँ हुनुहुन्छ?",
+     "roman": "tapāī̃ kahā̃ hunuhuncha?",
+     "literal": "",
+     "gloss": "Where are you? (polite)"
+    },
+    {
+     "target": "उहाँ कहाँ हुनुहुन्छ?",
+     "roman": "uhā̃ kahā̃ hunuhuncha?",
+     "literal": "",
+     "gloss": "Where is he/she? (honorific)"
+    },
+    {
+     "target": "मेरो कार्ड झोलामा छ।",
+     "roman": "mero kārḍ jholāmā cha.",
+     "literal": "",
+     "gloss": "My card is in the bag."
+    },
+    {
+     "target": "चाबीहरू टेबलमा छन्।",
+     "roman": "cābīharū ṭebalmā chan.",
+     "literal": "",
+     "gloss": "The keys are on the table."
+    },
+    {
+     "target": "म कक्षामा छु।",
+     "roman": "ma kakṣāmā chu.",
+     "literal": "",
+     "gloss": "I am in class."
+    },
+    {
+     "target": "तपाईं अफिसमा हुनुहुन्छ।",
+     "roman": "tapāī̃ aphismā hunuhuncha.",
+     "literal": "",
+     "gloss": "You are in the office. (polite)"
+    },
+    {
+     "target": "मेरो मोबाइल यहाँ छैन।",
+     "roman": "mero mobāil yahā̃ chaina.",
+     "literal": "",
+     "gloss": "My phone is not here."
+    },
+    {
+     "target": "चाबीहरू टेबलमा छैनन्।",
+     "roman": "cābīharū ṭebalmā chainan.",
+     "literal": "",
+     "gloss": "The keys are not on the table."
+    },
+    {
+     "target": "तपाईं कक्षामा हुनुहुन्न।",
+     "roman": "tapāī̃ kakṣāmā hunuhunna.",
+     "literal": "",
+     "gloss": "You are not in class. (polite)"
+    },
+    {
+     "target": "उहाँ त्यहाँ हुनुहुन्न।",
+     "roman": "uhā̃ tyahā̃ hunuhunna.",
+     "literal": "",
+     "gloss": "He/She is not there. (hon.)"
+    }
+   ]
+  },
+  {
+   "id": "case-02",
+   "doc": "chapter-023-chapter-3-unit-4-grammar-focus.xhtml",
+   "chunk": "ives show two things:\n distance: near or far\n number: singular or plural\n The main forms are:\n यो ( yo ) — this\n त्यो ( tyo ) — that\n यी ( yī ) — these\n ती ( tī ) — those\n 1. Near and Far\n Use यो ( yo ) and यी ( yī ) for things close to the speaker.\n Use त्यो ( tyo ) and ती ( tī ) for things farther away.\n Table 3.4.3 – Demonstratives: near vs. far (singular/plural)\n Nepali\n Transliteration\n English\n यो\n yo \n this (singular; near)\n यी\n yī \n these (plural; near)\n त्यो\n tyo \n that (singular; far)\n ती\n tī \n those (plural; far)\n Simple Rule\n Near + singular → यो ( yo )\n Far + singular → त्यो ( tyo )\n Near + plural → यी ( yī )\n Far + plural → ती ( tī )\n Try It Now\n Point to something close to you and say:\n यो किताब हो।\n yo kitāb ho. \n This is a book.\n Now point to something farther away and say:\n त्यो किताब हो।\n tyo kitāb ho. \n That is a book.\n Demonstratives Before Nouns\n In Nepali, demonstratives usually come before the noun.\n For example:\n यो किताब\n yo kitāb \n this book\n त्यो घर\n tyo ghar \n that house\n यी किताबहरू\n yī kitābharū \n these books\n ती घरहरू\n tī gharharū \n those houses\n Table 3.4.4 – Demonstratives Before a Noun\n Nepali\n Transliteration\n English\n यो किताब\n yo kitāb \n this book\n त्यो घर\n tyo ghar \n that house\n यी कुर्सीहरू\n yī kursīharū \n these chairs\n ती विद्यार्थीहरू\n tī widyārthīharū \n those students\n Try It Now\n Complete the phrase by changing the noun.\n यो __________ हो।\n yo __________ ho. \n This is a __________.\n You can use:\n किताब\n kitāb \n book\n कलम\n kalam \n pen\n झोला\n jholā \n bag\n घर\n ghar \n house\n Demonstratives as Pronouns\n Demonstratives can also stand alone. This means they can replace a noun when the meaning is already clear.\n For example:\n यो के हो?\n yo ke ho? \n What is this?\n त्यो के हो?\n tyo ke ho? \n What is that?\n यी के हुन्?\n yī ke hun? \n What are these?\n ती के हुन्?\n tī ke hun? \n What are those?\n Table 3.4.5 – Demonstratives as Pronouns\n Nepali\n Transliteration\n English\n यो राम्रो छ।\n yo rāmro cha. \n This is good.\n त्यो मेरो हो।\n tyo mero ho. \n That is mine.\n यी सस्ता छन्।\n yī sastā chan. \n These are cheap.\n ती नयाँ कुर्सीहरू हुन्।\n tī nayā̃ kursīharū hun. \n Those are new chairs.\n Try It Now\n Ask and answer:\n यो के हो?\n yo ke ho? \n What is this?\n यो किताब हो।\n yo kitāb ho. \n This is a book.\n Now change यो ( yo ) to त्यो ( tyo ):\n त्यो के हो?\n tyo ke ho? \n What is that?\n त्यो कलम हो।\n tyo kalam ho. \n That is a pen.\n Singular and Plural Agreement\n In Nepali, singular demonstratives usually go with singular forms, and plural demonstratives usually go with plural forms.\n Use यो ( yo ) and त्यो ( tyo ) for singular nouns.\n Use यी ( ",
+   "golden": [
+    {
+     "target": "यो कलम हो।",
+     "roman": "yo kalam ho.",
+     "literal": "this pen is",
+     "gloss": "This is a pen."
+    },
+    {
+     "target": "यो किताब",
+     "roman": "yo kitāb",
+     "literal": "",
+     "gloss": "this book"
+    },
+    {
+     "target": "त्यो घर",
+     "roman": "tyo ghar",
+     "literal": "",
+     "gloss": "that house"
+    },
+    {
+     "target": "यी कुर्सीहरू",
+     "roman": "yī kursīharū",
+     "literal": "",
+     "gloss": "these chairs"
+    },
+    {
+     "target": "ती विद्यार्थीहरू",
+     "roman": "tī widyārthīharū",
+     "literal": "",
+     "gloss": "those students"
+    },
+    {
+     "target": "यो राम्रो छ।",
+     "roman": "yo rāmro cha.",
+     "literal": "",
+     "gloss": "This is good."
+    },
+    {
+     "target": "त्यो मेरो हो।",
+     "roman": "tyo mero ho.",
+     "literal": "",
+     "gloss": "That is mine."
+    },
+    {
+     "target": "यी सस्ता छन्।",
+     "roman": "yī sastā chan.",
+     "literal": "",
+     "gloss": "These are cheap."
+    },
+    {
+     "target": "ती नयाँ कुर्सीहरू हुन्।",
+     "roman": "tī nayā̃ kursīharū hun.",
+     "literal": "",
+     "gloss": "Those are new chairs."
+    },
+    {
+     "target": "यो के हो?",
+     "roman": "yo ke ho?",
+     "literal": "",
+     "gloss": "What is this?"
+    },
+    {
+     "target": "त्यो के हो?",
+     "roman": "tyo ke ho?",
+     "literal": "",
+     "gloss": "What is that?"
+    },
+    {
+     "target": "यो किताब हो।",
+     "roman": "yo kitāb ho.",
+     "literal": "",
+     "gloss": "This is a book."
+    },
+    {
+     "target": "यी के हुन्?",
+     "roman": "yī ke hun?",
+     "literal": "",
+     "gloss": "What are these?"
+    },
+    {
+     "target": "ती के हुन्?",
+     "roman": "tī ke hun?",
+     "literal": "",
+     "gloss": "What are those?"
+    }
+   ]
+  },
+  {
+   "id": "case-03",
+   "doc": "chapter-104-chapter-12-unit-4-grammar-focus.xhtml",
+   "chunk": " Transliteration\n English\n मलाई पानी चाहिन्छ।\n malāī pānī cāhincha. \n I need water.\n मलाई खाना चाहिन्छ।\n malāī khānā cāhincha. \n I need food.\n Table 12.4.16 – Saying “I don’t need …something”(negative)\n Nepali\n Transliteration\n English\n मलाई अहिले पानी चाहिँदैन।\n malāī ahile pānī chāhĩdaina. \n I don’t need water right now.\n हामीलाई थप समय चाहिँदैन।\n hāmīlāī thap samaya chāhĩdaina. \n We don’t need extra time.\n Simple Rule\n Use चाहिन्छ ( cāhincha ) for things or resources you need.\n The form चाहिन्छ ( cāhincha ) stays the same for different people.\n Try It Now\n Read the sentences aloud.\n मलाई पानी चाहिन्छ।\n malāī pānī cāhincha. \n I need water.\n तपाईंलाई समय चाहिन्छ।\n tapāī̃lāī samaya cāhincha. \n You need time.\n उहाँलाई खाना चाहिन्छ।\n uhā̃lāī khānā cāhincha. \n He/She needs food.\n Need to Do an Action: पर्छ\n Use पर्छ ( parcha ) when English means “need to” or “have to.”\n This pattern expresses necessity or obligation to do an action.\n The person who needs to do something is marked with –लाई ( –lāī ).\n The action verb appears in the infinitive form ending in –नु ( –nu ).\n The basic pattern is:\n person + लाई + verb infinitive + पर्छ\n For example:\n मलाई जानु पर्छ।\n malāī jānu parcha. \n I need to go. / I have to go.\n मलाई पढ्नु पर्छ।\n malāī paḍhnu parcha. \n I need to study. / I have to study.\n उहाँलाई काम गर्नु पर्छ।\n uhā̃lāī kām garnu parcha. \n He/She needs to work. / He/She has to work.\n NEED to Do an Action (–लाई + infinitive + parcha) — Questions\n Nepali\n Transliteration\n English\n तपाईंलाई खानु पर्छ?\n tapāī̃lāī khānu parcha? \n Do you need to eat?\n तपाईंलाई के गर्नुपर्छ?\n tapāī̃lāī ke garnu parcha? \n What do you need to do?\n NEED to Do an Action — Affirmative\n Nepali\n Transliteration\n English\n मलाई खानु पर्छ।\n malāī khānu parcha. \n I need to eat.\n मलाई अहिले जानु पर्छ।\n malāī ahile jānu parcha. \n I need to go now.\n NEED to Do an Action — Negative\n Nepali\n Transliteration\n English\n मलाई आज काम गर्नुपर्दैन।\n malāī āja kām garnu pardaina. \n I don’t have to work today.\n मलाई आज पढ्नुपर्दैन।\n malāī āja paḍhnu pardaina. \n I don’t have to study today.\n Simple Rule\n Use चाहिन्छ ( cāhincha ) when you need a thing.\n Use पर्छ ( parcha ) when you need to do an action.\n Compare:\n मलाई पानी चाहिन्छ।\n malāī pānī cāhincha. \n I need water.\n मलाई जानु पर्छ।\n malāī jānu parcha. \n I need to go.\n Try It Now\n Read the sentences aloud.\n मलाई घर जानु पर्छ।\n malāī ghar jānu parcha. \n I need to go home.\n मलाई नेपाली पढ्नु पर्छ।\n malāī nepālī paḍhnu parcha. \n I need to study Nepali.\n तपाईंलाई खाना खानु पर्छ।\n tapāī̃lāī khānā khānu parcha. \n You need to eat food.\n Want: चाहनु\n Use चाहनु",
+   "golden": [
+    {
+     "target": "मलाई पानी चाहिन्छ।",
+     "roman": "malāī pānī cāhincha.",
+     "literal": "",
+     "gloss": "I need water."
+    },
+    {
+     "target": "मलाई खाना चाहिन्छ।",
+     "roman": "malāī khānā cāhincha.",
+     "literal": "",
+     "gloss": "I need food."
+    },
+    {
+     "target": "मलाई अहिले पानी चाहिँदैन।",
+     "roman": "malāī ahile pānī chāhĩdaina.",
+     "literal": "",
+     "gloss": "I don’t need water right now."
+    },
+    {
+     "target": "हामीलाई थप समय चाहिँदैन।",
+     "roman": "hāmīlāī thap samaya chāhĩdaina.",
+     "literal": "",
+     "gloss": "We don’t need extra time."
+    },
+    {
+     "target": "तपाईंलाई खानु पर्छ?",
+     "roman": "tapāī̃lāī khānu parcha?",
+     "literal": "",
+     "gloss": "Do you need to eat?"
+    },
+    {
+     "target": "तपाईंलाई के गर्नुपर्छ?",
+     "roman": "tapāī̃lāī ke garnu parcha?",
+     "literal": "",
+     "gloss": "What do you need to do?"
+    },
+    {
+     "target": "मलाई खानु पर्छ।",
+     "roman": "malāī khānu parcha.",
+     "literal": "",
+     "gloss": "I need to eat."
+    },
+    {
+     "target": "मलाई अहिले जानु पर्छ।",
+     "roman": "malāī ahile jānu parcha.",
+     "literal": "",
+     "gloss": "I need to go now."
+    },
+    {
+     "target": "मलाई आज काम गर्नुपर्दैन।",
+     "roman": "malāī āja kām garnu pardaina.",
+     "literal": "",
+     "gloss": "I don’t have to work today."
+    },
+    {
+     "target": "मलाई आज पढ्नुपर्दैन।",
+     "roman": "malāī āja paḍhnu pardaina.",
+     "literal": "",
+     "gloss": "I don’t have to study today."
+    }
+   ]
+  },
+  {
+   "id": "case-04",
+   "doc": "chapter-131-chapter-15-unit-4-grammar-focus.xhtml",
+   "chunk": "ting food, watching a movie, visiting a place, reading a book, or attending an event.\n For example:\n मलाई खाना मन पर्‍यो।\n malāī khānā man paryo. \n I liked the food.\n मलाई फिल्म मन परेन।\n malāī philm man parena. \n I did not like the movie.\n The structure stays the same: the experiencer is marked with –लाई ( –lāī ), and the thing liked or disliked remains the main item in the sentence.\n Table 15.4.2 – Past preference: मन पर्‍यो / मन परेन (man paryo / man parena)\n Nepali \n Transliteration \n English \n मलाई चिया मन पर्‍यो। \n malāī ciyā man paryo. \n I liked the tea. \n मलाई कफी मन परेन। \n malāī kaphī man parena. \n I didn’t like the coffee. \n उहाँलाई मोमो मन पर्‍यो। \n uhā̃lāī momo man paryo. \n He/She liked momo. \n उहाँलाई पिरो मन परेन। \n uhā̃lāī piro man parena. \n He/She didn’t like spicy food. \n तपाईंलाई दाल-भात मन पर्‍यो। \n tapāī̃lāī dālbhāt man paryo. \n You liked daal-bhaat. \n तपाईंलाई दाल-भात मन परेन। \n tapāī̃lāī dālbhāt man parena. \n You didn’t like daal-bhaat. \n Table 15.4.3 – Common questions for preferences (present and past)\n Nepali \n Transliteration \n English \n तपाईंलाई के मन पर्छ? \n tapāī̃lāī ke man parcha? \n What do you like? \n तपाईंलाई चिया मन पर्छ? \n tapāī̃lāī ciyā man parcha? \n Do you like tea? \n तपाईंलाई पिरो मन पर्छ? \n tapāī̃lāī piro man parcha? \n Do you like spicy food? \n तपाईंलाई चिया मन पर्‍यो? \n tapāī̃lāī ciyā man paryo? \n Did you like the tea? \n तपाईंलाई मोमो मन परेन? \n tapāī̃lāī momo man parena? \n Didn’t you like the momo? \n Table 15.4.4 – Short answers for preferences\n Nepali \n Transliteration \n English \n हो, मलाई मन पर्छ। \n ho, malāī man parcha. \n Yes, I do. \n होइन, मलाई मन पर्दैन। \n hoina, malāī man pardaina. \n No, I don’t. \n हो, मलाई मन पर्‍यो। \n ho, malāī man paryo. \n Yes, I liked it. \n होइन, मलाई मन परेन। \n hoina, malāī man parena. \n No, I didn’t like it. \n Try It Now\n Read the sentences aloud.\n मलाई मोमो मन पर्‍यो।\n malāī momo man paryo. \n I liked the momo.\n मलाई चिया मन परेन।\n malāī ciyā man parena. \n I did not like the tea.\n उहाँलाई ठाउँ मन पर्‍यो।\n uhā̃lāī ṭhāũ man paryo. \n He/She liked the place.\n Alternative Expression: मन पराउनु\n Everyday Nepali most commonly uses the pattern:\n मलाई … मन पर्छ\n malāī … man parcha \n However, you may also see or hear the verb मन पराउनु ( man parāunu ), meaning “to like.”\n This form is more like English because the person who likes something appears as the grammatical subject.\n For example:\n म चिया मन पराउँछु।\n ma ciyā man parāũchu. \n I like tea.\n उहाँ नेपाली खाना मन पराउनुहुन्छ।\n uhā̃ nepālī khānā man parāunuhuncha. \n He/She likes Nepali food.\n This pattern is common in written Nepali or more ",
+   "golden": [
+    {
+     "target": "मलाई चिया मन पर्‍यो।",
+     "roman": "malāī ciyā man paryo.",
+     "literal": "",
+     "gloss": "I liked the tea."
+    },
+    {
+     "target": "मलाई कफी मन परेन।",
+     "roman": "malāī kaphī man parena.",
+     "literal": "",
+     "gloss": "I didn’t like the coffee."
+    },
+    {
+     "target": "उहाँलाई मोमो मन पर्‍यो।",
+     "roman": "uhā̃lāī momo man paryo.",
+     "literal": "",
+     "gloss": "He/She liked momo."
+    },
+    {
+     "target": "उहाँलाई पिरो मन परेन।",
+     "roman": "uhā̃lāī piro man parena.",
+     "literal": "",
+     "gloss": "He/She didn’t like spicy food."
+    },
+    {
+     "target": "तपाईंलाई दाल-भात मन पर्‍यो।",
+     "roman": "tapāī̃lāī dālbhāt man paryo.",
+     "literal": "",
+     "gloss": "You liked daal-bhaat."
+    },
+    {
+     "target": "तपाईंलाई दाल-भात मन परेन।",
+     "roman": "tapāī̃lāī dālbhāt man parena.",
+     "literal": "",
+     "gloss": "You didn’t like daal-bhaat."
+    },
+    {
+     "target": "तपाईंलाई के मन पर्छ?",
+     "roman": "tapāī̃lāī ke man parcha?",
+     "literal": "",
+     "gloss": "What do you like?"
+    },
+    {
+     "target": "तपाईंलाई चिया मन पर्छ?",
+     "roman": "tapāī̃lāī ciyā man parcha?",
+     "literal": "",
+     "gloss": "Do you like tea?"
+    },
+    {
+     "target": "तपाईंलाई पिरो मन पर्छ?",
+     "roman": "tapāī̃lāī piro man parcha?",
+     "literal": "",
+     "gloss": "Do you like spicy food?"
+    },
+    {
+     "target": "तपाईंलाई चिया मन पर्‍यो?",
+     "roman": "tapāī̃lāī ciyā man paryo?",
+     "literal": "",
+     "gloss": "Did you like the tea?"
+    },
+    {
+     "target": "तपाईंलाई मोमो मन परेन?",
+     "roman": "tapāī̃lāī momo man parena?",
+     "literal": "",
+     "gloss": "Didn’t you like the momo?"
+    },
+    {
+     "target": "हो, मलाई मन पर्छ।",
+     "roman": "ho, malāī man parcha.",
+     "literal": "",
+     "gloss": "Yes, I do."
+    },
+    {
+     "target": "होइन, मलाई मन पर्दैन।",
+     "roman": "hoina, malāī man pardaina.",
+     "literal": "",
+     "gloss": "No, I don’t."
+    },
+    {
+     "target": "हो, मलाई मन पर्‍यो।",
+     "roman": "ho, malāī man paryo.",
+     "literal": "",
+     "gloss": "Yes, I liked it."
+    },
+    {
+     "target": "होइन, मलाई मन परेन।",
+     "roman": "hoina, malāī man parena.",
+     "literal": "",
+     "gloss": "No, I didn’t like it."
+    }
+   ]
+  },
+  {
+   "id": "case-05",
+   "doc": "chapter-086-chapter-10-unit-4-grammar-focus.xhtml",
+   "chunk": "हुनुहुन्न)\n Nepali\n Transliteration\n English\n म क्यानेडियन होइन।\n ma kyāneḍiyan hoina. \n I am not Canadian.\n म शिक्षक होइन।\n ma śikṣak hoina. \n I am not a teacher.\n हामी नेपाली होइनौं।\n hāmī nepālī hoinaũ. \n We are not Nepali.\n हामी विद्यार्थी होइनौं।\n hāmī widyārthī hoinaũ. \n We are not students.\n तिमी अमेरिकी होइनौ।\n timī amerīkī hoinau. \n You (familiar) are not American. \n तिमी नर्स होइनौ।\n timī nars hoinau. \n You (familiar) are not a nurse. \n तपाईं इन्जिनियर हुनुहुन्न।\n tapāī̃ injiniyar hunuhunna. \n You (polite) are not an engineer. \n ऊ पाकिस्तानी होइन।\n ū pākistānī hoina. \n He/She is not Pakistani.\n ऊ शिक्षक होइन।\n ū śikṣak hoina. \n He/She is not a teacher.\n उनी चिनियाँ होइनन्।\n unī ciniyā̃ hoinan. \n He/She is not Chinese.\n उनी विद्यार्थी होइनन्।\n unī widyārthī hoinan. \n He/She is not a student.\n उनीहरू फिलिपिनी होइनन्।\n unīharū philipinī hoinan. \n They are not Filipino.\n उनीहरू शिक्षक होइनन्।\n unīharū śikṣak hoinan. \n They are not teachers.\n उहाँ भारतीय हुनुहुन्न।\n uhā̃ bhāratīya hunuhunna. \n He/She (hon.) is not Indian. \n उहाँ प्राध्यापक हुनुहुन्न।\n uhā̃ prādhyāpak hunuhunna. \n He/She (hon.) is not a professor. \n उहाँहरू जापानी हुनुहुन्न।\n uhā̃harū jāpānī hunuhunna. \n They (hon.) are not Japanese. \n उहाँहरू शिक्षक हुनुहुन्न।\n uhā̃harū śikṣak hunuhunna. \n They (hon.) are not teachers. \n Simple Rule\n Use identity sentences for:\n nationality\n profession\n role\n category\n For example:\n म विद्यार्थी हुँ।\n ma widyārthī hũ. \n I am a student.\n उहाँ डाक्टर हुनुहुन्छ।\n uhā̃ ḍākṭar hunuhuncha. \n He/She is a doctor.\n हामी नेपाली हौं।\n hāmī nepālī haũ. \n We are Nepali.\n Negative Identity Sentences\n To make identity sentences negative, Nepali uses negative forms such as होइन ( hoina ), होइनन् ( hoinan ), and हुनुहुन्न ( hunuhunna ).\n For example:\n म शिक्षक होइन।\n ma śikṣak hoina. \n I am not a teacher.\n उहाँ विद्यार्थी हुनुहुन्न।\n uhā̃ widyārthī hunuhunna. \n He/She is not a student.\n उनीहरू क्यानाडेली होइनन्।\n unīharū kyānāḍelī hoinan. \n They are not Canadian.\n Try It Now\n Read the sentences aloud.\n म नेपाली हुँ।\n ma nepālī hũ. \n I am Nepali.\n म नेपाली होइन।\n ma nepālī hoina. \n I am not Nepali.\n उहाँ शिक्षक हुनुहुन्छ।\n uhā̃ śikṣak hunuhuncha. \n He/She is a teacher.\n उहाँ विद्यार्थी हुनुहुन्न।\n uhā̃ widyārthī hunuhunna. \n He/She is not a student.\n Common Mistake\n Do not use छ ( cha ) for identity sentences.\n Incorrect:\n म नेपाली छ।\n ma nepālī cha. \n Correct:\n म नेपाली हुँ।\n ma nepālī hũ. \n I am Nepali.\n Incorrect:\n उहाँ शिक्षक छ।\n uhā̃ śikṣak cha. \n Correct:\n उहाँ शिक्षक हुनुहुन्छ।\n uhā̃ śikṣak hunuhuncha. \n He/She is a teacher.\n Discourse Particles\n In everyd",
+   "golden": [
+    {
+     "target": "म क्यानेडियन होइन।",
+     "roman": "ma kyāneḍiyan hoina.",
+     "literal": "",
+     "gloss": "I am not Canadian."
+    },
+    {
+     "target": "म शिक्षक होइन।",
+     "roman": "ma śikṣak hoina.",
+     "literal": "",
+     "gloss": "I am not a teacher."
+    },
+    {
+     "target": "हामी नेपाली होइनौं।",
+     "roman": "hāmī nepālī hoinaũ.",
+     "literal": "",
+     "gloss": "We are not Nepali."
+    },
+    {
+     "target": "हामी विद्यार्थी होइनौं।",
+     "roman": "hāmī widyārthī hoinaũ.",
+     "literal": "",
+     "gloss": "We are not students."
+    },
+    {
+     "target": "तिमी अमेरिकी होइनौ।",
+     "roman": "timī amerīkī hoinau.",
+     "literal": "",
+     "gloss": "You (familiar) are not American."
+    },
+    {
+     "target": "तिमी नर्स होइनौ।",
+     "roman": "timī nars hoinau.",
+     "literal": "",
+     "gloss": "You (familiar) are not a nurse."
+    },
+    {
+     "target": "तपाईं इन्जिनियर हुनुहुन्न।",
+     "roman": "tapāī̃ injiniyar hunuhunna.",
+     "literal": "",
+     "gloss": "You (polite) are not an engineer."
+    },
+    {
+     "target": "ऊ पाकिस्तानी होइन।",
+     "roman": "ū pākistānī hoina.",
+     "literal": "",
+     "gloss": "He/She is not Pakistani."
+    },
+    {
+     "target": "ऊ शिक्षक होइन।",
+     "roman": "ū śikṣak hoina.",
+     "literal": "",
+     "gloss": "He/She is not a teacher."
+    },
+    {
+     "target": "उनी चिनियाँ होइनन्।",
+     "roman": "unī ciniyā̃ hoinan.",
+     "literal": "",
+     "gloss": "He/She is not Chinese."
+    },
+    {
+     "target": "उनी विद्यार्थी होइनन्।",
+     "roman": "unī widyārthī hoinan.",
+     "literal": "",
+     "gloss": "He/She is not a student."
+    },
+    {
+     "target": "उनीहरू फिलिपिनी होइनन्।",
+     "roman": "unīharū philipinī hoinan.",
+     "literal": "",
+     "gloss": "They are not Filipino."
+    },
+    {
+     "target": "उनीहरू शिक्षक होइनन्।",
+     "roman": "unīharū śikṣak hoinan.",
+     "literal": "",
+     "gloss": "They are not teachers."
+    },
+    {
+     "target": "उहाँ भारतीय हुनुहुन्न।",
+     "roman": "uhā̃ bhāratīya hunuhunna.",
+     "literal": "",
+     "gloss": "He/She (hon.) is not Indian."
+    },
+    {
+     "target": "उहाँ प्राध्यापक हुनुहुन्न।",
+     "roman": "uhā̃ prādhyāpak hunuhunna.",
+     "literal": "",
+     "gloss": "He/She (hon.) is not a professor."
+    },
+    {
+     "target": "उहाँहरू जापानी हुनुहुन्न।",
+     "roman": "uhā̃harū jāpānī hunuhunna.",
+     "literal": "",
+     "gloss": "They (hon.) are not Japanese."
+    },
+    {
+     "target": "उहाँहरू शिक्षक हुनुहुन्न।",
+     "roman": "uhā̃harū śikṣak hunuhunna.",
+     "literal": "",
+     "gloss": "They (hon.) are not teachers."
+    }
+   ]
+  },
+  {
+   "id": "case-06",
+   "doc": "chapter-068-chapter-8-unit-4-grammar-focus.xhtml",
+   "chunk": "s is an experiencer construction . The person who feels the state is marked with –लाई ( -lāī ), and the feeling itself is expressed as a noun. The verb then appears as लागेको ( lāgeko ) + छ/छैन ( cha/chaina ) to indicate whether the feeling is present.\n Basic structure \n [Person + –लाई (- lāī )] + [feeling noun] + लागेको छ/छैन ( lāgeko cha/chaina ) \n Key idea \n Instead of saying “I am hungry” in a simple adjective form, Nepali expresses it more literally as: “Hunger has come to me / I am experiencing hunger.”\n Table 8.4.13 – lāgeko cha: feelings and physical states\n Nepali\n Transliteration\n English\n मलाई थकाइ लागेको छ।\n malāī thakāi lāgeko cha. \n I feel tired.\n तपाईंलाई भोक लागेको छ?\n tapāī̃lāī bhok lāgeko cha? \n Are you hungry? (polite)\n उहाँलाई निद्रा लागेको छ।\n uhā̃lāī nidrā lāgeko cha. \n He/She feels sleepy.\n मायालाई भोक लागेको छैन।\n māyālāī bhok lāgeko chaina. \n Maya is not hungry.\n Past forms of हुनु ( hunu ): थियो ( thiyo ) vs भयो ( bhayo )\n In Nepali, the verb हुनु ( hunu ) has two very common past patterns. The difference is not just tense, but meaning .\n 1) थियो-form ( thiyo ) — past state or condition\n The थियो-form ( thiyo ; including forms like thiẽ, thiyau, thie, thī ) is used to describe a state or condition in the past . It expresses something that was true for a period of time .\n Meaning focus: “was / were” (description, situation) \n मौसम चिसो थियो। mausam ciso thiyo. The weather was cold. \n Table 8.4.14 – थियो-form: past states/conditions (examples)\n Nepali\n Transliteration\n English\n म घरमा थिएँ।\n ma gharmā thiẽ. \n I was at home.\n म घरमा थिइनँ।\n ma gharmā thiinã. \n I was not at home.\n के तपाईं घरमा हुनुहुन्थ्यो?\n ke tapāī̃ gharmā hunuhunthyo? \n Were you at home?\n हिजो मौसम खराब थियो।\n hijo mausam kharāb thiyo. \n Yesterday the weather was bad.\n हिजो मौसम खराब थिएन।\n hijo mausam kharāb thiena. \n Yesterday the weather was not bad.\n के हिजो मौसम खराब थियो?\n ke hijo mausam kharāb thiyo? \n Was the weather bad yesterday?\n 2) भयो-form ( bhayo ) — change or event\n The भयो-form ( bhayo ; including forms like bhaẽ, bhayau, bhae, bhaī ) is used to express a change, event, or result . It highlights that something became true or happened .\n Meaning focus: “became / happened / turned” \n मौसम चिसो भयो।\n mausam ciso bhayo. \n The weather became cold.\n Table 8.4.15 – भयो-form: past change/outcome (examples)\n Nepali\n Transliteration\n English\n ऊ धनी भयो।\n ū dhanī bhayo. \n He became rich.\n ऊ धनी भएन।\n ū dhanī bhaena. \n He did not become rich.\n के ऊ धनी भयो?\n ke ū dhanī bhayo? \n Did he become rich?\n खाना चिसो भयो।\n khānā ciso bhayo. \n The food became cold.\n",
+   "golden": [
+    {
+     "target": "म घरमा थिएँ।",
+     "roman": "ma gharmā thiẽ.",
+     "literal": "",
+     "gloss": "I was at home."
+    },
+    {
+     "target": "म घरमा थिइनँ।",
+     "roman": "ma gharmā thiinã.",
+     "literal": "",
+     "gloss": "I was not at home."
+    },
+    {
+     "target": "के तपाईं घरमा हुनुहुन्थ्यो?",
+     "roman": "ke tapāī̃ gharmā hunuhunthyo?",
+     "literal": "",
+     "gloss": "Were you at home?"
+    },
+    {
+     "target": "हिजो मौसम खराब थियो।",
+     "roman": "hijo mausam kharāb thiyo.",
+     "literal": "",
+     "gloss": "Yesterday the weather was bad."
+    },
+    {
+     "target": "हिजो मौसम खराब थिएन।",
+     "roman": "hijo mausam kharāb thiena.",
+     "literal": "",
+     "gloss": "Yesterday the weather was not bad."
+    },
+    {
+     "target": "के हिजो मौसम खराब थियो?",
+     "roman": "ke hijo mausam kharāb thiyo?",
+     "literal": "",
+     "gloss": "Was the weather bad yesterday?"
+    },
+    {
+     "target": "ऊ धनी भयो।",
+     "roman": "ū dhanī bhayo.",
+     "literal": "",
+     "gloss": "He became rich."
+    },
+    {
+     "target": "ऊ धनी भएन।",
+     "roman": "ū dhanī bhaena.",
+     "literal": "",
+     "gloss": "He did not become rich."
+    },
+    {
+     "target": "के ऊ धनी भयो?",
+     "roman": "ke ū dhanī bhayo?",
+     "literal": "",
+     "gloss": "Did he become rich?"
+    },
+    {
+     "target": "खाना चिसो भयो।",
+     "roman": "khānā ciso bhayo.",
+     "literal": "",
+     "gloss": "The food became cold."
+    }
+   ]
+  },
+  {
+   "id": "case-07",
+   "doc": "chapter-113-chapter-13-unit-4-grammar-focus.xhtml",
+   "chunk": "/ up to / as far as”: sentence examples\n Nepali\n Transliteration\n English\n म छ बजेसम्म घरमा हुन्छु। \n ma cha bajesamma gharmā hunchu. \n I am at home until 6 o’clock.\n तपाईं भोलिसम्म यहाँ हुनुहुन्छ? \n tapāī̃ bholisamma yahā̃ hunuhuncha? \n Are you here until tomorrow?\n उनीहरू मेरो घरसम्म आउँछन्। \n unīharū mero gharsamma āũchan. \n They come as far as my house.\n म पोखरासम्म जान्छु। \n ma pokharāsamma jānchu. \n I go up to/as far as Pokhara.\n देखि…सम्म: From…To / From…Until\n देखि…सम्म ( dekhi…samma ) expresses a range with both a starting point and an ending point.\n देखि ( dekhi ) marks the starting point.\n सम्म ( samma ) marks the ending point.\n For example:\n दुई बजेदेखि चार बजेसम्म\n duī bajedekhi cār bajesamma \n from two o’clock to four o’clock\n सोमबारदेखि शुक्रबारसम्म\n sombārdekhi śukrabārsamma \n from Monday to Friday\n काठमाडौंदेखि पोखरासम्म\n kāṭhmāḍaũdekhi pokharāsamma \n from Kathmandu to Pokhara\n Table 13.4.25 – देखि…सम्म (dekhi…samma) “from…to / from…until”: sentence examples\n Nepali\n Transliteration\n English\n उहाँ दुई बजेदेखि छ बजेसम्म घरमा हुनुहुन्छ। \n uhā̃ duī baje dekhi cha bajesamma gharmā hunuhuncha. \n He/She is at home from 2 to 6.\n म दिल्लीदेखि काठमाडौंसम्म जान्छु।\n ma dillī dekhi kāṭhamāḍaũ samma jānchu. \n I go from Delhi to Kathmandu.\n Try It Now\n Read the range expressions aloud.\n नौ बजेदेखि दश बजेसम्म\n nau bajedekhi daś bajesamma \n from nine o’clock to ten o’clock\n सोमबारदेखि बुधबारसम्म\n sombārdekhi budhabārsamma \n from Monday to Wednesday\n घरदेखि स्कुलसम्म\n ghardekhi skulsamma \n from home to school\n का लागि / को लागि: For\n का लागि / को लागि ( kā lāgi / ko lāgi ) means “for.”\n It has two common uses:\n recipient or beneficiary\n purpose\n For example:\n तपाईंका लागि\n tapāī̃kā lāgi \n for you\n बालबालिकाका लागि\n bālbālikākā lāgi \n for children\n अभ्यासका लागि\n abhyāsakā lāgi \n for practice\n पढाइका लागि\n paḍhāikā lāgi \n for study\n Table 13.4.26 – का लागि / को लागि (kā lāgi / ko lāgi) “for”: sentence examples\n Nepali\n Transliteration\n English\n यो उपहार तपाईंको लागि हो। \n yo upahār tapāī̃ko lāgi ho. \n This gift is for you.\n यो किताब बच्चाहरूका लागि हो। \n yo kitāb baccāharūkā lāgi ho. \n This book is for children.\n पढाइको लागि यो किताब राम्रो छ।\n paḍhāiko lāgi yo kitāb rāmro cha. \n This book is good for studying.\n कामको लागि यो कम्प्युटर चाहिन्छ। \n kāmko lāgi yo kampyūṭar cāhincha. \n This computer is needed for work.\n खेलको लागि यो मैदान ठुलो छ। \n khelko lāgi yo maidān ṭhulo cha. \n This ground is big for playing.\n Learner Tip\n In many beginner sentences, लागि ( lāgi ) can be understood as “for.” The form before लागि may change depending on the noun phras",
+   "golden": [
+    {
+     "target": "म छ बजेसम्म घरमा हुन्छु।",
+     "roman": "ma cha bajesamma gharmā hunchu.",
+     "literal": "",
+     "gloss": "I am at home until 6 o’clock."
+    },
+    {
+     "target": "तपाईं भोलिसम्म यहाँ हुनुहुन्छ?",
+     "roman": "tapāī̃ bholisamma yahā̃ hunuhuncha?",
+     "literal": "",
+     "gloss": "Are you here until tomorrow?"
+    },
+    {
+     "target": "उनीहरू मेरो घरसम्म आउँछन्।",
+     "roman": "unīharū mero gharsamma āũchan.",
+     "literal": "",
+     "gloss": "They come as far as my house."
+    },
+    {
+     "target": "म पोखरासम्म जान्छु।",
+     "roman": "ma pokharāsamma jānchu.",
+     "literal": "",
+     "gloss": "I go up to/as far as Pokhara."
+    },
+    {
+     "target": "उहाँ दुई बजेदेखि छ बजेसम्म घरमा हुनुहुन्छ।",
+     "roman": "uhā̃ duī baje dekhi cha bajesamma gharmā hunuhuncha.",
+     "literal": "",
+     "gloss": "He/She is at home from 2 to 6."
+    },
+    {
+     "target": "म दिल्लीदेखि काठमाडौंसम्म जान्छु।",
+     "roman": "ma dillī dekhi kāṭhamāḍaũ samma jānchu.",
+     "literal": "",
+     "gloss": "I go from Delhi to Kathmandu."
+    },
+    {
+     "target": "यो उपहार तपाईंको लागि हो।",
+     "roman": "yo upahār tapāī̃ko lāgi ho.",
+     "literal": "",
+     "gloss": "This gift is for you."
+    },
+    {
+     "target": "यो किताब बच्चाहरूका लागि हो।",
+     "roman": "yo kitāb baccāharūkā lāgi ho.",
+     "literal": "",
+     "gloss": "This book is for children."
+    },
+    {
+     "target": "पढाइको लागि यो किताब राम्रो छ।",
+     "roman": "paḍhāiko lāgi yo kitāb rāmro cha.",
+     "literal": "",
+     "gloss": "This book is good for studying."
+    },
+    {
+     "target": "कामको लागि यो कम्प्युटर चाहिन्छ।",
+     "roman": "kāmko lāgi yo kampyūṭar cāhincha.",
+     "literal": "",
+     "gloss": "This computer is needed for work."
+    },
+    {
+     "target": "खेलको लागि यो मैदान ठुलो छ।",
+     "roman": "khelko lāgi yo maidān ṭhulo cha.",
+     "literal": "",
+     "gloss": "This ground is big for playing."
+    }
+   ]
+  },
+  {
+   "id": "case-08",
+   "doc": "chapter-149-chapter-17-unit-4-grammar-focus.xhtml",
+   "chunk": "English\n काठमाडौंमा छ।\n kāṭhmāḍaũmā cha. \n It is in Kathmandu.\n स्कूलको अगाडि छ।\n skūlko agāḍi cha. \n It is in front of the school.\n बजार नजिक छ।\n bajār najik cha. \n It is near the market.\n Simple Rule\n Use कहाँ छ? ( kahā̃ cha? ) when asking “Where is it?”\n Use छ ( cha ) because the question is about location, not identity.\n कता छ?\n कता छ? ( katā cha? ) asks which way something is or which direction to go.\n It is more direction-focused than कहाँ छ? ( kahā̃ cha? ).\n For example:\n मन्दिर कता छ?\n mandir katā cha? \n Which way is the temple?\n बजार कता छ?\n bajār katā cha? \n Which way is the market?\n स्कुल कता छ?\n skul katā cha? \n Which way is the school?\n Answers often give route instructions.\n For example:\n सीधा जानुहोस्, अनि दायाँ मोड्नुहोस्।\n sīdhā jānuhos, ani dāyā̃ moḍnuhos. \n Go straight, and then turn right.\n यहाँबाट बायाँ जानुहोस्।\n yahā̃bāṭa bāyā̃ jānuhos. \n From here, go left.\n Table 17.4.6 – “Which way?” questions (direction/route): katā cha?\n Nepali\n Transliteration\n English\n नजिकको बैंक कता छ?\n najikko baiṅk katā cha? \n Where is the nearest bank (which way)?\n नजिकको बस स्टप कता छ?\n najikko bas sṭap katā cha? \n Where is the nearest bus stop (which way)?\n Table 17.4.7 – Answers to katā cha?: short direction steps\n Nepali\n Transliteration\n English\n सीधा जानुहोस्।\n sīdhā jānuhos. \n Go straight.\n दायाँ मोड्नुहोस्।\n dāyā̃ moḍnuhos. \n Turn right.\n बायाँपट्टि छ।\n bāyā̃paṭṭi cha. \n It’s on the left side.\n Simple Difference\n कहाँ ( kahā̃ ) asks for a place.\n कता ( katā ) asks for a direction or route.\n Compare:\n अस्पताल कहाँ छ?\n aspatāl kahā̃ cha? \n Where is the hospital?\n अस्पताल कता छ?\n aspatāl katā cha? \n Which way is the hospital?\n Sequencing Directions: अनि, त्यसपछि, पछि\n Directions are often given as a sequence of short steps.\n Nepali uses discourse markers to show the order of steps.\n अनि\n ani \n and then\n त्यसपछि\n tyaspachi \n then / after that\n पछि\n pachi \n after / later\n For example:\n सीधा जानुहोस्। त्यसपछि दायाँ मोड्नुहोस्।\n sīdhā jānuhos. tyaspachi dāyā̃ moḍnuhos. \n Go straight. Then turn right.\n पहिले बायाँ जानुहोस्। अनि अगाडि जानुहोस्।\n pahile bāyā̃ jānuhos. ani agāḍi jānuhos. \n First go left. Then go ahead.\n Table 17.4.8 – Sequencing steps in directions: ani / tyaspachi / pachi\n Nepali\n Transliteration\n English\n अनि सीधा जानुहोस्।\n ani sīdhā jānuhos. \n And then go straight.\n बैंकपछि दायाँ मोड्नुहोस्।\n baiṅkpachi dāyā̃ moḍnuhos. \n After the bank turn right.\n पुल पार गरेपछि बस स्टप दायाँ छ।\n pul pār garepachi bas sṭap dāyā̃ cha. \n After crossing the bridge the bus stop is on the right.\n Try It Now\n Read the sequence aloud.\n पहिले सीधा जानुहोस्।\n",
+   "golden": [
+    {
+     "target": "अस्पताल कहाँ छ?",
+     "roman": "aspatāl kahā̃ cha?",
+     "literal": "",
+     "gloss": "Where is the hospital?"
+    },
+    {
+     "target": "काठमाडौंमा छ।",
+     "roman": "kāṭhmāḍaũmā cha.",
+     "literal": "",
+     "gloss": "It is in Kathmandu."
+    },
+    {
+     "target": "स्कूलको अगाडि छ।",
+     "roman": "skūlko agāḍi cha.",
+     "literal": "",
+     "gloss": "It is in front of the school."
+    },
+    {
+     "target": "बजार नजिक छ।",
+     "roman": "bajār najik cha.",
+     "literal": "",
+     "gloss": "It is near the market."
+    },
+    {
+     "target": "नजिकको बैंक कता छ?",
+     "roman": "najikko baiṅk katā cha?",
+     "literal": "",
+     "gloss": "Where is the nearest bank (which way)?"
+    },
+    {
+     "target": "नजिकको बस स्टप कता छ?",
+     "roman": "najikko bas sṭap katā cha?",
+     "literal": "",
+     "gloss": "Where is the nearest bus stop (which way)?"
+    },
+    {
+     "target": "सीधा जानुहोस्।",
+     "roman": "sīdhā jānuhos.",
+     "literal": "",
+     "gloss": "Go straight."
+    },
+    {
+     "target": "दायाँ मोड्नुहोस्।",
+     "roman": "dāyā̃ moḍnuhos.",
+     "literal": "",
+     "gloss": "Turn right."
+    },
+    {
+     "target": "बायाँपट्टि छ।",
+     "roman": "bāyā̃paṭṭi cha.",
+     "literal": "",
+     "gloss": "It’s on the left side."
+    },
+    {
+     "target": "अनि सीधा जानुहोस्।",
+     "roman": "ani sīdhā jānuhos.",
+     "literal": "",
+     "gloss": "And then go straight."
+    },
+    {
+     "target": "बैंकपछि दायाँ मोड्नुहोस्।",
+     "roman": "baiṅkpachi dāyā̃ moḍnuhos.",
+     "literal": "",
+     "gloss": "After the bank turn right."
+    },
+    {
+     "target": "पुल पार गरेपछि बस स्टप दायाँ छ।",
+     "roman": "pul pār garepachi bas sṭap dāyā̃ cha.",
+     "literal": "",
+     "gloss": "After crossing the bridge the bus stop is on the right."
+    }
+   ]
+  },
+  {
+   "id": "case-09",
+   "doc": "chapter-077-chapter-9-unit-4-grammar-focus.xhtml",
+   "chunk": "िनले ( yinle )\n this person/these people (non-honorific) (did…)\n तिनी ( tinī )\n तिनले ( tinle )\n that person/those people (non-honorific) (did…)\n उहाँ ( uhā̃ )\n उहाँले ( uhā̃le )\n he/she (HIGH) (did…)\n उनीहरू ( unīharū )\n उनीहरूले ( unīharūle )\n they (did…)\n उहाँहरू ( uhā̃harū )\n उहाँहरूले ( uhā̃harūle )\n they (HIGH) (did…)\n को? ( ko? )\n कस्ले? ( kasle? )\n who (as agent)?\n Try It Now\n Read the –ले forms aloud.\n मैले\n maile \n I, as doer\n तपाईंले\n tapāī̃le \n you, as doer\n उहाँले\n uhā̃le \n he/she, as doer\n कस्ले\n kasle \n who, as doer?\n Table 9.4.17 – Transitive Past with –ले\n Examples where the subject is marked with –ले because the verb has a direct object. \n Nepali\n Transliteration\n English\n मैले ढोका बन्द गरेँ।\n maile ḍhokā banda garẽ. \n I closed the door.\n मैले किताब खोलेँ।\n maile kitāb kholẽ. \n I opened the book.\n मैले किताब पढेँ।\n maile kitāb paḍhẽ. \n I read the book.\n तपाईंले ढोका बन्द गर्नुभयो।\n tapāī̃le ḍhokā banda garnubhayo. \n You (pol.) closed the door.\n उहाँले किताब पढ्नुभयो।\n uhā̃le kitāb paḍhnubhayo. \n He/She (hon.) read the book.\n Common Mistake\n Do not add –ले ( –le ) to every past-tense subject.\n Use –ले especially when the verb is transitive and has a direct object.\n Compare:\n मैले किताब पढें।\n maile kitāb paḍhẽ. \n I read a book.\n म घर गएँ।\n ma ghar gaẽ. \n I went home.\n In the first sentence, किताब ( kitāb ) is a direct object.\n In the second sentence, घर ( ghar ) is a destination, not a direct object.\n Intransitive Verbs in the Simple Past\n Intransitive verbs do not take a direct object.\n Because there is no direct object, the subject is usually not marked with –ले ( –le ).\n For example:\n म गएँ।\n ma gaẽ. \n I went.\n म बसें।\n ma basẽ. \n I sat.\n उहाँ जानुभयो।\n uhā̃ jānubhayo. \n He/She went.\n उहाँ बस्नुभयो।\n uhā̃ basnubhayo. \n He/She sat.\n Table 9.4.18 – Intransitive Past Without –ले\n Examples of past movement/posture verbs where –ले is not used. \n Nepali\n Transliteration\n English\n म उठें।\n ma uṭhẽ. \n I stood up.\n म कुर्सीमा बसें।\n ma kursīmā basẽ. \n I sat on the chair.\n म ढोकासम्म गएँ।\n ma ḍhokāsamma gaẽ. \n I went to the door.\n ऊ घर गयो।\n ū ghar gayo. \n He went home.\n उनीहरू कक्षामा आए।\n unīharū kakṣāmā āe. \n They came to class.\n उहाँ कुर्सीमा बस्नुभयो।\n uhā̃ kursīmā basnubhayo. \n He/She (hon.) sat on the chair.\n Simple Rule\n Transitive past sentence with a direct object → subject often takes –ले ( –le )\n Intransitive past sentence with no direct object → no –ले ( –le )\n Compare:\n मैले किताब पढें।\n maile kitāb paḍhẽ. \n I read a book.\n म घर गएँ।\n ma ghar gaẽ. \n I went home.\n Try It Now\n Decide whether the sentence uses –ले.\n मैले चि",
+   "golden": [
+    {
+     "target": "मैले ढोका बन्द गरेँ।",
+     "roman": "maile ḍhokā banda garẽ.",
+     "literal": "",
+     "gloss": "I closed the door."
+    },
+    {
+     "target": "मैले किताब खोलेँ।",
+     "roman": "maile kitāb kholẽ.",
+     "literal": "",
+     "gloss": "I opened the book."
+    },
+    {
+     "target": "मैले किताब पढेँ।",
+     "roman": "maile kitāb paḍhẽ.",
+     "literal": "",
+     "gloss": "I read the book."
+    },
+    {
+     "target": "तपाईंले ढोका बन्द गर्नुभयो।",
+     "roman": "tapāī̃le ḍhokā banda garnubhayo.",
+     "literal": "",
+     "gloss": "You (pol.) closed the door."
+    },
+    {
+     "target": "उहाँले किताब पढ्नुभयो।",
+     "roman": "uhā̃le kitāb paḍhnubhayo.",
+     "literal": "",
+     "gloss": "He/She (hon.) read the book."
+    },
+    {
+     "target": "म उठें।",
+     "roman": "ma uṭhẽ.",
+     "literal": "",
+     "gloss": "I stood up."
+    },
+    {
+     "target": "म कुर्सीमा बसें।",
+     "roman": "ma kursīmā basẽ.",
+     "literal": "",
+     "gloss": "I sat on the chair."
+    },
+    {
+     "target": "म ढोकासम्म गएँ।",
+     "roman": "ma ḍhokāsamma gaẽ.",
+     "literal": "",
+     "gloss": "I went to the door."
+    },
+    {
+     "target": "ऊ घर गयो।",
+     "roman": "ū ghar gayo.",
+     "literal": "",
+     "gloss": "He went home."
+    },
+    {
+     "target": "उनीहरू कक्षामा आए।",
+     "roman": "unīharū kakṣāmā āe.",
+     "literal": "",
+     "gloss": "They came to class."
+    },
+    {
+     "target": "उहाँ कुर्सीमा बस्नुभयो।",
+     "roman": "uhā̃ kursīmā basnubhayo.",
+     "literal": "",
+     "gloss": "He/She (hon.) sat on the chair."
+    }
+   ]
+  },
+  {
+   "id": "case-10",
+   "doc": "chapter-092-chapter-11-unit-1-key-vocabulary.xhtml",
+   "chunk": " an elder brother?\n तपाईंकी दिदी हुनुहुन्छ?\n tapāī̃kī didī hunuhuncha? \n Do you have an elder sister?\n ओहो, राम्रो।\n oho, rāmro. \n Oh, nice.\n धन्यवाद।\n dhanyawād. \n Thank you.\n Useful Sentence Patterns\n Use the vocabulary above with these simple sentence patterns. \n Nepali\n Transliteration\n English\n यो मेरो परिवार हो।\n yo mero pariwār ho. \n This is my family.\n यो मेरो आमा हुनुहुन्छ।\n yo mero āmā hunuhuncha. \n This is my mother.\n यो मेरो बुबा हुनुहुन्छ।\n yo mero bubā hunuhuncha. \n This is my father.\n उहाँ मेरो दाइ हुनुहुन्छ।\n uhā̃ mero dāi hunuhuncha. \n He is my elder brother.\n उहाँ मेरी दिदी हुनुहुन्छ।\n uhā̃ merī didī hunuhuncha. \n She is my elder sister.\n मेरो परिवारमा पाँच जना हुनुहुन्छ।\n mero pariwārmā pā̃c janā hunuhuncha. \n There are five people in my family.\n उहाँ गणित पढाउनुहुन्छ।\n uhā̃ gaṇit paḍhāunuhuncha. \n He/She teaches math.\n उहाँ विज्ञान पढ्नुहुन्छ।\n uhā̃ wijñān paḍhnuhuncha. \n He/She studies science.\n उहाँ अहिले क्यानाडामा बस्नुहुन्छ।\n uhā̃ ahile kyānāḍāmā basnuhuncha. \n He/She lives in Canada now.\n Practice\n Look at a family photo or imagine your family. Practise asking and answering questions in Nepali.\n Example:\n यो फोटोमा को हुनुहुन्छ?\n yo phoṭomā ko hunuhuncha? \n Who is this in the photo?\n उहाँ मेरो बुबा हुनुहुन्छ।\n uhā̃ mero bubā hunuhuncha. \n He is my father.\n तपाईंको परिवारमा कति जना हुनुहुन्छ?\n tapāī̃ko pariwārmā kati janā hunuhuncha? \n How many people are in your family?\n मेरो परिवारमा पाँच जना हुनुहुन्छ।\n mero pariwārmā pā̃c janā hunuhuncha. \n There are five people in my family.",
+   "golden": [
+    {
+     "target": "यो फोटोमा को हुनुहुन्छ?",
+     "roman": "yo phoṭomā ko hunuhuncha?",
+     "literal": "",
+     "gloss": "Who is this in the photo?"
+    },
+    {
+     "target": "तपाईंको परिवारमा कति जना हुनुहुन्छ?",
+     "roman": "tapāī̃ko pariwārmā kati janā hunuhuncha?",
+     "literal": "",
+     "gloss": "How many people are in your family?"
+    },
+    {
+     "target": "तपाईंकी दिदी हुनुहुन्छ?",
+     "roman": "tapāī̃kī didī hunuhuncha?",
+     "literal": "",
+     "gloss": "Do you have an elder sister?"
+    },
+    {
+     "target": "ओहो, राम्रो।",
+     "roman": "oho, rāmro.",
+     "literal": "",
+     "gloss": "Oh, nice."
+    },
+    {
+     "target": "धन्यवाद।",
+     "roman": "dhanyawād.",
+     "literal": "",
+     "gloss": "Thank you."
+    },
+    {
+     "target": "यो मेरो परिवार हो।",
+     "roman": "yo mero pariwār ho.",
+     "literal": "",
+     "gloss": "This is my family."
+    },
+    {
+     "target": "यो मेरो आमा हुनुहुन्छ।",
+     "roman": "yo mero āmā hunuhuncha.",
+     "literal": "",
+     "gloss": "This is my mother."
+    },
+    {
+     "target": "यो मेरो बुबा हुनुहुन्छ।",
+     "roman": "yo mero bubā hunuhuncha.",
+     "literal": "",
+     "gloss": "This is my father."
+    },
+    {
+     "target": "उहाँ मेरो दाइ हुनुहुन्छ।",
+     "roman": "uhā̃ mero dāi hunuhuncha.",
+     "literal": "",
+     "gloss": "He is my elder brother."
+    },
+    {
+     "target": "उहाँ मेरी दिदी हुनुहुन्छ।",
+     "roman": "uhā̃ merī didī hunuhuncha.",
+     "literal": "",
+     "gloss": "She is my elder sister."
+    },
+    {
+     "target": "मेरो परिवारमा पाँच जना हुनुहुन्छ।",
+     "roman": "mero pariwārmā pā̃c janā hunuhuncha.",
+     "literal": "",
+     "gloss": "There are five people in my family."
+    },
+    {
+     "target": "उहाँ गणित पढाउनुहुन्छ।",
+     "roman": "uhā̃ gaṇit paḍhāunuhuncha.",
+     "literal": "",
+     "gloss": "He/She teaches math."
+    },
+    {
+     "target": "उहाँ विज्ञान पढ्नुहुन्छ।",
+     "roman": "uhā̃ wijñān paḍhnuhuncha.",
+     "literal": "",
+     "gloss": "He/She studies science."
+    },
+    {
+     "target": "उहाँ अहिले क्यानाडामा बस्नुहुन्छ।",
+     "roman": "uhā̃ ahile kyānāḍāmā basnuhuncha.",
+     "literal": "",
+     "gloss": "He/She lives in Canada now."
+    }
+   ]
+  }
+ ]
+}

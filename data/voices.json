@@ -11,8 +11,15 @@
     "female form": "B4NdgwdU97lHqA8Udh2D"
    },
    "note": "Preecha (th, male — 'Patient, Friendly, Clear') for Jordan; Kanya (th, female — 'Warm, Calm Narrator') for Josephine. A learner copies the voice they hear, so the voice must match the learner's own particle."
-  }
- },
+   },
+   "ne-NP": {
+    "by_form": { "default": "BTUIboFmihb87sfmikzP" },
+    "model_id": "eleven_v3",
+    "_model_why": "MEASURED 2026-10-18: eleven_v3 supports ne (+ th, fil, es) in its published language list; eleven_multilingual_v2 lists neither ne nor th but ACCEPTS the text anyway (15,925 bytes returned) — it simply isn't trained for it. Both produce audio, so 'it works' proves nothing: for Nepali and Thai, v3 is the only model that publishes support. v2 stays the default for es-DO / fil-PH where it is trained and cheaper. Chosen by measurement, and a better-ear check beats my measurement.",
+   "note": "Kaanchi (Nepali, conversational) — added to the account 2026-10-18 from the shared library (free; adds do not consume characters). ONE voice for every learner, deliberately: Nepali marks respect INSIDE the verb and pronoun (tapai polite / timi familiar), not with a gendered particle like Thai's khrap/kha, so there is no male/female split to map. Inventing a by_form split here would be a lie about the language.",
+   "register_warning": "The voice says the right sounds; it does not teach WHICH register to use with a colleague. That is the pack's job and the colleague's correction."
+   }
+   },
  "bridge": {
   "_what": "THE BRIDGE — the Latin reading (`rom`) said ALOUD, so the learner hears the approximation beside the real Thai. A bridge is only a bridge if it is spoken in the learner's OWN first language. Jordan, 2026-10-17: 'I am American, so I speak English… Josephine, she's Filipino, so she speaks Tagalog… speak to her and her language whenever she is asking for pronunciation.' An English-eye reading does not serve a Tagalog speaker. THE DELTA BETWEEN THE TWO CLIPS IS THE LESSON — and it matters most because RTGS drops tones, so the audio is the only carrier of them.",
   "by_lang": {

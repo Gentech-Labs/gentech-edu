@@ -1,0 +1,54 @@
+{
+  "_what": "PHRASE BANK — Nepali (Central / Kathmandu standard, ne-NP). PACK DATA. Jordan, 2026-10-18: 'Because I work with some of the Nepali people, we're going to also learn the language Nepali.'",
+  "_why_a_file": "The bank used to live INSIDE life-lesson-engine.py (PHRASES, line 143) with es-DO and th-TH beside each other. Adding a third language by editing the engine is the boundary rule read backwards. A subject is a file: this one.",
+  "_sources": [
+    {"name": "Overland Trek Nepal — basic Nepali words", "url": "https://overlandtreknepal.com/basic-nepali-words-for-traveling-in-nepal", "used_for": "greetings, thank you, yes/no, how much, I don't understand"},
+    {"name": "MyLanguages — Nepali phrases", "url": "https://mylanguages.org/nepali_phrases.php", "used_for": "polite forms, I'm fine, what is this, slow down"},
+    {"name": "Language Trainers UK — Nepali phrases for tourists", "url": "https://www.languagetrainers.co.uk/blog/nepali-phrases-for-tourists", "used_for": "kati ho, mitho cha, bistarai bhannus"},
+    {"name": "GWT (UK) — 5 phrases", "url": "https://www.gwt.org.uk/news/5-nepali-phrases", "used_for": "maaph garnuhos, pheri bhetaunla, didi/dai/bhai/bahini"}
+  ],
+  "_verification": "Every entry below was cross-checked against AT LEAST the sources named. Where the sources spell the same phrase differently (dhanyabad / dhanyabaad / dhanyabād), the form used here is the one the majority of sources use, and the variation is noted rather than hidden.",
+  "_NOT_VERIFIED_BY_A_NATIVE_SPEAKER": "This is the honest limit. I am not a Nepali speaker and no native speaker has checked this file. Nepali has a prestige register (tapai/hajur) and a familiar one (timi/ta) — getting that wrong is not a grammar error, it is a social one. Treat every phrase as PROVISIONAL until a colleague confirms it. The engine's job is to make the mistake cheap and the correction easy; the colleague's job is to be right.",
+  "_count": 14,
+  "dialect": "ne-NP",
+  "label": "Nepali — Central (ne-NP)",
+  "register": {
+    "_note": "Nepali marks respect INSIDE the verb and pronoun, not with a particle like Thai's khrap/kha. So there is no 'male form' / 'female form' here — the split that exists in Thai does not exist in Nepali, and inventing one would be a lie about the language.",
+    "default": "polite (tapai)",
+    "familiar": "timi / ta — for close friends and children only, NEVER for a colleague you have just met"
+  },
+  "phrases": {
+    "greeting": [
+      {"ne": "नमस्ते", "rom": "namaste", "en": "Hello / hi (also goodbye)", "register": "polite", "note": "Universal. Palms together. Use any time of day — it is not time-of-day specific like Thai's sawatdee."},
+      {"ne": "नमस्कार", "rom": "namaskar", "en": "Hello (more formal than namaste)", "register": "formal", "note": "Added 2026-10-26 from the UBC textbook's Ch.2 list — the register step up from namaste."},
+      {"ne": "शुभ प्रभात", "rom": "shubha prabhat", "en": "Good morning", "register": "polite"},
+      {"ne": "तपाईंलाई कस्तो छ?", "rom": "tapai-lai kasto chha?", "en": "How are you? (polite)", "note": "The standard polite form — for a colleague, a shopkeeper, anyone you are not close to."},
+      {"ne": "म ठीक छु", "rom": "ma thik chhu", "en": "I'm fine / I'm doing well", "note": "The answer to the line above."},
+      {"ne": "अनि तपाईंलाई?", "rom": "ani tapai-lai?", "en": "And you? (polite)", "note": "Added 2026-10-26 (Jordan asked for 'how about you'). 'ani' = and. ASK IT — a greeting that does not bounce back is not a conversation."},
+      {"ne": "के छ खबर?", "rom": "ke chha khabar?", "en": "What's new? / what's up?", "register": "friendly", "note": "Casual — fine with a colleague you have spoken to before; skip it on day one."},
+      {"ne": "धन्यवाद", "rom": "dhanyabad", "en": "Thank you", "note": "Sources also write ‘dhanyabaad’ / ‘dhanyabād’. Same word, different romanisation."},
+      {"ne": "धेरै धन्यवाद", "rom": "dherai dhanyabad", "en": "Thank you very much", "note": "‘dherai’ = much/very. Use it when someone actually helped you."},
+      {"ne": "कृपया", "rom": "kripaya", "en": "Please"},
+      {"ne": "माफ गर्नुहोस्", "rom": "maaph garnuhos", "en": "Sorry / excuse me", "note": "For an apology. Also works to get past someone in a crowd."},
+      {"ne": "हुन्छ", "rom": "huncha", "en": "OK / alright (agreeing)", "note": "The all-purpose 'sounds good' — you will hear it a hundred times a shift."},
+      {"ne": "फेरि भेटौंला", "rom": "pheri bhetaunla", "en": "See you again / goodbye", "note": "The natural way to leave a conversation."}
+    ],
+    "workplace": [
+      {"ne": "मैले बुझिनँ", "rom": "maile bujhina", "en": "I didn't understand", "note": "The single most useful phrase on a shift with colleagues whose language you are only starting."},
+      {"ne": "विस्तारै भन्नुहोस्", "rom": "bistarai bhannus", "en": "Please speak slowly", "note": "Asking someone to slow down is polite here — it is not an admission you are failing, and saying it EARLY beats guessing."},
+      {"ne": "मेरो नाम जोर्डन हो", "rom": "mero naam Jordan ho", "en": "My name is Jordan", "note": "Added 2026-10-26. Pattern: [name] ho = 'is [name]'. Swap the name and you can introduce anyone."},
+      {"ne": "तपाईंको नाम के हो?", "rom": "tapai-ko naam ke ho?", "en": "What is your name? (polite)"},
+      {"ne": "यो के हो?", "rom": "yo ke ho?", "en": "What is this?", "note": "Point at the thing. Fastest vocabulary you will build."},
+      {"ne": "मलाई मद्दत गर्नुहोस्", "rom": "malai maddat garnuhos", "en": "Please help me"},
+      {"ne": "हो", "rom": "ho", "en": "Yes"},
+      {"ne": "होइन", "rom": "hoina", "en": "No"}
+    ],
+    "people": [
+      {"ne": "दाई", "rom": "dai", "en": "older brother — polite address for an older man", "note": "Not literal family. Colleagues use these as respectful address; getting them right earns more goodwill than perfect grammar."},
+      {"ne": "दिदी", "rom": "didi", "en": "older sister — polite address for an older woman"},
+      {"ne": "भाई", "rom": "bhai", "en": "younger brother — for a younger man"},
+      {"ne": "बहिनी", "rom": "bahini", "en": "younger sister — for a younger woman"}
+    ]
+  },
+  "_register_warning_for_the_engine": "Nepali has NO gendered politeness particle. Do not apply the Thai form-swap (ครับ/ค่ะ) to this dialect — a female learner saying 'dhanyabad kha' would be nonsense. All learners get the same form, and the pack declares no by_form voices."
+}

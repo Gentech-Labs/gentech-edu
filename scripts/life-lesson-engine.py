@@ -211,6 +211,7 @@ DIALECT_FOR_PLACE = {
 DIALECT_LABEL = {
     "es-DO": "Spanish — Dominican (es-DO)",
     "th-TH": "Thai — Central (th-TH)",
+    "ne-NP": "Nepali — Central (ne-NP)",
 }
 
 # The regional voice that matches the dialect. Resolved here, not hardcoded in the audio script,
@@ -399,6 +400,45 @@ def load_trips() -> list[dict]:
     return out
 
 
+def bank_dialects() -> list[str]:
+    """Every dialect that HAS a phrase bank — the inline ones plus the pack files."""
+    _bank_keys = set(PHRASES)
+    if PHRASE_DIR.exists():
+        _bank_keys |= {p.stem for p in PHRASE_DIR.glob("*.json")}
+    return sorted(_bank_keys)
+
+
+def load_subjects() -> list[dict]:
+    """Subjects active WITHOUT a trip (e.g. a language spoken at work). PACK DATA.
+
+    Jordan, 2026-10-18: *"Because I work with some of the Nepali people, we're going to also learn
+    Nepali."* That has no destination, so it cannot come from the itinerary. Rather than add a second
+    resolution path to the engine, these entries are merged into the same candidate list the trips feed.
+    Missing file -> no subjects, which is the old behaviour, announced rather than assumed.
+    """
+    f = DATA / "subjects.json"
+    if not f.exists():
+        return []
+    try:
+        doc = json.loads(f.read_text())
+    except Exception as e:
+        print(f"  ⚠️  subjects.json unreadable ({e}) — no non-trip subjects this run.", file=sys.stderr)
+        return []
+    out = []
+    for s in doc.get("subjects") or []:
+        if s.get("status") != "active":
+            continue
+        if s.get("dialect") not in bank_dialects():
+            print(f"  ⚠️  subject {s.get('dialect')} has no phrase bank — skipped, not guessed.",
+                  file=sys.stderr)
+            continue
+        out.append({"name": s.get("name") or s["dialect"], "status": s.get("status"),
+                    "start": "", "place": s.get("dialect", ""), "legs": [],
+                    "dialect": s.get("dialect"), "rank": s.get("rank", 50),
+                    "why": s.get("why", "")})
+    return out
+
+
 def pick_dialect(trips: list[dict]) -> tuple[str, str]:
     """Return (dialect, why) from real trip data, NEAREST TRIP FIRST. Never guesses silently.
 
@@ -414,7 +454,22 @@ def pick_dialect(trips: list[dict]) -> tuple[str, str]:
     # picking the first country that matches would be a guess wearing a lesson's clothes.
     if not TRIP_RANK:
         return "", ""
-    for t in trips:
+    # ── SUBJECTS WITHOUT A TRIP (2026-10-18) ─────────────────────────────────────────────────
+    # A language learned for WORK has no destination, so it can never come out of the itinerary.
+    # Rather than add a second resolution path, those entries join the same ranking below; their
+    # rank comes from the pack file, not from TRIP_RANK, because a colleague is not a departure date.
+    candidates = list(trips) + load_subjects()
+    for t in candidates:
+        if t.get("dialect"):
+            dialect = t["dialect"]
+            if dialect not in bank_dialects():
+                continue
+            rank = int(t.get("rank", 50))
+            if best is None or rank < best[0]:
+                # Keep the REASON, not just the label — `build_lesson` prints this line to the
+                # learner, and "drawn from: Nepali — for work" says nothing about why.
+                best = (rank, dialect, t.get("why") or t.get("name", dialect))
+            continue
         blob = " ".join([t.get("name", ""), t.get("place", ""),
                          " ".join(l.get("destination", "") for l in t.get("legs", []))]).lower()
         blob = re.sub(r"[-_/]+", " ", blob)          # puerto-plata -> puerto plata
@@ -424,7 +479,7 @@ def pick_dialect(trips: list[dict]) -> tuple[str, str]:
                 # 2026-10-17 — a resolver that can name a dialect it has no bank for is a crash, not an
                 # answer. (Combined with the loud missing-record warning above: a trip whose dialect has no
                 # pack must DECLINE, never silently fall through to whichever country happens to match next.)
-                if dialect not in PHRASES:
+                if dialect not in bank_dialects():
                     continue
                 rank = TRIP_RANK.get(k, 99)
                 if best is None or rank < best[0]:
@@ -481,19 +536,41 @@ def apply_forms(items: list[dict], learner: dict, dialect: str) -> tuple[list[di
     return out, have
 
 
-def build_lesson(trips: list[dict], seen: dict, learner_key: str = "jordan") -> dict | None:
+def build_lesson(trips: list[dict], seen: dict, learner_key: str = "jordan",
+                 subject: str | None = None) -> dict | None:
     dialect, why = pick_dialect(trips)
+    if subject:
+        # An EXPLICIT request wins over the plan — but never over the honesty rules: the bank must
+        # exist, the learner must be registered, and the voice must resolve. Requesting a language is
+        # not permission to invent one.
+        if subject not in bank_dialects():
+            return None
+        subj = next((s for s in load_subjects() if s.get("dialect") == subject), None)
+        dialect = subject
+        why = (subj or {}).get("why") or f"requested subject: {subject}"
     if not dialect:
         return None
     learner = resolve_learner(learner_key)          # hard stop on an unknown learner
-    bank = PHRASES[dialect]
+    bank = load_bank(dialect)
+    # A lesson must say WHERE it came from. Trip data and a work subject read very differently, and
+    # serving a colleague's language with the line "keyed to a country you are travelling to" would be
+    # a plain mislabel.
+    why = (why or "").strip()
+    subj = next((s for s in load_subjects() if s.get("dialect") == dialect), None)
+    if not why:
+        why = (subj or {}).get("why") or f"subject {dialect} — active on its own terms, no trip attached"
+    # Determine the SOURCE from the data, not from words inside the reason. The earlier heuristic
+    # matched on 'colleague'/'no trip attached' and missed the real reason string, so a work lesson was
+    # still closing with "a country you are travelling to" — a mislabel, in the learner's own lesson.
+    source_kind = "subject" if subj else "trip"
     items: list[dict] = []
     for sit in SITUATION_ORDER:
         for row in bank.get(sit, []):
             es, en = row[0], row[1]
             std = row[2] if len(row) > 2 else "—"
             items.append({"situation": sit, "es": es, "en": en, "std": std,
-                          "bank_es": es})      # what the BANK held, for the key fallback below
+                          "bank_es": es,                        # what the BANK held, for the key fallback
+                          "rom_pack": row[3] if len(row) > 3 else None})  # reading from the PACK, if any
 
     # ── FORMS FIRST, THEN THE KEY (fixed 2026-10-17, found by the Sr audit) ──────────────────────
     # The mastery key was computed from the BANK phrase with the forms swapped AFTERWARDS. The bank is
@@ -523,8 +600,13 @@ def build_lesson(trips: list[dict], seen: dict, learner_key: str = "jordan") -> 
     items = items[:6]
     pron = load_pron(dialect.split("-")[0])
     for it in items:
-        it["rom"] = pron.get(it["es"])        # None = no reading, and the render stays silent
+        # The pack's OWN reading wins; the pronunciation file is the fallback for a dialect whose
+        # readings were generated separately (Thai). None = no reading, and the render stays silent
+        # rather than inventing a Latin spelling the learner would then trust.
+        it["rom"] = it.pop("rom_pack", None) or pron.get(it["es"])
     return {"dialect": dialect, "lang": dialect.split("-")[0],
+            "divergence": divergence_label(dialect),
+            "source_kind": source_kind, "why": why,
             "dialect_label": DIALECT_LABEL.get(dialect, dialect),
             "voice_id": resolve_voice(dialect, learner),
             # The BRIDGE — reads the `rom` approximation aloud in THIS learner's first language,
@@ -552,11 +634,17 @@ def render(lesson: dict) -> str:
             lines.append(f"   🔤 {it['rom']}")
         lines.append(f"   {it['en']}")
         if it.get("std") and it["std"] != "—":
-            lines.append(f"   (textbook: {it['std']})")
+            # The label is PER DIALECT. Reading a Thai/Nepali romanisation as "textbook" tells the
+            # learner there is a standard variant to learn, which is false and confusing.
+            lines.append(f"   ({lesson.get('divergence', 'textbook')}: {it['std']})")
         lines.append("")
     lines.append("Audio is generated separately, in the matching regional voice.")
-    lines.append("Nothing here is invented — every phrase is keyed to a country you are")
-    lines.append("actually travelling to, in the dialect spoken there.")
+    if lesson.get("source_kind") == "subject":
+        lines.append("Nothing here is invented — every phrase comes from the pack for this subject,")
+        lines.append("which is active because you named it, not because of a trip.")
+    else:
+        lines.append("Nothing here is invented — every phrase is keyed to a country you are")
+        lines.append("actually travelling to, in the dialect spoken there.")
     return "\n".join(lines)
 
 
@@ -594,17 +682,71 @@ def brain_target(learner: str, dialect: str,
     return folder / fname, f"brain → {folder.relative_to(VAULT)}/  (dialect {dialect} → topic '{topic}')"
 
 
+DIVERGENCE_LABEL = {
+    "es-DO": "textbook",   # element 3 is the standard/regional contrast
+    "th-TH": "reading",    # element 3 is the romanisation, NOT a register contrast
+    "ne-NP": "reading",    # same as Thai: script + romanisation, no textbook variant
+}
+DEFAULT_DIVERGENCE = "textbook"
+
+
+def divergence_label(dialect: str) -> str:
+    return DIVERGENCE_LABEL.get(dialect, DEFAULT_DIVERGENCE)
+
+
+# ── PHRASE BANKS ARE PACK DATA, NOT A DICT IN THIS SCRIPT ─────────────────────────────────────────
+# The bank used to live here as an inline PHRASES dict (es-DO and th-TH side by side). Adding a third
+# language then meant editing the ENGINE — the boundary rule read backwards. Now a subject adds
+# `data/phrases/<dialect>.json` and nothing else. The inline bank below is the FALLBACK for a dialect
+# that has no file yet, kept so an existing lesson can never silently lose its bank.
+PHRASE_DIR = DATA / "phrases"
+
+
+def load_bank(dialect: str) -> dict:
+    """Phrases for a dialect, from its pack file. Falls back to the inline bank, LOUDLY.
+
+    Shape returned: {category: [(target, english, divergence, rom_or_None), ...]} — the same 3/4-tuple
+    the inline bank used, so build_lesson() does not care where the data came from.
+    """
+    f = PHRASE_DIR / f"{dialect}.json"
+    if f.exists():
+        try:
+            doc = json.loads(f.read_text())
+        except Exception as e:
+            print(f"  🔴 phrase pack unreadable ({f.name}): {e}", file=sys.stderr)
+        else:
+            bank = {}
+            for cat, items in (doc.get("phrases") or {}).items():
+                bank[cat] = [(it.get("ne") or it.get("target") or it.get("text") or "",
+                              it.get("en", ""),
+                              it.get("textbook") or "—",
+                              it.get("rom")) for it in items]
+            if bank:
+                return bank
+    if dialect in PHRASES:
+        print(f"  ⚠️  no pack file for {dialect} ({f}) — using the INLINE bank carried in this script. "
+              f"Move it to data/phrases/{dialect}.json.", file=sys.stderr)
+        return PHRASES[dialect]
+    return {}
+
+
 def selftest() -> int:
     """PLANT a failure and prove we go RED. House rule: every detector proves it can fail."""
     print("SELFTEST — planting failures, expecting loud RED\n")
     ok = True
 
-    # 1. Missing trip data must produce NO lesson, not a generic course.
+    # 1. Missing trip data must produce NO lesson, not a generic course. RE-STATED 2026-10-18: with
+    #     the arrival of non-trip SUBJECTS (Nepali for work), "no trip" must still refuse rather than
+    #     quietly serve whatever subject happens to be active. A work subject is not a travel plan, and
+    #     a lesson nobody asked for is a guess wearing a lesson's clothes.
     real_trips, real_load = load_trips, None
+    real_subj = globals().get("load_subjects")
     globals()["load_trips"] = lambda: []
+    globals()["load_subjects"] = lambda: []
     l = build_lesson([], {})
+    globals()["load_subjects"] = real_subj
     if l is None:
-        print("  ✅ RED 1: no trip data -> no lesson (refuses to invent one)")
+        print("  ✅ RED 1: no trip data -> no lesson (refuses to invent one, even with a work subject ready)")
     else:
         print("  ❌ FAIL 1: invented a lesson with no trip data"); ok = False
     globals()["load_trips"] = real_trips
@@ -792,16 +934,26 @@ def main() -> int:
     ap.add_argument("--quiet", action="store_true", help="silent on success (cron mode)")
     ap.add_argument("--learner", default="jordan",
                     help="who the lesson is for (registry: data/learners.json). Separate progress per learner.")
+    ap.add_argument("--subject", default=None,
+                    help="ask for a SPECIFIC dialect (e.g. ne-NP) instead of letting the plan pick. "
+                         "Still refuses if that dialect has no phrase bank — an explicit request is not "
+                         "permission to invent a language.")
     a = ap.parse_args()
     if a.selftest:
         return selftest()
 
     trips = load_trips()
-    if not trips:
+    if a.subject and a.subject not in bank_dialects():
+        print(f"🔴 no phrase bank for '{a.subject}'. Banks present: {', '.join(bank_dialects())}",
+              file=sys.stderr)
+        return 1
+    if not a.subject and not trips:
         print("🔴 life-lesson-engine: NO trip data in the vault — refusing to invent a lesson.",
               file=sys.stderr)
         return 1
-    lesson = build_lesson(trips, mastery(a.learner), a.learner)
+    # `--subject` is threaded through, NOT faked by rewriting the trip list: rewriting trips lost the
+    # dialect on the way to the lesson file (the audio step then rendered whatever the plan wanted).
+    lesson = build_lesson(trips, mastery(a.learner), a.learner, subject=a.subject)
     if lesson is None:
         print("🔴 life-lesson-engine: no country in your trips maps to a language bank. "
               "Add the trip or the bank — not a generic course.", file=sys.stderr)

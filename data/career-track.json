@@ -1,0 +1,293 @@
+{
+ "_pack": "CAREER — the Amazon-funded credential + cloud-engineering track (AWS major, Solidity/security minor)",
+ "_rule": "This is PACK DATA on the EDU engine. Adding a subject is adding a FILE, never editing the engine. The engine owns sequencing, mastery, and the honesty rules; this file only names the subject matter, the FUNDING, and the DATES.",
+ "_source": "All funding figures verified 2026-10-26 from AtoZ screenshots (read directly) + provider pages. Funding amounts are Jordan's own account values, not estimates.",
+ "_revision": "REVISED 2026-10-27 — Jordan set the endgame: 'I want the focus to be on cloud engineering because of not only the income potential, but being able to work remote.' Consequence: SANS CyberLaunch is OUT (its entry seat is SOC Tier-1 triage, which the AI-substitutability measurement ranked the highest-confidence avoid, and its budget year competes with nothing useful). The minor moves from GIAC to CYFRIN UPDRAFT (Solidity + smart-contract security) — free, no budget impact, and it feeds the recorded 'minor in Solidity and blockchain security for Cypherin' intent.",
+ "_honesty_rules": [
+  "NEVER print progress as a fact about the learner. This is a plan, not certification.",
+  "No observed work on a milestone means UNMEASURED — never a fabricated 0%.",
+  "COVERAGE IS NOT PROFICIENCY: knowing the plan is not passing an exam. Only a certificate number closes one.",
+  "An unattempted milestone is NOT a miss — exclude it from any ratio rather than counting it against him.",
+  "DEADLINES ARE HARD DATES, not nudges. The per-year voucher cap is a real gate.",
+  "A began-course is NOT a credential. A cert closes when a Pearson VUE result exists.",
+  "A FREE COURSE HAS NO DEADLINE — never let Cyfrin's open access displace a voucher-windowed AWS exam. Order matters."
+ ],
+ "target": {
+  "lane": "CLOUD ENGINEERING — primary and explicit. Set by Jordan 2026-10-27.",
+  "lane_reason": "Not only income (entry $110k-$130,802 vs $52-72k for cyber entry), but REMOTE viability — which is the hard requirement he named. Data-center ops was evaluated and rejected for exactly this: it is on-site by definition.",
+  "minor": "Solidity + smart-contract security (Cyfrin Updraft) — the 'useful oddity', not the qualification. Stacks on the AWS security domain.",
+  "horizon": "2 years or less to a remote role, while staying employed at Amazon",
+  "strategy": "COMPOUND, not escape. Stay employed; harvest the benefits; build years while credentialed.",
+  "why_this_works": "The measured FDE gate was '2-6+ years, mostly 5+'. This plan BUILDS those years while employed rather than waiting for them. By 2028 the candidate is ~3 years at Amazon + cloud certs + a rare cloud/security blend + a live operating portfolio.",
+  "explicitly_not": "NOT a 6-month exit plan. That pressure was removed by Jordan's own decision on 2026-10-26.",
+  "backburners_that_must_survive": [
+   "GenTech — the fleet keeps running throughout",
+   "Web3 — the x402 rail, ERC-8004 identity, Treasury work"
+  ]
+ },
+ "funding": {
+  "_note": "TWO INDEPENDENT STREAMS. They do not compete. Key finding of 2026-10-26, still true.",
+  "aws_exam_voucher": {
+   "amount": "1 per year · 100% discount · ANY AWS Certification exam",
+   "mechanism": "AtoZ → Benefits → Amazon For Amazonians → AWS Training and Certification → copy the unique voucher code → enter at Pearson VUE checkout",
+   "verified_quote": "\"Each Amazonian is eligible for one (1) 100% benefit voucher per year... 100% discount on scheduling ANY AWS Certification exam.\"",
+   "value_ceiling": "~$300 if aimed at a Professional-level exam",
+   "UNVERIFIED": "whether 'per year' is CALENDAR year or rolling 12 months. If calendar: a Dec-2026 claim + a Jan-2027 claim yields two free exams ~3 months apart. CONFIRM IN ATOZ — this is C0."
+  },
+  "career_choice": {
+   "amount": "$5,250 for 2027 · $0 used · $0 reserved · expires 12/31/2027",
+   "allocated_to": "NOTHING. HELD UNSPENT — decision 2026-10-27.",
+   "decision_reason": "All three catalog candidates evaluated and each failed a stated requirement: NetCom (help desk/A+) targets the WORST-ranked AI-substitution row, BLS -3% replacement-only openings, and A+ sits below Jordan's demonstrated level; SANS CyberLaunch (SOC T1) is the highest-confidence avoid and takes 12 months; Correlation One (data-center technician) is ON-SITE by definition and fails the remote requirement. An unused budget is worth $0 — a budget spent in the wrong lane costs the YEAR.",
+   "what_would_change_it": "A CLOUD-RELEVANT program appearing in the AtoZ catalog. Still worth a periodic catalog check, not a one-time search.",
+   "UNVERIFIED": "whether such a cloud program exists in the AtoZ catalog. CHECK BEFORE ASSUMING NONE."
+  },
+  "skill_builder": {
+   "amount": "free to employees",
+   "role": "study for every AWS exam in this track — the official AWS-authored material for the AWS exam"
+  },
+  "aws_educate": {
+   "amount": "free",
+   "role": "zero-friction orientation and fundamentals; Skill Builder is where the exam-aligned prep lives"
+  },
+  "cyfrin_updraft": {
+   "amount": "FREE — on-demand courses, no deadline, no budget impact",
+   "role": "the Solidity/security minor; security-first curriculum; trusted by PwC, Ethereum Foundation, Uniswap, MetaMask, Chainlink, Lido, LayerZero"
+  }
+ },
+ "milestones": [
+  {
+   "id": "C0",
+   "skill": "CONFIRM THE VOUCHER RULE (5 minutes, and it gates the calendar)",
+   "kind": "admin",
+   "why": "Everything downstream depends on one unverified fact: is the 100% voucher per CALENDAR year or rolling 12 months? If calendar, CCP (Dec 2026) + SAA-C03 (Jan 2027) are BOTH free — two certifications for one 5-minute check.",
+   "artifact": "a screenshot of the AtoZ answer",
+   "steps": [
+    "AtoZ → Benefits → Amazon For Amazonians → AWS Training and Certification",
+    "Find the eligibility wording: calendar year or rolling 12 months",
+    "Note whether a 2026 voucher is still claimable today",
+    "Also: search the AtoZ catalog for any CLOUD program (Career Choice is currently held unspent)"
+   ],
+   "done_when": "the per-year rule is written down with a screenshot, and the cloud-catalog question is answered",
+   "hours": 0.5,
+   "gate": "BLOCKS C1 AND C2 — do this first. The engine refuses C1 until C0 closes."
+  },
+  {
+   "id": "C1",
+   "skill": "AWS Certified Cloud Practitioner (CCP / CLF-C02)",
+   "kind": "certification",
+   "why": "The entry credential for every cloud lane and the cheapest use of the first voucher. Study is free: AWS Skill Builder's free tier carries 'AWS Cloud Practitioner Essentials' — the authoritative prep, written by AWS for the AWS exam — plus a 4-step official Exam Prep Plan with 225+ exam-style questions and an Official Practice Exam (65 q / 90 min). It also mints the separate 50% AWS certified-individual voucher for later.",
+   "artifact": "a Pearson VUE result + certificate number",
+   "steps": [
+    "AWS Skill Builder (free) → 'AWS Cloud Practitioner Essentials'",
+    "Skill Builder → Exam Prep Plan: CLF-C02 (225+ exam-style questions)",
+    "Skill Builder → Official Practice Exam CLF-C02 (65 q, 90 min) — a real score, not a feeling",
+    "Claim the 100% voucher in AtoZ and enter it at Pearson VUE checkout",
+    "Book and sit the exam. Record the certificate number."
+   ],
+   "study_note": "CCP rewards CONCEPTS, not hands-on depth (AWS re:Post guidance): shared responsibility model, IAM basics, billing/pricing, and what each core service is FOR — EC2 vs Lambda, S3 vs EBS, RDS vs DynamoDB. Great hands-on skill is NOT required. ~30h is honest.",
+   "done_when": "a PASS result exists and the certificate number is recorded. NOT 'studying started'.",
+   "hours": 30,
+   "blocked_by": "C0",
+   "target_window": "claim the voucher in DEC 2026 if the calendar-year reading holds; exam by mid-Jan 2027"
+  },
+  {
+   "id": "C2",
+   "skill": "AWS Certified Solutions Architect – Associate (SAA-C03)",
+   "kind": "certification",
+   "why": "The #1 named cloud cert in the whole measurement (1,675 US postings, +15%). It is the cert that says 'cloud engineer' to a screener, and the voucher makes it free.",
+   "artifact": "a Pearson VUE result + certificate number",
+   "steps": [
+    "Claim the NEXT year's 100% voucher (Jan 2027 under the calendar-year reading)",
+    "Skill Builder / SAA-C03 course + hands-on in a free AWS account",
+    "MOCK the exam before booking — a real practice score, not a feeling",
+    "Pass it. Record the certificate number."
+   ],
+   "done_when": "a PASS result exists and the certificate number is recorded.",
+   "hours": 80,
+   "blocked_by": "C0",
+   "target_window": "exam by mid-2027 (no SANS deadline pressure now — the Feb 2027 cliff is gone)",
+   "optional_next": "After SAA: CKA (1,926 postings, +232%) or Terraform Associate (561-716, +135%) — both REMOTE-NATIVE lanes. Platform/SRE is where remote is the norm, not the exception. Not a milestone yet; named so it is not re-derived."
+  },
+  {
+   "id": "C3",
+   "skill": "Cyfrin Updraft — Blockchain Fundamentals",
+   "kind": "course",
+   "why": "The entry to the Solidity/security minor. Free, no deadline, no budget impact. Establishes smart contracts, wallets, consensus — the vocabulary the security track assumes.",
+   "artifact": "completed course + completion record",
+   "steps": [
+    "updraft.cyfrin.io → career tracks → 'Blockchain fundamentals'",
+    "Work the track in order; it is security-first by construction"
+   ],
+   "done_when": "the fundamentals track is completed and recorded.",
+   "hours": 40,
+   "blocked_by": "C2",
+   "scheduling_note": "DELIBERATELY AFTER C2. Cyfrin is free forever with no deadline; the AWS voucher is windowed. Never let open access displace a windowed exam. And the AWS security domain (IAM, shared responsibility, trust boundaries) is what makes Cyfrin's security track land as understanding rather than vocabulary."
+  },
+  {
+   "id": "C4",
+   "skill": "Cyfrin Updraft — Smart Contract Security",
+   "kind": "course",
+   "why": "The minor's payoff, and the rare half of the pairing. 'Cloud engineer who can read Solidity and audit a contract' is a genuinely uncommon combination — it is the useful ODDITY on the resume, not the qualification. Directly continuous with the recorded intent (auditing our own money-code, the Cyfrin/security background).",
+   "artifact": "completed security track + a public audit write-up of real code",
+   "steps": [
+    "updraft.cyfrin.io → career tracks → 'Smart contract security'",
+    "Identify vulnerabilities, audits, formal verification",
+    "PUBLISH ONE REAL AUDIT — the portfolio artifact, not the certificate, is what proves it. Candidates: our own x402-gateway, the treasury tools, or a public CTF-style target."
+   ],
+   "done_when": "the security track is completed AND one real audit is published in public.",
+   "hours": 80,
+   "blocked_by": "C3",
+   "why_the_artifact_rule": "cert-vs-portfolio measured it: 8 FDE postings named ZERO certs, and the recruiter line is 'Your Degree Signals Potential, GitHub Proves Results'. A Cyfrin completion is a course; a published audit is evidence."
+  },
+  {
+   "id": "C5",
+   "skill": "THE REMOTE ROLE — the actual goal",
+   "kind": "outcome",
+   "why": "Cloud certs + a live operating portfolio + a rare cloud/security blend + ~3 years at Amazon is a genuinely different candidate from the one measured on 2026-10-26. This milestone exists so the plan names its own finish line instead of drifting.",
+   "artifact": "an offer for a REMOTE cloud engineering role",
+   "steps": [
+    "Keep the portfolio publishing throughout — one legible artifact, not a pile",
+    "Internal door first: an Amazon cloud/IT transfer is the lowest-risk move available and uses the tenure he already has",
+    "External door second: cloud engineer (SAA) or platform/SRE (CKA)",
+    "HARD FILTER: REMOTE. Data-center/on-site roles are out — that was evaluated and rejected 2026-10-27.",
+    "Do NOT wait for the plan to finish before applying. Apply when a credential lands.",
+    "The pitch, already on record: 'I architect and operate the system, and I verify every line that ships.' Never 'my agents write the code.'"
+   ],
+   "done_when": "an offer is accepted. Not 'applications sent'.",
+   "hours": 0,
+   "target_window": "by late 2028 (two years or less from the 2026-10-26 decision)"
+  }
+ ],
+ "sequence_rule": "Serve the next UNMET milestone in order. C0 gates C1 and C2. AWS certs (C1, C2) come BEFORE Cyfrin (C3, C4) because the voucher is windowed and Cyfrin is not. Never a menu.",
+ "hard_dates": [
+  {
+   "date": "2026-12-31",
+   "what": "2026 Career Choice budget expires — $0 used and it stays unspent by decision, so nothing is lost"
+  }
+ ],
+ "retired_dates": [
+  {
+   "what": "SANS CyberLaunch — application 2027-02-08 · cohort start 2027-02-15 · program end 2028-02-14",
+   "why": "Program evaluated and DECLINED 2026-10-27. Kept as prose, not as dated rows: a date field holding 'RETIRED 2027-02-08' renders unparseable and would break the engine's countdown. Its removal also removes the only hard deadline the old plan had."
+  }
+ ],
+ "capacity_warning": "The only real constraint is CAPACITY, not money and not eligibility. REVISED 2026-10-27: the old warning said SANS would consume 16-20 hrs/week for 12 months from Feb 2027 with no room for anything else. That is GONE. The new track is ~150 hours total across CCP + SAA + both Cyfrin tracks, spread over ~12 months — roughly 3 hrs/week. There is genuine room here, which is why the plan can tolerate slippage instead of breaking.",
+ "_pitfalls": {
+  "_what": "Money and time traps previous students hit. Each one is a RULE the engine can surface in a lesson when the learner reaches the milestone it protects.",
+  "_source": "r/AWSCertifications (2022-2026) including the engineer who created the Skill Builder exam-prep courses, plus official AWS training pricing (2026-10-28).",
+  "_limit": "Forum evidence, not a controlled study. The population that posts skews toward people who struggled. Treat these as warnings that cost little to obey — not as measured failure rates.",
+  "_standing_rule": "CHECK THE FREE DOOR FIRST. Amazon already funds this: Skill Builder free to employees, one 100% exam voucher per year via AtoZ, and Career Choice $5,250 for 2027. Anyone paying before confirming those three is paying for something already owned.",
+  "pitfalls": [
+   {
+    "n": 1,
+    "trap": "Buying a video course when the free tier covers the concepts",
+    "what_happens": "Skill Builder's free tier is 600+ courses. The paid tier's real addition is the OFFICIAL PRACTICE EXAM, not better teaching.",
+    "rule": "Never buy a course to LEARN. Buy the readiness test only when the exam date is set.",
+    "cost_if_ignored": "$15-20 per unnecessary course",
+    "guard_at": [
+     "C1",
+     "C2"
+    ],
+    "cost_class": "small"
+   },
+   {
+    "n": 2,
+    "trap": "Buying the subscription too early",
+    "what_happens": "$29/month running for a 3-month study plan = $87 for what ONE month buys.",
+    "rule": "Buy Skill Builder Individual for the month you SIT the exam. Cancel after. One month, not three.",
+    "cost_if_ignored": "$58+ avoidable",
+    "guard_at": [
+     "C2"
+    ],
+    "cost_class": "medium"
+   },
+   {
+    "n": 3,
+    "trap": "Buying more than one practice-exam bank",
+    "what_happens": "People stack Tutorials Dojo AND WhizLabs AND the instructor's exams. They test the same patterns; the second bank teaches nothing new.",
+    "rule": "ONE outside bank. Practise the question SHAPES, not new answers.",
+    "cost_if_ignored": "$15-40 per extra bank",
+    "guard_at": [
+     "C2"
+    ],
+    "cost_class": "small"
+   },
+   {
+    "n": 4,
+    "trap": "Treating a course as evidence of readiness",
+    "what_happens": "The exam-prep course is a READINESS CHECK by design — the engineer who built it says so: 'designed to help you identify skills gaps and determine your readiness.' Using it as the teacher is using a thermometer as a textbook.",
+    "rule": "Readiness is a PRACTICE-EXAM SCORE, never hours watched. No score = UNMEASURED, not ready.",
+    "cost_if_ignored": "a retake — $150, or a wasted annual voucher (2027 benefit burns)",
+    "guard_at": [
+     "C1",
+     "C2"
+    ],
+    "cost_class": "large"
+   },
+   {
+    "n": 5,
+    "trap": "Paying for what Amazon already funds",
+    "what_happens": "Skill Builder is free to employees, the 100% voucher comes from AtoZ, and Career Choice has $5,250 unspent. Buying first pays twice for one thing.",
+    "rule": "AtoZ check BEFORE any card is entered. Three questions: is Skill Builder active, is the voucher claimed, what is Career Choice allocated to.",
+    "cost_if_ignored": "the whole $150 exam fee, and $29/mo",
+    "guard_at": [
+     "C0"
+    ],
+    "cost_class": "large"
+   },
+   {
+    "n": 6,
+    "trap": "Buying for the wrong lane",
+    "what_happens": "Postings in a 98-posting sample name Kubernetes and GPU serving. NOT ONE asked for a certificate. The cert closes a benefit that would otherwise be wasted; it does not close the hiring gap.",
+    "rule": "The cert is a funded credential, never the door to the job. APPLY IN PARALLEL — do not wait for it.",
+    "cost_if_ignored": "months of opportunity cost, not dollars",
+    "guard_at": [
+     "C1",
+     "C2",
+     "C3",
+     "C4"
+    ],
+    "cost_class": "time"
+   },
+   {
+    "n": 7,
+    "trap": "Front-loading the certs past the hard date",
+    "what_happens": "The voucher is one per YEAR and the SANS cohort starts 2027-02-15 at 16-20 hrs/week. If the AWS certs are not landed before then, they wait a full year.",
+    "rule": "The AWS window closes 2027-02-15. Land them EARLY in the window, not at the end of it.",
+    "cost_if_ignored": "12 months of lost voucher value",
+    "guard_at": [
+     "C1",
+     "C2"
+    ],
+    "cost_class": "time"
+   }
+  ],
+  "cheapest_legitimate_path": {
+   "_what": "What to spend if every free door is exhausted — the floor, not the ceiling.",
+   "items": [
+    {
+     "item": "Skill Builder free tier (spine)",
+     "cost": "$0"
+    },
+    {
+     "item": "Skill Builder Individual — ONE month, the month of the exam",
+     "cost": "~$29"
+    },
+    {
+     "item": "ONE outside practice bank",
+     "cost": "~$15-20"
+    },
+    {
+     "item": "Builder Labs free tier + AWS Free Tier (hands-on)",
+     "cost": "$0"
+    },
+    {
+     "item": "Exam itself, via the AtoZ 100% voucher",
+     "cost": "$0"
+    }
+   ],
+   "total": "~$45-50 for exam-ready — if the free doors are exhausted. With the voucher, $0 is possible.",
+   "note": "Not $0 in every case, and not $500 either. Say the real number."
+  }
+ }
+}

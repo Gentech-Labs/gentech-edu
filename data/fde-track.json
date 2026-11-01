@@ -1,109 +1,197 @@
 {
-  "_pack": "FDE — the forward-deployed-engineer track",
-  "_rule": "This is PACK DATA on the EDU engine. Adding a subject is adding a FILE, never editing the engine. The engine owns sequencing, mastery, and the honesty rules; this file only names the subject matter.",
-  "_source": "scripts/fde-gap.py — requirement terms counted in the bodies of 517 FDE/solutions/applied-AI postings across 30 verified ATS boards, 2026-10-15. Posting counts below are from THAT measurement, not from memory.",
-  "_honesty_rules": [
-    "NEVER print progress as a fact about the learner. This is practice, not certification.",
-    "No observed work on a milestone means UNMEASURED — never a fabricated 0%.",
-    "COVERAGE IS NOT PROFICIENCY: reading the steps is not doing the milestone. Only evidence closes one.",
-    "An unattempted milestone is NOT a miss — exclude it from any ratio rather than counting it against him."
-  ],
-  "target": {
-    "lane": "forward deployed engineer / FDE-adjacent",
-    "why": "The gate on this lane is demonstrable engineering plus the ability to explain it, not credentials.",
-    "measured": {
-      "postings_examined": 517,
-      "companies": 26,
-      "mention_a_degree": 12,
-      "mention_a_clearance": 4
-    }
+ "_pack": "FDE — the forward-deployed-engineer track",
+ "_rule": "This is PACK DATA on the EDU engine. Adding a subject is adding a FILE, never editing the engine. The engine owns sequencing, mastery, and the honesty rules; this file only names the subject matter.",
+ "_source": "scripts/fde-gap.py — requirement terms counted in the bodies of 517 FDE/solutions/applied-AI postings across 30 verified ATS boards, 2026-10-15. Posting counts below are from THAT measurement, not from memory.",
+ "_honesty_rules": [
+  "NEVER print progress as a fact about the learner. This is practice, not certification.",
+  "No observed work on a milestone means UNMEASURED — never a fabricated 0%.",
+  "COVERAGE IS NOT PROFICIENCY: reading the steps is not doing the milestone. Only evidence closes one.",
+  "An unattempted milestone is NOT a miss — exclude it from any ratio rather than counting it against him."
+ ],
+ "target": {
+  "lane": "forward deployed engineer / FDE-adjacent",
+  "why": "The gate on this lane is demonstrable engineering plus the ability to explain it, not credentials.",
+  "measured": {
+   "postings_examined": 517,
+   "companies": 26,
+   "mention_a_degree": 12,
+   "mention_a_clearance": 4
+  }
+ },
+ "already_carried": [
+  {
+   "they_ask_for": "Deployment / onboarding",
+   "postings": 25,
+   "our_evidence": "handoff system, systems documented for a human reader"
   },
-  "already_carried": [
-    {"they_ask_for": "Deployment / onboarding", "postings": 25, "our_evidence": "handoff system, systems documented for a human reader"},
-    {"they_ask_for": "Customer-facing", "postings": 23, "our_evidence": "the PA suite reporting daily to a non-engineer"},
-    {"they_ask_for": "API / REST / SDK", "postings": 21, "our_evidence": "x402 gateway with 5 paid routes, MCP servers"},
-    {"they_ask_for": "Agents / LLM", "postings": 20, "our_evidence": "the agent fleet itself"},
-    {"they_ask_for": "Evaluations", "postings": 18, "our_evidence": "an audit that caught its own false claim; cron truth-layer; falsifiable tests"},
-    {"they_ask_for": "Discovery / scoping", "postings": 18, "our_evidence": "the vault-as-brain: messy business turned into a working system"}
-  ],
-  "milestones": [
+  {
+   "they_ask_for": "Customer-facing",
+   "postings": 23,
+   "our_evidence": "the PA suite reporting daily to a non-engineer"
+  },
+  {
+   "they_ask_for": "API / REST / SDK",
+   "postings": 21,
+   "our_evidence": "x402 gateway with 5 paid routes, MCP servers"
+  },
+  {
+   "they_ask_for": "Agents / LLM",
+   "postings": 20,
+   "our_evidence": "the agent fleet itself"
+  },
+  {
+   "they_ask_for": "Evaluations",
+   "postings": 18,
+   "our_evidence": "an audit that caught its own false claim; cron truth-layer; falsifiable tests"
+  },
+  {
+   "they_ask_for": "Discovery / scoping",
+   "postings": 18,
+   "our_evidence": "the vault-as-brain: messy business turned into a working system"
+  }
+ ],
+ "milestones": [
+  {
+   "id": "M0",
+   "skill": "Package what already exists",
+   "kind": "not new learning — narrative work",
+   "why": "Six of the top asks are things we already run. The gap is that nobody has written them down as a teardown an interviewer can follow.",
+   "artifact": "one written FDE case study: the problem, the system, what broke, how it was caught",
+   "steps": [
+    "Write the fleet as a system: sources -> engine -> surface -> rail",
+    "Pick the single best incident and write it as a story with the measurement that caught it",
+    "Name your own gap out loud (cloud) before they find it",
+    "Publish it on the org that carries the resume link"
+   ],
+   "done_when": "a stranger can read it in 10 minutes and describe what you built",
+   "hours": 6,
+   "status": "closed",
+   "closed_at": "2026-10-30",
+   "evidence": "EDU/interview-prep/2026-10-30-eval7-deep-dive.md (174 lines) — the one-system deep-dive Lunon's published step 2 asks for; every number re-derived against profiles/arthur/cache/eval7/results.json (12/12 matched).",
+   "met": true,
+   "evidence_short": "EDU/interview-prep/2026-10-30-eval7-deep-dive.md (174 lines, 12/12 numbers re-derived)"
+  },
+  {
+   "id": "M1",
+   "skill": "Go",
+   "kind": "language",
+   "why": "18 postings mention Go — MORE than Python (17). Go is the lingua franca of cloud-native infra, and 4 of the 26 companies are Go shops (Temporal, Grafana, Docker, Kubernetes). Measured, not assumed.",
+   "artifact": "port the list-steward to Go — a real binary that keeps doing its nightly job",
+   "steps": [
+    "toolchain: go mod, go build, go test",
+    "stdlib only at first: net/http, encoding/json, flags",
+    "concurrency: goroutines + channels for the 30-board fetch",
+    "table-driven tests, then a --selftest that plants failures",
+    "ship it: run it nightly alongside the Python one and compare output"
+   ],
+   "done_when": "the Go binary replaces the Python steward for a week with identical results",
+   "hours": 20
+  },
+  {
+   "id": "M2",
+   "skill": "Cloud reality + infrastructure as code",
+   "kind": "platform",
+   "why": "AWS 14, Kubernetes 12, Docker 12, GCP 11, CI/CD 10, Terraform 9. We have Docker on one VPS, not cloud — and this is the exact line that gated the Supabase role.",
+   "artifact": "one GenTech service deployed on AWS, provisioned by Terraform, built by CI",
+   "steps": [
+    "free AWS account, IAM least-privilege, budget alarm on day one",
+    "deploy ONE service (the x402 gateway or the scanner) — not the whole fleet",
+    "write the Terraform for it, with remote state",
+    "GitHub Actions: build -> test -> deploy on push",
+    "TLS + a health check that a stranger can curl"
+   ],
+   "done_when": "a URL that answers 200 from a machine that is not ours, and you can destroy it with one command",
+   "hours": 30,
+   "cert_sequence": [
     {
-      "id": "M0",
-      "skill": "Package what already exists",
-      "kind": "not new learning — narrative work",
-      "why": "Six of the top asks are things we already run. The gap is that nobody has written them down as a teardown an interviewer can follow.",
-      "artifact": "one written FDE case study: the problem, the system, what broke, how it was caught",
-      "steps": [
-        "Write the fleet as a system: sources -> engine -> surface -> rail",
-        "Pick the single best incident and write it as a story with the measurement that caught it",
-        "Name your own gap out loud (cloud) before they find it",
-        "Publish it on the org that carries the resume link"
-      ],
-      "done_when": "a stranger can read it in 10 minutes and describe what you built",
-      "hours": 6
+     "step": 1,
+     "cert": "AWS Certified Cloud Practitioner",
+     "level": "Foundational",
+     "hours": "12h45m (Skill Builder)",
+     "exam": "DO NOT SIT",
+     "why": "Study free for the vocabulary. ~$100 exam that proves nothing an engineer needs proven."
     },
     {
-      "id": "M1",
-      "skill": "Go",
-      "kind": "language",
-      "why": "18 postings mention Go — MORE than Python (17). Go is the lingua franca of cloud-native infra, and 4 of the 26 companies are Go shops (Temporal, Grafana, Docker, Kubernetes). Measured, not assumed.",
-      "artifact": "port the list-steward to Go — a real binary that keeps doing its nightly job",
-      "steps": [
-        "toolchain: go mod, go build, go test",
-        "stdlib only at first: net/http, encoding/json, flags",
-        "concurrency: goroutines + channels for the 30-board fetch",
-        "table-driven tests, then a --selftest that plants failures",
-        "ship it: run it nightly alongside the Python one and compare output"
-      ],
-      "done_when": "the Go binary replaces the Python steward for a week with identical results",
-      "hours": 20
+     "step": 2,
+     "cert": "AWS Certified AI Practitioner",
+     "level": "Foundational",
+     "hours": "25",
+     "exam": "DROPPED 2026-11-01",
+     "why": "Business-literacy cert; AWS names sales/PM/analyst as the intended candidate. 1 posting in 5,340 names it. Voucher allowed to expire rather than spend 25 evenings here."
     },
     {
-      "id": "M2",
-      "skill": "Cloud reality + infrastructure as code",
-      "kind": "platform",
-      "why": "AWS 14, Kubernetes 12, Docker 12, GCP 11, CI/CD 10, Terraform 9. We have Docker on one VPS, not cloud — and this is the exact line that gated the Supabase role.",
-      "artifact": "one GenTech service deployed on AWS, provisioned by Terraform, built by CI",
-      "steps": [
-        "free AWS account, IAM least-privilege, budget alarm on day one",
-        "deploy ONE service (the x402 gateway or the scanner) — not the whole fleet",
-        "write the Terraform for it, with remote state",
-        "GitHub Actions: build -> test -> deploy on push",
-        "TLS + a health check that a stranger can curl"
-      ],
-      "done_when": "a URL that answers 200 from a machine that is not ours, and you can destroy it with one command",
-      "hours": 30
+     "step": 3,
+     "cert": "AWS Certified Data Engineer - Associate",
+     "level": "Associate",
+     "hours": "60-100",
+     "exam": "SELF-FUNDED later",
+     "why": "The one whose bullets match the applied role: models, data quality, lineage. Worth paying for when there is slack."
     },
     {
-      "id": "M3",
-      "skill": "SQL",
-      "kind": "data",
-      "why": "11 postings. Cheapest gap on the list — the vault is already structured data with no schema.",
-      "artifact": "the four lists queryable with SQL instead of grep",
-      "steps": [
-        "load the list files into SQLite with Python's stdlib sqlite3",
-        "schema it: lists, items, status, gate, completed_at",
-        "the questions you actually ask: what is open, what is mine, what is blocked",
-        "one aggregate per week: how many closed, median age of an open item"
-      ],
-      "done_when": "you answer a real question about your own queue with one SELECT",
-      "hours": 8
-    },
-    {
-      "id": "M4",
-      "skill": "TypeScript / React",
-      "kind": "frontend",
-      "why": "TypeScript 11, React 6. FDEs build customer-facing demos — this is the difference between a screenshot and something a stakeholder can click.",
-      "artifact": "one Hub board rebuilt in TypeScript as a clickable demo",
-      "steps": [
-        "types first: model a job lead as an interface",
-        "one component tree, no framework churn",
-        "build it against the real jobs.json so it is never fake data",
-        "deploy it next to M2's cloud deploy"
-      ],
-      "done_when": "a link someone can open and click, fed by data your own system produced",
-      "hours": 24
+     "step": 4,
+     "cert": "AWS Certified Generative AI Developer",
+     "level": "Professional",
+     "hours": "150-250",
+     "exam": "DESTINATION, 6-12 months",
+     "why": "Bedrock + production AI + evals. The cert that matches the actual work, at Professional difficulty."
     }
-  ],
-  "sequence_rule": "Serve the next UNMET milestone in order. Never a menu — the engine owns the sequence, and a picker hands the decision back to the learner."
+   ],
+   "voucher": {
+    "count": "1 per year",
+    "window_closes": "2027-02-15",
+    "decision": "spend on AI Practitioner, NOT Cloud Practitioner",
+    "measured_on": "2026-10-30 from aws.amazon.com/certification (level of every cert read off the vendor page)"
+   },
+   "ranking_note": "Data Engineer - Associate is the most relevant path to the applied role; AI Practitioner is the voucher pick because it is passable inside the window. Skip ML Engineer (math gap = months), CloudOps (ops lane), Security Advanced (Specialty).",
+   "priority_note": "M2.4 (Terraform + one real AWS service) is now the HEAD of this milestone. The certs follow the artifact, not the other way round."
+  },
+  {
+   "id": "M3",
+   "skill": "SQL",
+   "kind": "data",
+   "why": "11 postings. Cheapest gap on the list — the vault is already structured data with no schema.",
+   "artifact": "the four lists queryable with SQL instead of grep",
+   "steps": [
+    "load the list files into SQLite with Python's stdlib sqlite3",
+    "schema it: lists, items, status, gate, completed_at",
+    "the questions you actually ask: what is open, what is mine, what is blocked",
+    "one aggregate per week: how many closed, median age of an open item"
+   ],
+   "done_when": "you answer a real question about your own queue with one SELECT",
+   "hours": 8
+  },
+  {
+   "id": "M4",
+   "skill": "TypeScript / React",
+   "kind": "frontend",
+   "why": "TypeScript 11, React 6. FDEs build customer-facing demos — this is the difference between a screenshot and something a stakeholder can click.",
+   "artifact": "one Hub board rebuilt in TypeScript as a clickable demo",
+   "steps": [
+    "types first: model a job lead as an interface",
+    "one component tree, no framework churn",
+    "build it against the real jobs.json so it is never fake data",
+    "deploy it next to M2's cloud deploy"
+   ],
+   "done_when": "a link someone can open and click, fed by data your own system produced",
+   "hours": 24
+  }
+ ],
+ "sequence_rule": "Serve the next UNMET milestone in order — now M1 (Go) or M2 (cloud+IaC), whichever the week's postings reward. Never a menu — the engine owns the sequence, and a picker hands the learner the one thing they should not have. M0 closed 2026-10-30.",
+ "_voucher_clock": {
+  "benefit": "one (1) 100% exam voucher per year, Amazon",
+  "expires": "2026-12-31",
+  "rule": "Expires end of the same calendar year granted. Received in 2026 -> exam on or before 2026-12-31.",
+  "one_per_year": "One per year. Spending it on an AI/ML exam does not earn another.",
+  "decision": "LET IT EXPIRE — Jordan's call, 2026-11-01",
+  "decision_reason": "AWS Certified AI Practitioner is a business-literacy cert (AWS's own candidate list: business analyst, IT support, marketing, PM, sales — not engineers). MEASURED demand: 1 posting in 5,340 across 30 live boards names it. 25 study hours buy a resume line nobody asks about. The same hours go to M2.4 (Terraform + one real AWS service), which makes a sentence true that interviews actually test.",
+  "measured_demand": {
+   "boards": 30,
+   "postings_scanned": 5340,
+   "naming_ai_practitioner": 1,
+   "naming_generative_ai": 524
+  },
+  "cost_of_expiring": "$100 exam fee, free to him already",
+  "cost_of_not_expiring": "25 evenings on a cert that changes nothing, inside the window where the artifact that matters should be built",
+  "source": "Jordan pasted official voucher terms 2026-11-01; demand measured same day"
+ }
 }

@@ -6,7 +6,8 @@
   "filename_template": "{date}-{dialect}.md",
   "topic_by_dialect": {
     "th-TH": "thai",
-    "es-DO": "spanish-do"
+    "es-DO": "spanish-do",
+    "ne-NP": "nepali"
   },
   "topic_default": "_unsorted",
   "_topic_default_rule": "A dialect with no topic mapping files under `_unsorted` rather than being dropped or guessed into the wrong subject — an unsorted lesson is findable; a misfiled one is not.",

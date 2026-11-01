@@ -111,9 +111,28 @@ def api_key() -> str:
     raise SystemExit("🔴 ELEVENLABS_API_KEY not found (env, secrets file, or profile .env)")
 
 
+def model_for(voice_id: str) -> str:
+    """The TTS model for this voice. PACK DATA (data/voices.json), default v2.
+
+    MEASURED 2026-10-18: `eleven_multilingual_v2` lists neither `ne` nor `th` in its published language
+    list, but it ACCEPTS that text and returns audio anyway — so "it produced a file" proves nothing.
+    `eleven_v3` publishes support for ne/th/fil/es and is the only model that does for Nepali or Thai.
+    v2 stays the default for the dialects it is actually trained on, because it is cheaper.
+    """
+    try:
+        voices = json.loads((DATA / "voices.json").read_text())
+    except Exception:
+        return "eleven_multilingual_v2"          # no mapping -> the old behaviour, not a crash
+    for _dialect, entry in (voices.get("dialects") or {}).items():
+        ids = [v for k, v in (entry.get("by_form") or {}).items() if k != "note"]
+        if voice_id in ids and entry.get("model_id"):
+            return entry["model_id"]
+    return "eleven_multilingual_v2"
+
+
 def synth(voice_id: str, text: str) -> bytes | None:
     """One utterance. Returns None — never a fake file — if the API refuses or the body is not audio."""
-    body = json.dumps({"text": text, "model_id": "eleven_multilingual_v2",
+    body = json.dumps({"text": text, "model_id": model_for(voice_id),
                        "voice_settings": {"stability": 0.45, "similarity_boost": 0.8}}).encode()
     req = urllib.request.Request(
         f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}",

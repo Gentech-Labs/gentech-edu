@@ -1,0 +1,186 @@
+{
+ "_what": "A MEASURED career track as pack data — the first one built from posting counts, not a roadmap. A subject is a file: adding this track required no engine edit.",
+ "_method": "career-claim-audit. Samples: 98 US agentic postings read in full (Simplilearn career-research, Oct 2026) and 1,135 published listings (agentic-engineering-jobs.com, Mar-May 2026, reproducible at their public API). Both Tier 2 snapshots — quoted as counts with their source, never as bare percentages.",
+ "_honesty": "Posting coverage is NOT proficiency and NOT eligibility. A milestone here still cannot close without an artifact.",
+ "track": "agentic-ai-engineer",
+ "label": "Agentic AI Engineer — measured (v2)",
+ "updated": "2026-10-28",
+ "pay": {
+  "advertised_median_low": 180000,
+  "advertised_median_high": 282225,
+  "n_with_pay": 86,
+  "source": "98-posting sample, Oct 2026",
+  "note": "advertised ranges, not earnings"
+ },
+ "median_min_experience_years": 5,
+ "requirements_by_count": [
+  {
+   "skill": "LLM evaluation",
+   "count": 56,
+   "sample": 98
+  },
+  {
+   "skill": "observability",
+   "count": 39,
+   "sample": 98
+  },
+  {
+   "skill": "RAG",
+   "count": 34,
+   "sample": 98
+  },
+  {
+   "skill": "tool / function calling",
+   "count": 32,
+   "sample": 98
+  },
+  {
+   "skill": "multi-agent orchestration",
+   "count": 27,
+   "sample": 98
+  },
+  {
+   "skill": "guardrails / safety",
+   "count": 25,
+   "sample": 98
+  }
+ ],
+ "frameworks_by_jobs": [
+  {
+   "name": "LangChain",
+   "jobs": 392,
+   "solo": 50,
+   "note": "universal substrate; most junior-friendly (37.8% junior/mid)"
+  },
+  {
+   "name": "LangGraph",
+   "jobs": 256,
+   "solo": 27,
+   "note": "stateful runtime; pairs with LangChain in 185 jobs"
+  },
+  {
+   "name": "LlamaIndex",
+   "jobs": 150,
+   "solo": 3,
+   "note": "retrieval layer"
+  },
+  {
+   "name": "CrewAI",
+   "jobs": 106,
+   "solo": 0,
+   "note": "NEVER appears alone"
+  },
+  {
+   "name": "AutoGen",
+   "jobs": 74,
+   "solo": 0,
+   "note": "IN MAINTENANCE — Microsoft sunset it; do not learn"
+  }
+ ],
+ "_stack_finding": "Average job names 2.31 frameworks; the modal job names two. 'Which framework' is the wrong question. Salary spread across all five is ~$4k, and naming an orchestration framework correlates with BELOW-market pay.",
+ "languages": {
+  "python": "91-96% of postings",
+  "typescript": "18-26%, mostly full-stack roles"
+ },
+ "milestones": [
+  {
+   "n": 1,
+   "title": "Make the evaluation work searchable",
+   "kind": "packaging",
+   "status": "closed",
+   "weeks": 1,
+   "artifact": "resume terms + published eval-harness page with real rejection numbers",
+   "closes_when": "a stranger reading only the resume and that page can name the evaluation work",
+   "closes_requirement": "LLM evaluation 57%"
+  },
+  {
+   "n": 2,
+   "title": "RAG-9 — local embeddings on the VPS",
+   "kind": "build",
+   "status": "next",
+   "days": 1,
+   "tooling": "bge-small ~160MB, CPU, no endpoint and no GPU required",
+   "artifact": "chunk the 204K-token textbook two ways, embed locally, vector index, hit@3/hit@5/MRR vs the 127-pair golden set, and one paragraph defending chunk size FROM THE NUMBERS",
+   "closes_when": "hit@k is measured on both chunking strategies and the loser is named",
+   "closes_requirement": "RAG 34/98"
+  },
+  {
+   "n": 3,
+   "title": "Packaging: 6 pins, descriptions, forks labelled",
+   "kind": "packaging",
+   "status": "open",
+   "days": 1,
+   "artifact": "six pins per Gentech's list; descriptions on the 3 drafted repos; 56 forks labelled",
+   "closes_when": "a stranger can tell whose work is whose in under a minute",
+   "closes_requirement": "it is the screen for everything else"
+  },
+  {
+   "n": 4,
+   "title": "Forge — local inference benchmark",
+   "kind": "build",
+   "status": "open",
+   "days": 2,
+   "tooling": "8GB 3070 · Qwen 2.5 7B Q4 (~5.0GB) via vLLM or llama.cpp",
+   "artifact": "TTFT + tokens/sec before and after ONE optimisation; the 8GB constraint in the artifact title",
+   "closes_when": "two measured runs and the constraint stated honestly",
+   "closes_requirement": "inference — Tier B"
+  },
+  {
+   "n": 5,
+   "title": "MCP server — the orchestrator's product",
+   "kind": "build",
+   "status": "open",
+   "days": 2,
+   "artifact": "an MCP server exposing the EDU tools (extract / evaluate / record) so ANOTHER agent can use them",
+   "closes_when": "a second agent completes a real task through it",
+   "closes_requirement": "agent/tool integration; the only PRODUCT on the list"
+  },
+  {
+   "n": 6,
+   "title": "Rented GPU — only when a posting requires it",
+   "kind": "build",
+   "status": "gated",
+   "days": 2,
+   "artifact": "same benchmark, bigger model, real GPU",
+   "closes_when": "NOT before milestone 4 — pay for hardware after the skill is demonstrated, not instead of it",
+   "closes_requirement": "Tier B credibility"
+  }
+ ],
+ "_lane_note": "Agentic lane = the door (apply now, short distance). AI-Infrastructure lane = the ceiling (needs milestone 5). Infra pay lives above the orchestration band.",
+ "_change_this_track_if": "A live Q4 pull shows evaluation under 40%; AutoGen leaves maintenance; any posting requires a certificate.",
+ "_v2_why": "v1 assumed an embedding endpoint existed. MEASURED 2026-10-28: OpenCode Go 30 models / 0 embedding, Zen 47 models / 0 embedding, no numpy/torch/ollama locally. Corpus is 204,414 tokens, so retrieval is still required. Forge is an 8GB 3070 (00-HQ/fde-timeline-2026-10-16.md) — the GPU milestone has an honest SIZE: 7B Q4, not a frontier model. AWS certs dropped entirely: no posting in the sample asks for one.",
+ "_orchestrator_skills": [
+  {
+   "n": 1,
+   "skill": "judge output, not produce it",
+   "proof": "EVAL-7: 127-pair golden set, 5/5 grader selftest, pre-registered rule",
+   "postings": "LLM evaluation 56/98 (57%)"
+  },
+  {
+   "n": 2,
+   "skill": "know when NOT to build",
+   "proof": "refused RAG on a rail with no embeddings, then built it locally instead",
+   "postings": "judgment — not scored"
+  },
+  {
+   "n": 3,
+   "skill": "systems that fail closed",
+   "proof": "TOOL-42: 6 bad-input classes, actionable rejection, fail-closed proven",
+   "postings": "guardrails 25/98, tool calling 32/98"
+  },
+  {
+   "n": 4,
+   "skill": "taste: true vs purchasable",
+   "proof": "agent economy is the thesis; applied agent engineering is hiring now",
+   "postings": "positioning — Jordan's call"
+  }
+ ],
+ "_dropped": [
+  "AWS Educate / AWS certs — no posting in the sample asks for one; the biggest gap (GPU serving) is not an AWS topic"
+ ],
+ "_honest_limits": [
+  "8GB/7B is a learning rig, not credential-grade for multi-GPU serving roles",
+  "quantisation-byte estimates are not benchmarks — milestone 4 makes them real",
+  "posting coverage is not eligibility"
+ ]
+}

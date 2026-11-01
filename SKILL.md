@@ -278,7 +278,7 @@ name.**
 copy**, so nothing synced it and `data/travel-apps.json` drifted on HQ alone until the drift gate went
 red; (2) `edu_apps.py` and then `life-lesson-scenario.py` each read **a different file than this doc
 names** — the doc/reader disagreement that hid the drift; (3) `life-lesson-{engine,audio,level}.py`
-carried **`/root/.hermes/profiles/gentech` hardcoded into all four seats**, so every seat read HQ's state
+carried **`/opt/data/profiles/gentech` hardcoded into all four seats**, so every seat read HQ's state
 and cache, and this doc's LEVEL LAYER section existed on HQ alone while the level *script* was on all
 four seats. One canonical tree + a path-derived seat closes all three.
 
@@ -395,8 +395,11 @@ four seats. One canonical tree + a path-derived seat closes all three.
   Read `status` from the same payload that carries the counter and refuse on a **deny-list**
   (`past_due`, `unpaid`, `suspended`, `blocked`, `canceled`, `restricted`) *before* spending a
   character — an unknown status must never stop a paid, working account. Then report the invoice
-  instead of rendering silence. (Guard shipped in Arthur's `scripts/elevenlabs-credit-check.py`; the
-  gentech/pixel/gizmo copies are drifted versions and do not carry it.)
+  instead of rendering silence. (Consolidated 2026-10-18 by HQ: ONE canonical gate at
+  `/opt/data/scripts/elevenlabs-credit-check.py` carries the guard, and each seat's
+  `scripts/elevenlabs-credit-check.py` is a thin wrapper that execs it. The three drifted copies —
+  arthur 8,204 B, gentech = pixel 3,916 B, gizmo 2,650 B — are retired to `/opt/data/backups/lane-gate/`
+  and the retired-seat vault archive. Extend the canonical; never fork the gate.)
 
 ## References
 

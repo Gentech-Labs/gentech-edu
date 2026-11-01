@@ -19,10 +19,19 @@
       "phrases_that_matter": ["greeting", "directions", "market", "smalltalk", "food", "taxi", "hotel"]
     },
     {
-      "match": ["thailand", "bangkok", "pattaya", "chiang mai"],
-      "zone": "tourist",
-      "target": "A1",
-      "label": "Two-week Thailand — get around politely",
+     "match": ["nepal", "kathmandu", "pokhara", "kaski", "chitwan", "lumbini"],
+     "zone": "colleagues",
+     "target": "A1",
+     "label": "Nepali colleagues at work — spoken, not tourist",
+     "why": "Added 2026-10-18 on Jordan's words: 'I work with some of the Nepali people.' This is NOT a trip — there is no itinerary, no venue, no price list, so the trip-driven sources do not apply. The corpus is the workplace. A1 is the honest target for a first pass: greet, thank, be polite, ask someone to slow down. FSI lists Nepali in Category III alongside Thai (~1,100 class hours to professional proficiency), so a full course is out of reach on a work schedule — 'get up to speed' means usable in conversation with colleagues, not fluent.",
+     "phrases_that_matter": ["greeting", "workplace"],
+     "_corpus_gap": "No workplace material supplied yet. The phrases in data/phrases/ne-NP.json are general-language basics from public sources, NOT things his specific colleagues say. Ask for real lines from his shift (what a colleague actually says when handing off, asking for help, saying goodbye) — that is the corpus that makes this pack his."
+    },
+    {
+     "match": ["thailand", "bangkok", "pattaya", "chiang mai"],
+     "zone": "tourist",
+     "target": "A1",
+     "label": "Two-week Thailand — get around politely",
       "why": "Thai is FSI Category IV (~1,100 class hours). A fluent goal does not fit in the months before the trip, so the honest target is polite survival, not fluency.",
       "phrases_that_matter": ["greeting", "airport", "taxi", "hotel", "food"]
     }

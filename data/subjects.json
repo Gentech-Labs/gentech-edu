@@ -1,0 +1,17 @@
+{
+  "_what": "SUBJECTS — a language the fleet teaches that is NOT tied to a trip. PACK DATA. Jordan, 2026-10-18: 'Because I work with some of the Nepali people, we're going to also learn the language Nepali.'",
+  "_why_this_file_exists": "Until now every dialect resolved from a TRIP: load_trips() reads the itinerary, pick_dialect() ranks the places, and the lesson is drawn from a destination. Nepali has no destination — the corpus is the workplace. Rather than bolt a second path into the engine, this file declares subjects that are active on their own terms. The engine merges them with the trip-derived ones; both go through the same bank, the same mastery, the same honesty rules.",
+  "_rank_convention": "Lower wins. A NAMED trip ranks 1, so a work subject ranks 5 — the trip still leads when both are live, because a departure date is a deadline and a colleague is not. Change the numbers here to change the order; never edit the engine for priority.",
+  "subjects": [
+    {
+      "dialect": "ne-NP",
+      "rank": 5,
+      "status": "active",
+      "name": "Nepali — for work",
+      "why": "Jordan, 2026-10-18: *'I work with some of the Nepali people, we're going to also learn the language Nepali. So anything I can learn to get up to speed, let's start a easy lesson.'* A workplace corpus, not a trip: no dates, no venues, no prices.",
+      "_corpus_note": "What is supplied so far is GENERAL Nepali from public sources, not lines his colleagues actually use. The moment he gives real shift language, that replaces this as the corpus — same rule as the itinerary."
+    }
+  ],
+  "_inactive_but_registered": {},
+  "_how_to_add_a_subject": "Add its phrases at data/phrases/<dialect>.json, add the dialect to DIALECT_LABEL and a voice to voices.json, then add ONE entry here with a rank and the learner's own words as the why. That is four file edits and zero engine edits — which is the test of whether the boundary is holding."
+}

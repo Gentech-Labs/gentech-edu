@@ -60,7 +60,9 @@ scripts/
   life-lesson-level.py    level + dialect resolution
   life-lesson-scenario.py scenario construction
   life-lesson-audio.py    voice rendering (per-form native voices; never one voice for all)
-  fde-lesson.py           the FDE track
+  fde-lesson.py           the TRACK renderer — any data/*-track.json, addressed by --track (default: fde)
+  notebook.py             the learner's own notes — BESIDE engine state, never in it (a note is not evidence)
+  edu-today.py            "today's lesson" = the milestone the engine serves now, + a 7-day recap (read-only)
   edu_apps.py             travel-app pack reader
   make-pronunciation.py   pronunciation bridge (generated, never hand-typed)
 data/                 the PACK data — a subject is a file here, not a code change

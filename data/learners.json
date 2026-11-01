@@ -1,0 +1,84 @@
+{
+ "_what": "LEARNER REGISTRY — PACK DATA. WHO the engine may teach, and the FORMS each learner must be served in. Adding a learner is adding an entry here; nobody edits the engine for a person.",
+ "_rule": "An unknown learner is NOT a permission — it is an ERROR (the same hard stop as tenant_guard: 'a mismatched identity is a hard stop, never a warning', because a warning gets scrolled past at 3am in a cron log).",
+ "_isolation": "Shared engine, SHARED PACK, SEPARATE PROGRESS. Mastery and lessons are per learner: profiles/<seat>/state/learners/<learner>.json and EDU/lessons/<learner>/. Two learners must never share one record — her misses would sort his drills.",
+ "_updated": "2026-10-17",
+ "_defaults": {
+  "_why": "The phrase banks are written in these forms. A learner whose forms differ gets a documented substitution, and the render SAYS which form it served — never a silent swap.",
+  "th-TH": {
+   "pronoun": "ผม",
+   "particle": "ครับ",
+   "form_label": "male form",
+   "form_english": "male speaker"
+  }
+ },
+ "learners": {
+  "jordan": {
+   "display": "Jordan",
+   "status": "ACTIVE",
+   "relationship": "seat owner",
+   "first_language": {
+    "code": "en-US",
+    "name": "American English",
+    "_source": "Jordan, 2026-10-17: 'I am American, so I speak English.' The BRIDGE — the Latin reading said aloud — is voiced in this language, because a bridge only works in the learner's OWN first language."
+   },
+   "forms": {
+    "th-TH": {
+     "pronoun": "ผม",
+     "particle": "ครับ",
+     "form_label": "male form",
+     "form_english": "male speaker"
+    }
+   },
+   "wants": ["thai", "fde"],
+   "_wants_source": "Jordan, 2026-10-18: 'we're both interested in learning Thai' — plus the FDE course lane he asked for. This is the list of SUBJECTS he asked for, not a curriculum the engine invented.",
+   "schedule": {
+    "window": "evening",
+    "_note": "Jordan, 2026-10-18, on why the two learners can't share one delivery time: 'we're up at different times — maybe she might want to do a separate lesson in the morning than me at night.' The window is LOCAL to the learner, which is exactly why the timezone field below matters.",
+    "tz": "America/New_York",
+    "_tz_status": "MEASURED 2026-10-18 — Jordan: 'I'm from Cincinnati Ohio USA… I'm on the New York time frame.' Cincinnati is Eastern, so his two statements agree and no guessing is involved. This CLOSES a field that was left UNKNOWN on purpose rather than invented."
+   },
+   "scope_why": "Learns better from his own material (his own rule): the trip and the venues are the corpus.",
+   "rooms": [
+    "Gentech EDU"
+   ]
+  },
+  "josephine-b": {
+   "display": "Josephine B",
+   "status": "ACTIVE",
+   "relationship": "collaborator — Jordan's partner; LEARNER scope, capital firewall unchanged",
+   "first_language": {
+    "code": "fil-PH",
+    "name": "Filipino / Tagalog",
+    "_status": "PROVISIONAL — given by Jordan, 2026-10-17 ('Josephine, she's Filipino, so she speaks Tagalog'), NOT yet confirmed by her. She is the authority on her own language; ask her before treating this as settled.",
+    "_open": "The readings are still spelled for an English eye (RTGS: 'phom ma thiao khrap'). Tagalog is phonetically regular and has no 'ph'/'kh', so her approximation should be re-spelled in Tagalog orthography. That is a second layer and it needs her input."
+   },
+   "forms": {
+    "th-TH": {
+     "pronoun": "ฉัน",
+     "particle": "ค่ะ",
+     "form_label": "female form",
+     "form_english": "female speaker"
+    }
+   },
+   "wants": ["thai"],
+   "_wants_source": "Jordan, 2026-10-18: both want Thai — and he was explicit that FDE is NOT on her list: 'Josephine doesn't want to learn forward development engineer. She hasn't said that she wants to.' Her own word decides her list, not his.",
+   "schedule": {
+    "window": "morning",
+    "_note": "Jordan, 2026-10-18: she may want a morning lesson — HER morning, which is his night. This is the reason the two learners cannot share one delivery time.",
+    "tz": "Asia/Manila",
+    "_tz_status": "INFERRED from 'she's Filipino' (Jordan) — NOT confirmed by her. An inferred zone is a scheduling guess, and it is labelled as one rather than presented as known."
+   },
+   "scope_why": "First outside learner on the engine. Thai material, with the BRIDGE voiced in her own first language rather than in English (see first_language).",
+   "rooms": [
+    "Gentech EDU",
+    "Gentech HQ",
+    "Gentech Treasury"
+   ]
+  }
+ },
+ "_open_limitations": {
+  "th-TH": "The bank is short ON PURPOSE — 'basic Thai and enough to get around' (Jordan, 2026-10-17). It is a survival set, not a course, and the level cap is A1 (see level-targets.json).",
+  "female_forms_review": "The substitutions (ครับ→ค่ะ, ผม→ฉัน) are the standard polite pair and are applied mechanically. A Thai speaker should confirm register on ฉัน vs ดิฉัน for a hotel desk — flagged rather than assumed."
+ }
+}

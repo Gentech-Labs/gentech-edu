@@ -1,2 +1,7 @@
 __pycache__/
 *.pyc
+.env
+*.log
+cache/
+# per-learner local state, not engine content
+data/progress.json

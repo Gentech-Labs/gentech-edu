@@ -1,0 +1,221 @@
+{
+ "_what": "THE WORKLOAD — what a week actually looks like on an agent/AI-automation role, written as ASSIGNMENTS the learner does for real. Not a syllabus: a ticket queue.",
+ "_why_this_file": "Jordan, 2026-10-28: 'What would be work assignments that I would get from work? What does the actual workload look like? I know that you say it's exactly what we do, but we're on Telegram. What would they want professionally?' A course built from a job description teaches the description. A course built from the WORK teaches the job. This is the work.",
+ "_source_of_truth": "Ticket shapes derived from the measured track (98-posting sample) plus the hiring-signal patterns those samples named: evaluation, observability, retrieval, tool calling, multi-agent, guardrails. Every assignment below carries the market term it trains.",
+ "_rule": "An assignment is not complete until its artifact exists somewhere a stranger can open. This is the same rule as the engine's milestone gate — no artifact, no close.",
+ "track": "agentic-ai-engineer",
+ "label": "The Workload — a week on the job",
+ "updated": "2026-10-28",
+ "week": [
+  {
+   "day": 1,
+   "theme": "Triage and observability",
+   "ticket": "OPS-114: 'Our agent keeps failing overnight and nobody knows why.'",
+   "what_you_actually_do": [
+    "Read the logs of a real scheduled run and find the last good and first bad execution.",
+    "Add structured logging to the failing path: run id, model, tokens, latency, error class.",
+    "Build one page that answers 'what failed in the last 24h and how often'.",
+    "Write the incident note: what broke, what you measured, what you changed."
+   ],
+   "artifact": "a dashboard/chart URL or a committed log + the incident note",
+   "trains": [
+    "observability (39/98)",
+    "failure triage",
+    "incident writing"
+   ],
+   "why_the_market_wants_it": "Postings name observability in 40% of samples, and 'how do you debug a non-deterministic failure' is a standard interview question.",
+   "jordan_has": "cron health standards, alarm debouncing, receipted logs — this is naming + one chart away"
+  },
+  {
+   "day": 2,
+   "theme": "Evaluation — the top requirement",
+   "ticket": "EVAL-7: 'Before we change the prompt, prove the change does not make it worse.'",
+   "what_you_actually_do": [
+    "Build a small golden set: 10 real inputs with the output you consider correct.",
+    "Write a grader that scores an output against each case — exact, rubric, or model-graded.",
+    "Run it before and after a prompt change and report the delta with counts, not percentages of a tiny n.",
+    "Decide: ship or revert, and say which and why."
+   ],
+   "artifact": "eval harness in a repo + a before/after table with n= stated",
+   "trains": [
+    "LLM evaluation (56/98 — #1)",
+    "golden datasets",
+    "regression testing for non-deterministic output"
+   ],
+   "why_the_market_wants_it": "The single most-named requirement in the sample. It is also the hardest to fake, which is why it separates candidates.",
+   "jordan_has": "edu-extract.py IS this — model proposes, verifier deletes unverifiable output, with real rejection counts. Needs its rubric written down and its numbers published."
+  },
+  {
+   "day": 3,
+   "theme": "Tool calling and a failure path",
+   "ticket": "TOOL-42: 'The agent calls the pricing tool and sometimes passes a string where a number belongs.'",
+   "what_you_actually_do": [
+    "Define the tool schema strictly (types, enums, required fields).",
+    "Make the tool reject bad input with a message the MODEL can act on.",
+    "Give the agent one retry with the error text, then fail closed.",
+    "Log the failure class so day 1's dashboard counts it."
+   ],
+   "artifact": "a tool with schema validation + a test showing the bad-input path, and the retry counted",
+   "trains": [
+    "tool / function calling (32/98)",
+    "guardrails (25/98)",
+    "fail-closed design"
+   ],
+   "why_the_market_wants_it": "Tool calling is the mechanism; guardrails are the trust story. Both appear in a quarter of postings each."
+  },
+  {
+   "day": 4,
+   "theme": "Retrieval — local embeddings (re-scoped 2026-10-28)",
+   "ticket": "RAG-9: 'The assistant answers from last year's docs. Make it answer from the current ones.'",
+   "what_you_actually_do": [
+    "chunk the 204K-token textbook TWO ways: fixed-size and structure-aware",
+    "embed locally with bge-small; store a vector index",
+    "answer 10 questions with citations back to chunk ids",
+    "measure hit@3, hit@5 and MRR on a hand-built question set, for BOTH chunkings",
+    "write one paragraph defending the chunk size from the numbers"
+   ],
+   "artifact": "retrieval service + hit@k for both chunkings + the chunking rationale with numbers",
+   "trains": [
+    "RAG (34/98)",
+    "embeddings",
+    "chunking",
+    "evaluation of retrieval"
+   ],
+   "why_the_market_wants_it": "RAG is in a third of postings and is the standard interview topic that reveals whether someone has shipped.",
+   "jordan_has": "the phrase packs (25 Nepali phrases, sourced) — a real corpus to retrieve over",
+   "_rescope": "v1 assumed an embedding endpoint. MEASURED: no embedding model on either rail (30 and 47 models, zero embedding). Re-scoped to bge-small (~160MB, CPU) — real retrieval, small model, both stated.",
+   "closes_requirement": "RAG 34/98"
+  },
+  {
+   "day": 5,
+   "theme": "Multi-agent orchestration, and handing it over",
+   "ticket": "ORCH-3: 'Split the job so a researcher agent and a writer agent do not block each other.'",
+   "what_you_actually_do": [
+    "Draw the graph: nodes, state, the termination condition.",
+    "Implement it in LangGraph (or LangChain) with explicit state.",
+    "Prove a failure in one node recovers rather than hangs.",
+    "Write the handover: what a colleague needs to run it without you."
+   ],
+   "artifact": "the graph in a repo + a state dump showing a recoverable failure + a README a stranger can follow",
+   "trains": [
+    "multi-agent orchestration (27/98)",
+    "LangChain/LangGraph (392/256 jobs)",
+    "handover discipline"
+   ],
+   "why_the_market_wants_it": "The modal job names two frameworks. The handover README is the difference between 'built a demo' and 'owns a system'."
+  }
+ ],
+ "the_week_in_one_line": "Find what broke, prove whether the fix helped, make the tool refuse bad input, answer from current documents, and hand the system to someone else.",
+ "_what_this_is_not": "Not a tutorial series. Each ticket is the SHAPE of real work; the artifact is what closes it. Hours vary — day 2 and day 5 are the expensive ones.",
+ "_interview_mapping": {
+  "tell me about debugging a non-deterministic system": "day 1",
+  "how do you know your change improved things": "day 2",
+  "walk me through your tool schema": "day 3",
+  "how do you handle stale data": "day 4",
+  "describe a multi-agent design and why": "day 5",
+  "_note": "Every ticket maps to a question the sample's interviewers ask. That is why the workload is the curriculum."
+ },
+ "progress": {
+  "OPS-114": {
+   "status": "closed",
+   "closed_at": "2026-10-28",
+   "artifact": "profiles/arthur/cache/ops114/index.html + report.json",
+   "incident_note": "EDU/workload/2026-10-28-ops114-incident-note.md",
+   "script": "profiles/arthur/scripts/ops114-fleet-health.py",
+   "measured": {
+    "executions_all_time": 1216,
+    "window_24h": 105,
+    "failed_in_window": 3
+   },
+   "finding": "All three failures are monitors exiting nonzero to REPORT, not crashes. status:failed cannot distinguish a broken job from an alerting one. DR gate has failed 3/3 with delivery_outcome=not_configured — a failing alarm nobody hears.",
+   "closed_because": "dashboard built + rendered + read back in a browser; incident note written; three failures diagnosed to root cause"
+  },
+  "EVAL-7": {
+   "status": "closed",
+   "closed_at": "2026-10-28",
+   "artifact": "profiles/arthur/cache/eval7/index.html + report",
+   "report": "EDU/workload/2026-10-28-eval7-report.md",
+   "scripts": [
+    "scripts/eval7-build-golden.py",
+    "scripts/eval7-run.py"
+   ],
+   "golden_set": "data/eval/golden-extract-ne.json (127 pairs, hand-reviewed, UBC open textbook)",
+   "measured": {
+    "variant_a_pairs": "97/127",
+    "variant_b_pairs": "118/127",
+    "delta": "+21",
+    "a_recall": 0.764,
+    "b_recall": 0.929,
+    "a_fab": 0,
+    "b_fab": 1,
+    "n_cases": 10
+   },
+   "verdict": "B better by 21 correct pairs. Pre-registered rule said KEEP A because fabricated went 0->1; the rule under-modelled the verbatim-src verifier, which deletes unverifiable units. Flagged to Jordan rather than silently re-graded.",
+   "landed": "edu-extract.py now has --prompt {a,b} defaulting to a; default model changed to kimi-k2.7-code because the old default was HTTP 410 ModelDeprecated/403.",
+   "closed_because": "golden set built+reviewed, grader selftested 5/5, 20 model calls run, decision rule evaluated, wiring proven end-to-end on the real EPUB"
+  },
+  "TOOL-42": {
+   "status": "closed",
+   "closed_at": "2026-10-28",
+   "artifacts": [
+    "profiles/arthur/scripts/toolgate.py",
+    "profiles/arthur/scripts/tool42-demo.py",
+    "profiles/arthur/cache/toolgate/failures.jsonl",
+    "profiles/arthur/cache/toolgate/demo.json"
+   ],
+   "report": "EDU/workload/2026-10-28-tool42-report.md",
+   "measured": {
+    "selftest": "11/11",
+    "natural_error_rate": "0 of 3 — UNMEASURED, not 0%",
+    "forced_correction": "1 of 1 corrected on first retry",
+    "fail_closed": "proven — exhausted=True, no value key",
+    "log_records": "3 rejections across 2 calls"
+   },
+   "finding": "The ticket's bug did not reproduce naturally in 3 calls; it reproduced only when forced. The guard's value is as a BOUNDARY, not a fix for an observed rate. 3 calls cannot bound a rate.",
+   "own_defects_fixed": [
+    "str.format() ate literal JSON braces",
+    "rejection logged twice (dashboard double-count)",
+    "selftest polluted the production log (6 counted vs 2 real)"
+   ],
+   "closed_because": "six bad-input classes rejected, rejection text proven actionable by a live model, fail-closed proven, log verified by reading it, 11/11 selftest"
+  },
+  "RAG-9": {
+   "status": "closed",
+   "closed_at": "2026-10-28",
+   "artifacts": [
+    "profiles/arthur/scripts/rag9-run.py",
+    "profiles/arthur/cache/rag9/results.json"
+   ],
+   "report": "EDU/workload/2026-10-28-rag9-report.md",
+   "environment": "CPU-only venv · fastembed 0.9.1 + onnxruntime 1.31.1 · no GPU, no embedding API",
+   "measured": {
+    "corpus": {
+     "sections": 184,
+     "chars": 733507,
+     "est_tokens": 183376
+    },
+    "chunks": {
+     "fixed-1200": 811,
+     "structural-2600": 380
+    },
+    "best_english": {
+     "model": "english-only bge-small",
+     "chunking": "fixed-1200",
+     "hit@5": "9/12",
+     "mrr": 0.549
+    },
+    "best_nepali": {
+     "model": "multilingual MiniLM",
+     "chunking": "structural-2600",
+     "hit@5": "2/8",
+     "mrr": 0.139
+    },
+    "english_only_on_nepali": "0/8, MRR 0.000 — never ranked a correct chunk in the top 10"
+   },
+   "finding": "Retrieval WORKS on English (9/12) and FAILS on Nepali (2/8 best). Model language must match query language. My first run used only English questions and nearly reported a biased result as the answer.",
+   "chunking_answer": "structural 1200-2600 split on section boundaries — the only config non-zero in BOTH languages",
+   "next": "bigger multilingual model (e5-large / bge-m3, 2.2GB+) = Forge task; and BM25 hybrid, untested and likely strong on Devanagari",
+   "closed_because": "chunked, embedded, searched, hit@k measured across 2 models x 2 chunkings x 2 query languages, chunk size defended from the numbers"
+  }
+ }
+}
